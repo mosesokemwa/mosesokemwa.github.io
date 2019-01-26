@@ -8,13 +8,22 @@
 
 {{ define "main" }}
 <main id="category">
-{{ range .Pages.ByPublishDate.Reverse }}
     <section class="post">
-        <h2><a href="{{.Permalink}}">{{.Title}}</a></h2>
-    {{partial "post_meta.html" .}}
-        <p>{{ .Summary }}</p>
-        <p><a href="{{.Permalink}}" class="btn btn-outline-moringa btn-sm">Read more</a></p>
+        <div class="container">
+            {{ range .Pages.ByPublishDate.Reverse }}
+            <div>
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <th class="text-center">{{partial "post_meta.html" .}}</th>
+                            <td class="text-nowrap" scope="row"><a href="{{.Permalink}}">{{.Title}}</a></td>
+                            <td><a href="{{.Permalink}}" class="btn btn-outline-moringa btn-sm">Read more</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            {{ end }}
+        </div>
     </section>
-{{ end }}
 </main>
 {{ end }}

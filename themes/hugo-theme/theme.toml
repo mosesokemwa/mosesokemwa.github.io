@@ -13,3 +13,6 @@ min_version = "0.41"
 [author]
   name = "mosesokemwa"
   homepage = "https://mosesokemwa.com"
+
+pygmentsCodefences = true
+pygmentsStyle = "pygments"

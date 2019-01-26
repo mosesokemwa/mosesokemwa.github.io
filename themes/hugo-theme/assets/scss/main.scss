@@ -116,16 +116,19 @@ header {
 }
 
 .post {
-    max-width: 800px;
+    max-width: 1000px;
     padding: 0 2rem;
     margin: 0 auto;
 
+    .container {
+        margin: 2rem auto 1rem auto;
+    }
+
     h2 {
         a {
-            font-size: 2rem;
+            font-size: 1.5rem;
             font-weight: 600;
             display: block;
-            margin: 2rem auto 1rem auto;
             text-align: left;
             color: #333333;
         }
@@ -150,27 +153,6 @@ header {
         display: inline-block;
         position: relative;
         padding: 0 1rem 0 0;
-    }
-
-    hr {
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 0.95rem;
-        margin: 0;
-        height: 1px;
-        border: 0;
-        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#96a3b6+50,ffffff+100 */
-        background: #96a3b6;
-        /* Old browsers */
-        background: -moz-linear-gradient(left, #96a3b6 50%, #ffffff 100%);
-        /* FF3.6-15 */
-        background: -webkit-linear-gradient(left, #96a3b6 50%, #ffffff 100%);
-        /* Chrome10-25,Safari5.1-6 */
-        background: linear-gradient(to right, #96a3b6 50%, #ffffff 100%);
-        /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#96a3b6', endColorstr='#ffffff', GradientType=1);
-        /* IE6-9 */
     }
 
     .meta-thumb {
@@ -244,6 +226,7 @@ header {
                 padding: 1.5rem;
                 margin-bottom: 1rem;
                 border-radius: 0.25em;
+                background-color: #f2f2f2;
 
                 code {
                     margin: 0;
