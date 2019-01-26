@@ -1,0 +1,10 @@
+{{ define "main" }}
+{{ partial "breadcrumbs.html" . }}
+<article>
+    <h1>{{ .Title }}</h1>
+{{partial "post_meta.html" .}}
+    <section id="content">
+        {{ .Content }}
+    </section>
+</article>
+{{ end }}

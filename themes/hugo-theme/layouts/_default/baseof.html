@@ -1,0 +1,86 @@
+<!doctype html>
+<html class="no-js" lang="{{ .Site.LanguageCode }}">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        {{ $title := delimit (slice .Title "&middot;" .Site.Title) " " }}
+        <title>{{ $title }}</title>
+
+        <meta name="description" content="{{ .Description }}">
+        <link rel="canonical" href="{{ .Permalink }}">
+
+        <link rel="manifest" href="{{ "/manifest.json" | relURL }}">
+        <meta name="application-name" content="{{ $title }}">
+        <meta name="theme-color" content="#2271ff">
+
+        {{ if .RSSLink }}
+        <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ $title }}" />
+        <link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ $title }}" />
+        {{ end }}
+
+        {{ $styles := resources.Get "scss/main.scss" | toCSS | minify | fingerprint }}
+        <link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}" media="screen">
+
+    </head>
+
+    <body>
+        <div class="page">
+            {{ block "header" . }}
+            <header>
+                <nav class="navbar navbar-expand-lg navbar-light bg-moringa">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://www.moringaschool.com/programs">Programs</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://www.moringaschool.com/">Moringa School</a>
+                            </li>
+                        </ul>
+                        <div class="form-inline my-2 my-lg-0">
+                            <div class="input-group">
+                                <input class="form-control input-moringa" type="search" placeholder="Your email"
+                                    aria-label="Your email">
+                                <div class="input-group-append">
+                                    <button class="btn btn-moringa" type="button">Join Moringa School!</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+            {{ end }}
+            {{ block "hero" . }} {{ end }}
+            <div id="main">
+                <div id="categories">
+                    <ul>
+                        <li><a href="{{ "/engineering.html" | relURL }}">Engineering</a> </li>
+                        <li><a href="{{ "/product.html" | relURL }}">Product</a> </li>
+                        <li><a href="{{ "/growth.html" | relURL }}">Growth</a> </li>
+                    </ul>
+                </div>
+                {{ block "main" . }} {{ end }}
+            </div>
+            {{ block "footer" . }}
+            <footer>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            Made with &hearts; in Nairobi &middot; {{ now.Year }}
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            {{ end }}
+        </div>
+    </body>
+
+</html>

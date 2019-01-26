@@ -1,0 +1,42 @@
+{{/* if author is set on the post's params, use that, if not, check if we have an
+     author configured in the Site params */}}
+{{$author := or .Params.author .Site.Params.author}}
+
+{{/* check to see if we have author details, note that we *must* perform this check
+     explicitly, as the user might not have $author set and we'd get an error
+     trying to use nil as the index value */}}
+{{$authorDetailSet := and (.Site.Author) ($author)}}
+
+<section class="meta">
+    <div class="meta-white">
+    {{if $authorDetailSet}}
+    {{$authorDetail := index .Site.Author $author}}
+    {{with $authorDetail.thumbnail}}
+        {{ $image := resources.Get .}}
+        {{ $image := $image.Fit "24x24" }}
+            <img class="meta-thumb" src="{{$image.RelPermalink}}" alt="Author image"/>
+    {{end}}
+
+    {{/* print the shortname (id) from the details */}}
+        <a href="/author/{{$authorDetail.id}}">
+        {{- $authorDetail.name -}}
+        </a>
+    {{else}}
+    {{/* if no author details are set, just print whatever is set on the $author field */}}
+    {{$author}}
+  {{end}}
+
+        <time class="meta-date" datetime="{{.Date.Format "2006-01-02T15:04:05Z07:00" | safeHTML}}">
+        {{.Date.Format "January 2, 2006"}}
+        </time>
+        <div class="meta-tag">
+        {{if .Params.tags}}
+        {{$baseURL := .Site.BaseURL}}
+        {{range $index, $tag := .Params.tags}}
+            <a href="{{$baseURL}}tags/{{$tag | urlize}}/">#{{$tag}}</a>
+        {{end}}
+        {{end}}
+        </div>
+    </div>
+    <hr class="meta-hr"/>
+</section>
