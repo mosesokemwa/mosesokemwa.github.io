@@ -3,23 +3,23 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://blog.mosesokemwa.com/growth/</loc>
+    <loc>/growth/</loc>
     <lastmod>2018-12-05T18:15:14+03:00</lastmod>
   </url>
   
   <url>
-    <loc>http://blog.mosesokemwa.com/categories/</loc>
+    <loc>/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://blog.mosesokemwa.com/</loc>
+    <loc>/</loc>
     <lastmod>2018-12-05T18:15:14+03:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://blog.mosesokemwa.com/tags/</loc>
+    <loc>/tags/</loc>
     <priority>0</priority>
   </url>
   
