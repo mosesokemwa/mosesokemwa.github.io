@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>My New Hugo Site</title>
+    <link>http://overflow.moringaschool.com/</link>
+    <description>Recent content on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 05 Dec 2018 18:15:14 +0300</lastBuildDate>
+    
+	<atom:link href="http://overflow.moringaschool.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Disabling Ubuntu MOTD Spam</title>
+      <link>http://overflow.moringaschool.com/growth/</link>
+      <pubDate>Wed, 05 Dec 2018 18:15:14 +0300</pubDate>
+      
+      <guid>http://overflow.moringaschool.com/growth/</guid>
+      <description>When you log into an Ubuntu machine using SSH or a console, you’ll see a motd (“message of the day”) printed with some useful system information, as well as some useless marketing spam. The useless marketing spam is the same material you see when you visit motd.ubuntu.com. This is an affront to good taste, and should be disabled.
+There are a few ways to disable the MOTD altogether. You can touch the file ~/.</description>
+    </item>
+    
+  </channel>
+</rss>

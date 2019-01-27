@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="{{ .Site.LanguageCode }}">
+<html class="no-js" lang="en-us">
 
     <head>
         <meta charset="utf-8">
@@ -25,44 +25,51 @@
         <link rel="icon" type="image/png" sizes="16x16" href="fav/favicon-16x16.png">
         <link rel="manifest" href="/manifest.json">
 
-        {{ $title := delimit (slice .Title "&middot;" .Site.Title) " " }}
-        <title>{{ $title }}</title>
+        
+        <title>404 Page not found &middot; My New Hugo Site</title>
 
-        <meta name="description" content="{{ .Description }}">
-        <link rel="canonical" href="{{ .Permalink }}">
+        <meta name="description" content="">
+        <link rel="canonical" href="">
 
-        <link rel="manifest" href="{{ "/manifest.json" | relURL }}">
-        <meta name="application-name" content="{{ $title }}">
+        <link rel="manifest" href="/manifest.json">
+        <meta name="application-name" content="404 Page not found &middot; My New Hugo Site">
         <meta name="theme-color" content="#2271ff">
 
-        {{ if .RSSLink }}
-        <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ $title }}" />
-        <link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ $title }}" />
-        {{ end }}
+        
 
-        {{ $styles := resources.Get "scss/main.scss" | toCSS | minify | fingerprint }}
-        <link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}" media="screen">
+        
+        <link rel="stylesheet" href="http://overflow.moringaschool.com/scss/main.min.2f057fcf5e6b2879d7870fef933bb94d47e253950024475dbf95da08145be449.css" integrity="sha256-LwV/z15rKHnXhw/vkzu5TUfiU5UAJEddv5XaCBRb5Ek=" media="screen">
 
     </head>
 
     <body>
         <div class="page">
-            {{ block "header" . }}
+            
             <header>
                 <nav class="navbar bg-moringa"></nav>
             </header>
-            {{ end }}
+            
 
-            {{ block "hero" . }} {{ end }}
+             
             <div id="main">
-                {{ block "main" . }} {{ end }}
+                
+<main id="main">
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h1 id="title">
+                <a href="/">Go Home</a>
+            </h1>
+        </div>
+    </div>
+</main>
+
             </div>
-            {{ block "footer" . }}
+            
             <footer>
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-12 text-center">
-                            <p>Made with &hearts; in Nairobi &middot; {{ now.Year }}</p>
+                            <p>Made with &hearts; in Nairobi &middot; 2019</p>
                             <p><a href="https://mosesokemwa.com" target="_blank">Home</a></p>
                             <p><a href="mailto:okewmamoses@gmail.com" target="_blank">Email</a></p>
                             <p><a href="https://github.com/moseskemwa" target="_blank">Github</a></p>
@@ -72,7 +79,7 @@
                 </div>
         </div>
         </footer>
-        {{ end }}
+        
         </div>
     </body>
 

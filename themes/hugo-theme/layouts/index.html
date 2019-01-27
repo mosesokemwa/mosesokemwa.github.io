@@ -10,19 +10,22 @@
 <main id="category">
     <section class="post">
         <div class="container">
-            {{ range .Pages.ByPublishDate.Reverse }}
-            <div>
-                <table class="table">
-                    <tbody>
-                        <tr>
-                            <th class="text-center">{{partial "post_meta.html" .}}</th>
-                            <td class="text-nowrap" scope="row"><a href="{{.Permalink}}">{{.Title}}</a></td>
-                            <td><a href="{{.Permalink}}" class="btn btn-outline-moringa btn-sm">Read more</a></td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div class="row">
+                <div class="col-md-8 offset-2">
+                    <table class="table table-condensed cf text-center">
+                        <tbody>
+                            {{ range .Pages.ByPublishDate.Reverse }}
+                            <tr>
+                                <td class="meta" scope="row">{{partial "post_meta.html" . }}</td>
+                                <td class="title" scope="row"><a href="{{.Permalink}}">{{.Title}}</a></td>
+                                <td class="read"><a href="{{.Permalink}}" class="btn btn-outline-moringa btn-sm">Read
+                                        more</a></td>
+                            </tr>
+                            {{ end }}
+                        </tbody>
+                    </table>
+                </div>
             </div>
-            {{ end }}
         </div>
     </section>
 </main>
