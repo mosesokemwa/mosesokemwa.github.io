@@ -1,6 +1,6 @@
 ---
 title: "Disabling Ubuntu MOTD Spam"
-date: 2019-01-24T18:15:14+03:00
+date: 2018-01-24T18:15:14+03:00
 draft: false
 ---
 When you log into an Ubuntu machine using SSH or a console, you’ll see a motd (“message of the day”) printed with some useful system information, as well as some useless marketing spam. The useless marketing spam is the same material you see when you visit [motd.ubuntu.com](motd.ubuntu.com). This is an affront to good taste, and should be disabled.
