@@ -3,7 +3,7 @@
 
 name = "dogplatter"
 license = "MIT"
-licenselink = "https://github.com/mosesokemwa/dogplatter/blob/master/LICENSE"
+licenselink = "https://github.com/mosesokemwa/techmaster/themes/blob/master/LICENSE"
 description = "Dogs and biscuit"
 homepage = ""
 tags = [code, tech, design, product, growth]
@@ -12,7 +12,7 @@ min_version = "0.41"
 
 [author]
   name = "mosesokemwa"
-  homepage = "https://mosesokemwa.com"
+  homepage = ""
 
 pygmentsCodefences = true
 pygmentsStyle = "pygments"
