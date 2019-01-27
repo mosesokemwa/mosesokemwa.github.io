@@ -21,15 +21,5 @@
 There are a few ways to disable the MOTD altogether. You can touch the file ~/.</description>
     </item>
     
-    <item>
-      <title>Disabling Ubuntu MOTD Spam</title>
-      <link>/growth.1/</link>
-      <pubDate>Wed, 24 Jan 2018 18:15:14 +0300</pubDate>
-      
-      <guid>/growth.1/</guid>
-      <description>When you log into an Ubuntu machine using SSH or a console, you’ll see a motd (“message of the day”) printed with some useful system information, as well as some useless marketing spam. The useless marketing spam is the same material you see when you visit motd.ubuntu.com. This is an affront to good taste, and should be disabled.
-There are a few ways to disable the MOTD altogether. You can touch the file ~/.</description>
-    </item>
-    
   </channel>
 </rss>
