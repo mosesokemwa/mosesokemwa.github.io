@@ -1,6 +1,7 @@
 baseURL = ""
 languageCode = "en-us"
-title = "My New Hugo Site"
+description = "Dogs and biscuit"
+title = "Moses Okemwa"
 theme = "hugo-theme"
 pygmentsCodefences = true
 pygmentsStyle = "pygments"

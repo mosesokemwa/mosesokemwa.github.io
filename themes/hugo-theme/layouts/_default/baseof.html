@@ -10,6 +10,18 @@
         <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
         <meta name="theme-color" content="#ffffff">
 
+        <link rel="manifest" href="/manifest.json">
+
+        {{ $title := delimit (slice .Title "&middot;" .Site.Title) " " }}
+        <title>{{ $title }}</title>
+
+        <meta name="description" content="{{ .Description }}">
+        <link rel="canonical" href="{{ .Permalink }}">
+
+        <link rel="manifest" href="{{ "/manifest.json" | relURL }}">
+        <meta name="application-name" content="{{ $title }}">
+        <meta name="theme-color" content="#2271ff">
+
         <link rel="apple-touch-icon" sizes="57x57" href="fav/apple-icon-57x57.png">
         <link rel="apple-touch-icon" sizes="60x60" href="fav/apple-icon-60x60.png">
         <link rel="apple-touch-icon" sizes="72x72" href="fav/apple-icon-72x72.png">
@@ -23,17 +35,6 @@
         <link rel="icon" type="image/png" sizes="32x32" href="fav/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="96x96" href="fav/favicon-96x96.png">
         <link rel="icon" type="image/png" sizes="16x16" href="fav/favicon-16x16.png">
-        <link rel="manifest" href="/manifest.json">
-
-        {{ $title := delimit (slice .Title "&middot;" .Site.Title) " " }}
-        <title>{{ $title }}</title>
-
-        <meta name="description" content="{{ .Description }}">
-        <link rel="canonical" href="{{ .Permalink }}">
-
-        <link rel="manifest" href="{{ "/manifest.json" | relURL }}">
-        <meta name="application-name" content="{{ $title }}">
-        <meta name="theme-color" content="#2271ff">
 
         {{ if .RSSLink }}
         <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ $title }}" />
@@ -42,7 +43,6 @@
 
         {{ $styles := resources.Get "scss/main.scss" | toCSS | minify | fingerprint }}
         <link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}" media="screen">
-
     </head>
 
     <body>
