@@ -7,7 +7,7 @@
      trying to use nil as the index value -->
 {{$authorDetailSet := and (.Site.Author) ($author)}}
 <div>
-    <time class="meta-date" datetime="{{.Date.Format "2006-01-02T15:04:05Z07:00" | safeHTML}}">
+    <time class="meta-date" datetime="{{.Date.Format "2006-01-02" | safeHTML}}">
     {{.Date.Format "January 2, 2006"}}
     </time>
 </div>
