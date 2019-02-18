@@ -6,10 +6,20 @@
     <description>Recent content on Moses Okemwa</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 03 Feb 2019 14:28:14 +0300</lastBuildDate>
+    <lastBuildDate>Mon, 18 Feb 2019 12:21:14 +0300</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Just buy me stuff - Wishlist</title>
+      <link>/my-dev-wishlist/</link>
+      <pubDate>Mon, 18 Feb 2019 12:21:14 +0300</pubDate>
+      
+      <guid>/my-dev-wishlist/</guid>
+      <description>People keep on asking me what I want as gift, or what would I get a dev as a gift. Now I will have place to direct them to
+Digital Ocean Devs have side project that they are (always)working on, at times those projects grow big and need to be hosted for public use. I personally use Digital Ocean for my hosting needs. Unfortunaley they don&amp;rsquo;t have gift vouchr one can use, thoguh you can set up a paypal account, load cash then gift the account to your nerd friend.</description>
+    </item>
     
     <item>
       <title>Broken Image Handling</title>
@@ -22,10 +32,10 @@
     
     <item>
       <title>Disabling Ubuntu MOTD Spam</title>
-      <link>/growth/</link>
+      <link>/disabling-ubuntu-motd-spam/</link>
       <pubDate>Thu, 24 Jan 2019 18:15:14 +0300</pubDate>
       
-      <guid>/growth/</guid>
+      <guid>/disabling-ubuntu-motd-spam/</guid>
       <description>When you log into an Ubuntu machine using SSH or a console, you’ll see a motd (“message of the day”) printed with some useful system information, as well as some useless marketing spam. The useless marketing spam is the same material you see when you visit motd.ubuntu.com. This is an affront to good taste, and should be disabled.
 There are a few ways to disable the MOTD altogether. You can touch the file ~/.</description>
     </item>

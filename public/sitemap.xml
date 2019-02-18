@@ -3,12 +3,17 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/my-dev-wishlist/</loc>
+    <lastmod>2019-02-18T12:21:14+03:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/broken-image-handling/</loc>
     <lastmod>2019-02-03T14:28:14+03:00</lastmod>
   </url>
   
   <url>
-    <loc>/growth/</loc>
+    <loc>/disabling-ubuntu-motd-spam/</loc>
     <lastmod>2019-01-24T18:15:14+03:00</lastmod>
   </url>
   
@@ -19,7 +24,7 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2019-02-03T14:28:14+03:00</lastmod>
+    <lastmod>2019-02-18T12:21:14+03:00</lastmod>
     <priority>0</priority>
   </url>
   
