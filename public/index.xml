@@ -2,40 +2,51 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Moses Okemwa</title>
-    <link>https://mosesokemwa.com/</link>
+    <link>/</link>
     <description>Recent content on Moses Okemwa</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 18 Feb 2019 12:21:14 +0300</lastBuildDate>
+    <lastBuildDate>Mon, 25 Feb 2019 01:47:00 +0300</lastBuildDate>
     
-	<atom:link href="https://mosesokemwa.com/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>kick off - the brain that is</title>
+      <link>/kick-off/</link>
+      <pubDate>Mon, 25 Feb 2019 01:47:00 +0300</pubDate>
+      
+      <guid>/kick-off/</guid>
+      <description>So I decided to start sharing my brain with the world, and by doing that I needed a place where I can put all my thoughts together. Most of them are unstructured others sound really composed.
+To be effective and not worry about the PR/Marketing side of things I decided to do things different.
+ I don’t use cookies to track visitors to my site; you are completely anonymous when vising this site except for whatever is revealed by your User-Agent and source IP information.</description>
+    </item>
+    
+    <item>
       <title>Just buy me stuff - Wishlist</title>
-      <link>https://mosesokemwa.com/my-dev-wishlist/</link>
+      <link>/my-dev-wishlist/</link>
       <pubDate>Mon, 18 Feb 2019 12:21:14 +0300</pubDate>
       
-      <guid>https://mosesokemwa.com/my-dev-wishlist/</guid>
+      <guid>/my-dev-wishlist/</guid>
       <description>People keep on asking me what I want as gift, or what would I get a dev as a gift. Now I will have place to direct them to
 Digital Ocean Devs have side project that they are (always)working on, at times those projects grow big and need to be hosted for public use. I personally use Digital Ocean for my hosting needs. Unfortunaley they don&amp;rsquo;t have gift vouchr one can use, thoguh you can set up a paypal account, load cash then gift the account to your nerd friend.</description>
     </item>
     
     <item>
       <title>Broken Image Handling</title>
-      <link>https://mosesokemwa.com/broken-image-handling/</link>
+      <link>/broken-image-handling/</link>
       <pubDate>Sun, 03 Feb 2019 14:28:14 +0300</pubDate>
       
-      <guid>https://mosesokemwa.com/broken-image-handling/</guid>
+      <guid>/broken-image-handling/</guid>
       <description>Missing images will either just display nothing, or display a [ ? ] style box when their source cannot be found. Instead, you may want to replace that with a &amp;ldquo;missing image&amp;rdquo; graphic that you are sure exists so there is better visual feedback that something is wrong. Or, you might want to hide it entirely. This is possible because images that a browser can&amp;rsquo;t find fire off an &amp;ldquo;error&amp;rdquo; JavaScript event we can watch for.</description>
     </item>
     
     <item>
       <title>Disabling Ubuntu MOTD Spam</title>
-      <link>https://mosesokemwa.com/disabling-ubuntu-motd-spam/</link>
+      <link>/disabling-ubuntu-motd-spam/</link>
       <pubDate>Thu, 24 Jan 2019 18:15:14 +0300</pubDate>
       
-      <guid>https://mosesokemwa.com/disabling-ubuntu-motd-spam/</guid>
+      <guid>/disabling-ubuntu-motd-spam/</guid>
       <description>When you log into an Ubuntu machine using SSH or a console, you’ll see a motd (“message of the day”) printed with some useful system information, as well as some useless marketing spam. The useless marketing spam is the same material you see when you visit motd.ubuntu.com. This is an affront to good taste, and should be disabled.
 There are a few ways to disable the MOTD altogether. You can touch the file ~/.</description>
     </item>
