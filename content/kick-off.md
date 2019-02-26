@@ -1,5 +1,5 @@
 ---
-title: "kick off - the brain that is"
+title: "Kick off - the brain that is"
 date: 2019-02-25T01:47:00+03:00
 draft: false
 ---
