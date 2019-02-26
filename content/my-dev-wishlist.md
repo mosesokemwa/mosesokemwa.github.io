@@ -29,6 +29,9 @@ As with everythin there is a work around
 
 #### Jetbrains Editor
 Need I say more.. this is here because I use there tools, the intergration is convinient for me. I can't seem to find a way to buy a licence for a user, however you can do the same thing as with digital ocean. Find the store <a href="https://www.jetbrains.com/store/#edition=personal">here</a>
-You can get a license for the pack, mine includes cosists of GoLand and Pycharm.
+You can get a license for the pack, mine includes cosists of GoLand and Pycharm
+
+#### Wakatime
+Tracking time spent writing code is importatn to me, first I get to see how much time is spent on code vs meetings. Second, I get bragging rights within my Wakatime time team when I consistently have the highest coding time.
 
 This lsit is endless but I will add more with time
