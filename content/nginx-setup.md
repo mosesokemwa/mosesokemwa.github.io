@@ -8,6 +8,14 @@ Hopefully having it here will make my work easier the next time I need to set up
 
 ##### Setup NGINX
 
+Setup UFW (Uncomplicated Firewall) rules
+
+```bash
+sudo ufw allow out 22/tcp
+sudo ufw allow out 80/tcp
+sudo ufw allow out 443/tcp
+```
+
 Lets start by updating our software
 ```bash
 sudo apt-get update && sudo apt-get dist-upgrade -y && sudo reboot
@@ -58,7 +66,7 @@ server {
 
 Reload Nginx to apply our configuration
 ```bash
-sudo nginx -t && sudo nginx -s reload
+sudo systemctl restart nginx
 ```
 
 
@@ -99,7 +107,10 @@ server {
 ```
 Save, Exit and then restart Nginx
 
-sudo nginx -t &&  sudo nginx -s reload
+```bash
+sudo systemctl restart nginx
+```
+
 Now we got https://mosesokemwa.com/ up and running! But we not done yet!
 
 #### Automatic Renew
