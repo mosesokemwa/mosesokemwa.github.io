@@ -1,79 +1,15 @@
 <!doctype html>
 <html class="no-js" lang="{{ .Site.LanguageCode }}">
-
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <meta name="msapplication-TileColor" content="#ffffff">
-        <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-        <meta name="theme-color" content="#ffffff">
-
-        <link rel="manifest" href="/manifest.json">
-
-        {{ $title := delimit (slice .Title "&middot;" .Site.Title) " " }}
-        <title>{{ $title }}</title>
-
-        <meta name="description" content="{{ .Description }}">
-        <link rel="canonical" href="{{ .Permalink }}">
-
-        <link rel="manifest" href="{{ "/manifest.json" | relURL }}">
-        <meta name="application-name" content="{{ $title }}">
-        <meta name="theme-color" content="#2271ff">
-
-        <link rel="apple-touch-icon" sizes="57x57" href="fav/apple-icon-57x57.png">
-        <link rel="apple-touch-icon" sizes="60x60" href="fav/apple-icon-60x60.png">
-        <link rel="apple-touch-icon" sizes="72x72" href="fav/apple-icon-72x72.png">
-        <link rel="apple-touch-icon" sizes="76x76" href="fav/apple-icon-76x76.png">
-        <link rel="apple-touch-icon" sizes="114x114" href="fav/apple-icon-114x114.png">
-        <link rel="apple-touch-icon" sizes="120x120" href="fav/apple-icon-120x120.png">
-        <link rel="apple-touch-icon" sizes="144x144" href="fav/apple-icon-144x144.png">
-        <link rel="apple-touch-icon" sizes="152x152" href="fav/apple-icon-152x152.png">
-        <link rel="apple-touch-icon" sizes="180x180" href="fav/apple-icon-180x180.png">
-        <link rel="icon" type="image/png" sizes="192x192" href="fav/android-icon-192x192.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="fav/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="96x96" href="fav/favicon-96x96.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="fav/favicon-16x16.png">
-
-        {{ if .RSSLink }}
-        <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ $title }}" />
-        <link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ $title }}" />
-        {{ end }}
-
-        {{ $styles := resources.Get "scss/main.scss" | toCSS | minify | fingerprint }}
-        <link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}" media="screen">
-
-    </head>
-
+    {{ partial "head.html" . }}
     <body>
         <div class="page">
-            {{ block "header" . }}
-            <header>
-                <nav class="navbar bg-moringa"></nav>
-            </header>
-            {{ end }}
+            {{ partial "header.html" . }}
 
             {{ block "hero" . }} {{ end }}
             <div id="main">
                 {{ block "main" . }} {{ end }}
             </div>
-            {{ block "footer" . }}
-            <footer>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-12 text-center">
-                            <p>Made with &hearts; in Nairobi &middot; {{ now.Year }}</p>
-                            <p><a href="https://mosesokemwa.com" target="_blank">Home</a></p>
-                            <p><a href="mailto:okemwamoses@gmail.com" target="_blank">Email</a></p>
-                            <p><a href="https://github.com/mosesokemwa" target="_blank">Github</a></p>
-                            <p><a href="https://linkedin.com/in/mosesokemwa/" target="_blank">LinkedIn</a></p>
-                        </div>
-                    </div>
-                </div>
-        </div>
-        </footer>
-        {{ end }}
+            {{ partial "footer.html" . }}
         </div>
     </body>
 
