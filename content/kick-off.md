@@ -1,6 +1,6 @@
 ---
-title: "Kick off - the brain that is"
-date: 2019-02-25T01:47:00+03:00
+title: "Kick off - The Brain That Is"
+date: 2019-01-24T18:15:14+03:00
 draft: false
 ---
 So I decided to start sharing my brain with the world, and by doing that I needed a place where I can put all my thoughts together. Most of them are unstructured others sound really composed.

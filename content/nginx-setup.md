@@ -1,7 +1,7 @@
 ---
 title: "Setup NGINX"
-date: 2019-02-25T24:41:14+03:00
-draft: true
+date: 2019-05-25T18:15:14+03:00
+draft: false
 ---
 This is a process that I find myself doing over and over again, and for the most part I keep skipping a couple of steps or repeating them.
 Hopefully having it here will make my work easier the next time I need to set up NGINX.
@@ -140,4 +140,4 @@ Make it executable.
 ```bash
 chmod +x /home/recers.sh
 ```
-Now it become zombies yeah! But if you test with SSL analyser, You’ll grade only B grade which is bummer! Gimme A!
+Now it become zombies yeah! But if you test with SSL analyser, You’ll grade only B grade which is a bummer! Gimme A!

@@ -10,7 +10,7 @@ Due to certain figures in my life I decided earlier on that I would not go to ca
 
 Back to hard decisions, I knew campus life was not for me, I mean I have tried. Twice to be precise but I ended up stopping mid way, story for another day. I hate being idle, I'd rather watch a movie than be there doing nothing(now that I say it out loud, I dont see any difference). With this in mind, I approach my parent and presented the rationale to her, the out come surprised me. I thought she would flip, but to my surprise she was cool with it, even funded two of my earlier start-up in agribusiness.
 
-The path I chose might have been through premature rationale.. What does a 18/19 year old know about life to make such a decision like that. That's beside the point, after a string of 2 failed(bankrupt businesses) and 1 successful dope kick ass solo entrepreneurship stint, I decided to leave that and move to different field.
+The path I chose might have been through premature rationale.. What does an 18/19 year old know about life to make such a decision like that. That's beside the point, after a string of 2 failed start-ups and 1 successful dope kick ass solo entrepreneurship stint, I decided to leave all that and move to different field.
 
 From as far back as I can remember I have always loved fixing things. If it requires mental energy, and is challenging enough, I will find a way to put it back together or create a new one. I still I'm the house handy man. I recently made a coffee table on a random evening. Home made coffee table, there is something funny about that. I should have taken the name Ralph after 'fix it Ralph'.
 

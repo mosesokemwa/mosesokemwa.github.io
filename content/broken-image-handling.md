@@ -1,5 +1,5 @@
 ---
-title: "Broken Image Handling"
+title: "Broken Image Handling With jQuery"
 date: 2019-02-03T14:28:14+03:00
 draft: false
 ---
