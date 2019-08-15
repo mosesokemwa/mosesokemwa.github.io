@@ -3,7 +3,28 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/kick-off/</loc>
+    <loc>/</loc>
+    <lastmod>2019-08-09T21:40:14+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/dark-net-diaries/</loc>
+    <lastmod>2019-08-09T21:40:14+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/nginx-setup/</loc>
+    <lastmod>2019-05-25T18:15:14+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/welcome-to-the-team/</loc>
+    <lastmod>2019-05-18T12:21:14+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/disabling-ubuntu-motd-spam/</loc>
     <lastmod>2019-02-25T01:47:00+03:00</lastmod>
   </url>
   
@@ -18,18 +39,12 @@
   </url>
   
   <url>
-    <loc>/disabling-ubuntu-motd-spam/</loc>
+    <loc>/kick-off/</loc>
     <lastmod>2019-01-24T18:15:14+03:00</lastmod>
   </url>
   
   <url>
     <loc>/categories/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/</loc>
-    <lastmod>2019-02-25T01:47:00+03:00</lastmod>
     <priority>0</priority>
   </url>
   
