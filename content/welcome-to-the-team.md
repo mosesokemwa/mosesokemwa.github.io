@@ -7,7 +7,7 @@ draft: false
 The most simple way to get dropdowns working in django-cms is to follow this: (In this example I am using Bootstrap styling framework for my menu)
 
 In your base.html file (or any other name that you are using) use this way of showing your menu ```{% show_menu 0 10 10 10 %}``` As an example, this is what i used in my code in base.html to render the menu:
-```html
+```
 <ul>
     {% show_menu 0 10 10 10 "menu/custom-menu.html" %}
 </ul>
