@@ -21,3 +21,10 @@ GoBuilds
 dist
 
 vendor
+
+layouts
+resources
+static
+themes
+content
+archetypes
