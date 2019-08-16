@@ -5,4 +5,4 @@ title: Moses Okemwa
 theme: hugo-theme
 pygmentsCodefences: true
 pygmentsStyle: pygments
-publishDir: docs
+publishDir: public
