@@ -1,7 +1,7 @@
 ---
 title: "Dropdown Menus in Django-CMS"
 date: 2019-05-18T12:21:14+03:00
-draft: false
+draft: true
 ---
 
 The most simple way to get dropdowns working in django-cms is to follow this: (In this example I am using Bootstrap styling framework for my menu)
