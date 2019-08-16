@@ -1,0 +1,368 @@
+@import "compass";
+@import "bootstrap/bootstrap.scss";
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700');
+
+$moringa-dark: #2f8742;
+$moringa-light: #80bf6e;
+$moringa-white: #ffffff;
+
+/*
+// Needs latest Compass, add '@import "compass"' to your scss
+// Permalink - use to edit and share this gradient:
+// http://colorzilla.com/gradient-editor/#636936+38,8e974c+100
+*/
+
+body,
+html {
+    font-family: 'Open Sans', sans-serif;
+    color: #4e4c36;
+    letter-spacing: -0.2px;
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 30px;
+    -webkit-font-smoothing: antialiased;
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link:focus {
+    color: #ffffff;
+}
+
+.navbar-light .navbar-nav .show>.nav-link,
+.navbar-light .navbar-nav .active>.nav-link,
+.navbar-light .navbar-nav .nav-link.show,
+.navbar-light .navbar-nav .nav-link.active {
+    color: #b8d8b8;
+    transition: 0.5s;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #b8d8b8;
+    transition: 0.5s;
+}
+
+#categories {
+    width: 100%;
+    text-align: center;
+
+
+
+    ul {
+        list-style: none;
+        box-shadow: 0 1px 0 rgba(89, 105, 129, 0.2), 0 1px 4px rgba(89, 105, 129, 0.05);
+        margin: 0 0 1px 0;
+        padding: 0;
+
+        li {
+            display: inline;
+            margin: 0;
+            padding: 0;
+
+            a {
+                margin: 0.5rem 1rem;
+                text-transform: uppercase;
+                font-size: 0.95rem;
+                display: inline-block;
+                color: #8f9ca7;
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+header {
+    nav {
+        font-size: 0.85rem;
+        font-weight: 600;
+
+        .navbar-brand {
+            width: 7.5rem;
+        }
+
+        &.bg-moringa {
+            /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#2f8742+0,2f8742+48,80bf6e+100 */
+            background: #2f8742;
+            /* Old browsers */
+            background: -moz-linear-gradient(left, #2f8742 0%, #2f8742 48%, #80bf6e 100%);
+            /* FF3.6-15 */
+            background: -webkit-linear-gradient(left, #2f8742 0%, #2f8742 48%, #80bf6e 100%);
+            /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to right, #2f8742 0%, #2f8742 48%, #80bf6e 100%);
+            /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2f8742', endColorstr='#80bf6e', GradientType=1);
+            /* IE6-9 */
+
+            box-shadow: 0 1px 0 rgba(89, 105, 129, 0.2), 0 1px 4px rgba(89, 105, 129, 0.05);
+        }
+
+        .btn-moringa {
+            background: $moringa-dark;
+            font-weight: 600;
+            color: #ffffff;
+            border-color: $moringa-dark;
+            transition: 0.3s;
+            font-size: 0.85rem;
+
+            &:hover {
+                // color: #b8d8b8;
+                text-decoration: underline;
+                border-color: #2f8742;
+            }
+        }
+    }
+
+}
+
+.post {
+    max-width: 1000px;
+    padding: 0 2rem;
+    margin: 0 auto;
+
+    .container {
+        margin: 2rem auto 1rem auto;
+
+        .meta {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            font-weight: 600;
+            color: #96A3B6;
+            background: #ffffff;
+            display: inline-block;
+        }
+
+        .title a {
+            text-decoration: none;
+            color: #000;
+            &:hover {
+                color: $moringa-dark;
+            }
+        }
+    }
+}
+
+
+.btn-outline-moringa {
+    border-color: $moringa-dark;
+    color: $moringa-dark;
+
+    &:hover {
+        background-color: $moringa-dark;
+        color: $moringa-white;
+    }
+}
+
+#main {
+    background: #ffffff;
+    width: 100%;
+
+    #category {
+        h1 {
+            text-transform: uppercase;
+            font-size: 1.75rem;
+            color: $moringa-dark;
+        }
+    }
+
+    article {
+        max-width: 800px;
+        padding: 0 2rem;
+        margin: 0 auto;
+
+        h1 {
+            font-size: 2.25rem;
+            display: block;
+            margin: 4rem auto 2rem auto;
+            text-align: center;
+            color: #333333;
+        }
+
+
+        h1,
+        h2 {
+            letter-spacing: -2px;
+            font-weight: 600;
+        }
+
+        #content {
+            p {
+                margin-bottom: 1.75rem;
+            }
+
+            a {
+                color: #8e974c;
+                text-decoration: underline;
+
+                &:hover {
+                    color: #636936;
+                }
+            }
+
+            h2 {
+                font-size: 2.25rem;
+            }
+
+            img {
+                max-width: 120%;
+                margin: 0 -10%;
+            }
+
+            .highlight {
+                padding: 1.5rem;
+                margin-bottom: 1rem;
+                border-radius: 0.25em;
+                background-color: #f2f2f2;
+
+                code {
+                    margin: 0;
+                }
+            }
+        }
+    }
+
+    .breadcrumb {
+        background: #f9f9fb;
+        font-weight: 400;
+        font-size: 0.85rem;
+        box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.05);
+        color: rgba(89, 105, 129, 0.5);
+        max-height: 3.5rem;
+
+        a {
+            color: #596981;
+            text-decoration: none;
+            transition: 0.3s;
+            font-weight: 600;
+
+            &:hover {
+                color: #338645;
+            }
+        }
+    }
+}
+
+#hero {
+    background: #221e1f url('/images/pattern.png');
+
+    .hero-container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 2.5rem 0;
+    }
+
+    .hero-image {
+        max-height: 150px;
+    }
+
+    .hero-sentence {
+        color: #ffffff;
+        margin: 0;
+        font-size: 200%;
+        text-align: left;
+    }
+
+    .anim-typewriter {
+        animation: typewriter 4s steps(44) 1s 1 normal both,
+            blinkTextCursor 500ms steps(44) infinite normal;
+    }
+
+    @keyframes typewriter {
+        from {
+            width: 0;
+        }
+
+        to {
+            width: 24em;
+        }
+    }
+
+    @keyframes blinkTextCursor {
+        from {
+            border-right-color: rgba(255, 255, 255, .75);
+        }
+
+        to {
+            border-right-color: transparent;
+        }
+    }
+}
+
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid #dae4ed;
+    font-size: 1rem;
+
+    div>p>a,
+    div>p {
+        text-decoration: none;
+        color: #000;
+        display: inline;
+        margin: 0 1rem;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    #main {
+        #category {
+            article {
+                h1 {
+                    text-align: center;
+                }
+            }
+        }
+
+        article {
+            h1 {
+                margin: 1rem 0;
+                font-size: 1.75rem;
+                text-align: left;
+            }
+        }
+
+        img {
+            max-width: 90%;
+            margin: 0 auto;
+            display: block;
+        }
+
+    }
+
+    .meta {
+        text-align: left;
+
+        .meta-white {
+            .meta-thumb {
+                display: none !important;
+            }
+        }
+
+        hr {
+            display: none;
+        }
+    }
+
+    .breadcrumb {
+        li {
+            &.active {
+                display: none;
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width: 800px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    html {
+        font-size: 8px;
+    }
+
+    table>td>.read {
+        display: none;
+    }
+
+}

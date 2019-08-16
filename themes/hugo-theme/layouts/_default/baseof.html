@@ -1,0 +1,16 @@
+<!doctype html>
+<html class="no-js" lang="{{ .Site.LanguageCode }}">
+    {{ partial "head.html" . }}
+    <body>
+        <div class="page">
+            {{ partial "header.html" . }}
+
+            {{ block "hero" . }} {{ end }}
+            <div id="main">
+                {{ block "main" . }} {{ end }}
+            </div>
+            {{ partial "footer.html" . }}
+        </div>
+    </body>
+
+</html>

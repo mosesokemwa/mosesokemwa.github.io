@@ -1,0 +1,31 @@
+{{ define "hero" }}
+<div id="hero">
+    <div class="hero-container">
+
+    </div>
+</div>
+{{ end }}
+
+{{ define "main" }}
+<main id="category">
+    <section class="post">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 offset-2">
+                    <table class="table table-condensed cf">
+                        <tbody>
+                            {{ range .Pages.ByPublishDate.Reverse }}
+                            <tr>
+                                <td class="meta" scope="row">{{partial "post_meta.html" . }}</td>
+                                <td class="title" scope="row"><a href="{{.Permalink}}">{{.Title}}</a></td>
+                                <td class="read"><a href="{{.Permalink}}" class="btn btn-outline-moringa btn-sm">Read more</a></td>
+                            </tr>
+                            {{ end }}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+{{ end }}
