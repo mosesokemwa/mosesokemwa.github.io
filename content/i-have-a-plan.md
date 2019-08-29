@@ -1,7 +1,7 @@
 ---
 title: "I have a plan, lets work together"
 date: 2019-08-28T01:47:00+03:00
-draft: false
+draft: true
 ---
 
 #### I have a plan, lets work together
