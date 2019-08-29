@@ -1,5 +1,5 @@
 ---
-title: "The Expert Beginner... { good || bad }"
+title: "The expert beginner { good || bad }"
 date: 2019-08-09T21:40:14+03:00
 draft: false
 ---
