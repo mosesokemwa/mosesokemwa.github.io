@@ -6,10 +6,31 @@
     <description>Recent content on Moses Okemwa</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 09 Aug 2019 21:40:14 +0300</lastBuildDate>
+    <lastBuildDate>Wed, 28 Aug 2019 01:47:00 +0300</lastBuildDate>
     
 	<atom:link href="https://mosesokemwa.github.io/public/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>I have a plan, lets work together</title>
+      <link>https://mosesokemwa.github.io/public/i-have-a-plan/</link>
+      <pubDate>Wed, 28 Aug 2019 01:47:00 +0300</pubDate>
+      
+      <guid>https://mosesokemwa.github.io/public/i-have-a-plan/</guid>
+      <description>I have a plan, lets work together Within 1 month, I will:  Work with an onboarding buddy to push commits in your first week. Use our documentation to learn the microservices architecture. Make regular contributions to our JavaScript and Python codebases. Use code reviews and pairing with peers to raise code quality. Deploy changes confidently with solid test coverage through our robust CI/CD pipeline. Take part in team planning and retrospective meetings.</description>
+    </item>
+    
+    <item>
+      <title>To my future boss</title>
+      <link>https://mosesokemwa.github.io/public/to-my-future-boss/</link>
+      <pubDate>Fri, 16 Aug 2019 23:24:14 +0300</pubDate>
+      
+      <guid>https://mosesokemwa.github.io/public/to-my-future-boss/</guid>
+      <description>Software Developer and Engineer career stages The stages are:
+ Coder Junior Developer Intermediate Developer Senior Developer Lead Developer Tech Leader  These stages are not job titles. They represent a developer&amp;rsquo;s real experience and competence.
+It&amp;rsquo;s been said that someone with 10 years experience might, in practice, have repeated the same 1 year of experience over-and-over!
+Let&amp;rsquo;s take a look at these stages to get an idea of where you fit and where you might want to go in the future.</description>
+    </item>
     
     <item>
       <title>The Expert Beginner... { good || bad }</title>
@@ -22,7 +43,7 @@ A high number of Expert Beginners are found in the Tech industry because it is r
     </item>
     
     <item>
-      <title>Setup NGINX</title>
+      <title>Seting up NGINX</title>
       <link>https://mosesokemwa.github.io/public/nginx-setup/</link>
       <pubDate>Sat, 25 May 2019 18:15:14 +0300</pubDate>
       
@@ -33,7 +54,7 @@ sudo ufw allow out 22/tcp sudo ufw allow out 80/tcp sudo ufw allow out 443/tcp L
     </item>
     
     <item>
-      <title>Disabling Ubuntu MOTD Spam</title>
+      <title>Disabling Ubuntu MOTD spam</title>
       <link>https://mosesokemwa.github.io/public/disabling-ubuntu-motd-spam/</link>
       <pubDate>Mon, 25 Feb 2019 01:47:00 +0300</pubDate>
       
@@ -43,7 +64,7 @@ There are a few ways to disable the MOTD altogether. You can touch the file ~/.<
     </item>
     
     <item>
-      <title>Just Buy Me Stuff - My Wishlist</title>
+      <title>My wishlist</title>
       <link>https://mosesokemwa.github.io/public/my-dev-wishlist/</link>
       <pubDate>Mon, 18 Feb 2019 12:21:14 +0300</pubDate>
       
@@ -53,7 +74,7 @@ Digital Ocean Devs have side project that they are (always)working on, at times 
     </item>
     
     <item>
-      <title>Broken Image Handling With jQuery</title>
+      <title>Broken image handling with jQuery</title>
       <link>https://mosesokemwa.github.io/public/broken-image-handling/</link>
       <pubDate>Sun, 03 Feb 2019 14:28:14 +0300</pubDate>
       
@@ -62,7 +83,7 @@ Digital Ocean Devs have side project that they are (always)working on, at times 
     </item>
     
     <item>
-      <title>Kick off - The Brain That Is</title>
+      <title>Kick off - The brain that Is</title>
       <link>https://mosesokemwa.github.io/public/kick-off/</link>
       <pubDate>Thu, 24 Jan 2019 18:15:14 +0300</pubDate>
       
