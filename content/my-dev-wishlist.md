@@ -1,5 +1,5 @@
 ---
-title: "Just Buy Me Stuff - My Wishlist"
+title: "My wishlist"
 date: 2019-02-18T12:21:14+03:00
 draft: false
 ---

@@ -1,5 +1,5 @@
 ---
-title: "To My Future Boss"
+title: "To my future boss"
 date: 2019-08-16T23:24:14+03:00
 draft: false
 ---

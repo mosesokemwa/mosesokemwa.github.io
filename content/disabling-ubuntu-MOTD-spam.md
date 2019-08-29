@@ -1,5 +1,5 @@
 ---
-title: "Disabling Ubuntu MOTD Spam"
+title: "Disabling Ubuntu MOTD spam"
 date: 2019-02-25T01:47:00+03:00
 draft: false
 ---

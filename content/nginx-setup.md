@@ -1,8 +1,9 @@
 ---
-title: "Setup NGINX"
+title: "Seting up NGINX"
 date: 2019-05-25T18:15:14+03:00
 draft: false
 ---
+
 This is a process that I find myself doing over and over again, and for the most part I keep skipping a couple of steps or repeating them.
 Hopefully having it here will make my work easier the next time I need to set up NGINX.
 

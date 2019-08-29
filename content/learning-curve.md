@@ -1,10 +1,10 @@
 ---
-title: "in pursuit of happines"
+title: "In pursuit of happines"
 date: 2019-02-25T24:41:14+03:00
 draft: true
 ---
 
-### in pursuit of 'very steep learning curves' to 'chase experience.'
+### in pursuit of 'a very steep learning curves' to 'chase experience.'
 
 Due to certain figures in my life I decided earlier on that I would not go to campus, I could not deal with the idle time that they had. Go to any public uni and you will see free spirited souls roaming the corridors of their lecture halls. Laughter echoing in open spaces, libraries quit as people flip pages prepping for a cat. Things might have changed though I doubt its by that much.
 
