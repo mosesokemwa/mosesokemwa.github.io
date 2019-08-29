@@ -1,7 +1,7 @@
 ---
 title: "Works by Me"
 date: 2019-05-18T12:21:14+03:00
-draft: false
+draft: true
 ---
 
 ### Canvas Rollout as a Product
