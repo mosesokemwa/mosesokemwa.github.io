@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Moses Okemwa</title>
@@ -18,9 +18,9 @@
       
       <guid>https://mosesokemwa.github.io/public/to-my-future-boss/</guid>
       <description>Software Developer and Engineer career stages The stages are:
- Coder Junior Developer Intermediate Developer Senior Developer Lead Developer Tech Leader  These stages are not job titles. They represent a developer&amp;rsquo;s real experience and competence.
-It&amp;rsquo;s been said that someone with 10 years experience might, in practice, have repeated the same 1 year of experience over-and-over!
-Let&amp;rsquo;s take a look at these stages to get an idea of where you fit and where you might want to go in the future.</description>
+ Coder Junior Developer Intermediate Developer Senior Developer Lead Developer Tech Leader  These stages are not job titles. They represent a developer&#39;s real experience and competence.
+It&#39;s been said that someone with 10 years experience might, in practice, have repeated the same 1 year of experience over-and-over!
+Let&#39;s take a look at these stages to get an idea of where you fit and where you might want to go in the future.</description>
     </item>
     
     <item>
@@ -55,13 +55,13 @@ There are a few ways to disable the MOTD altogether. You can touch the file ~/.<
     </item>
     
     <item>
-      <title>My wishlist</title>
-      <link>https://mosesokemwa.github.io/public/my-dev-wishlist/</link>
+      <title>Flask migration of non-nullable fields</title>
+      <link>https://mosesokemwa.github.io/public/alembic_migrations/</link>
       <pubDate>Mon, 18 Feb 2019 12:21:14 +0300</pubDate>
       
-      <guid>https://mosesokemwa.github.io/public/my-dev-wishlist/</guid>
-      <description>People keep on asking me what I want as gift, or what would I get a dev as a gift. Now I will have place to direct them to
-Digital Ocean Devs have side project that they are (always)working on, at times those projects grow big and need hosting for public use. I use Digital Ocean for my hosting needs. Unfortunately they don&amp;rsquo;t have gift voucher one can use, though you can set up a PayPal account, load cash then gift the account to your nerd friend.</description>
+      <guid>https://mosesokemwa.github.io/public/alembic_migrations/</guid>
+      <description>It is quite easy to add a non-nullable field to an empty table. Any migration tool, including Alembic, can automatically generate a migration file for you that is immediately ready for use, with no modifications required.
+The problem arises when you have a table that is populated with data. You specify that you want a new field that doesn’t accept null values, yet, you already have a host of rows on the table created prior to this new addition.</description>
     </item>
     
     <item>
@@ -70,7 +70,7 @@ Digital Ocean Devs have side project that they are (always)working on, at times 
       <pubDate>Sun, 03 Feb 2019 14:28:14 +0300</pubDate>
       
       <guid>https://mosesokemwa.github.io/public/broken-image-handling/</guid>
-      <description>Missing images will either just display nothing, or display a [ ? ] style box when their source cannot be found. Instead, you may want to replace that with a &amp;ldquo;missing image&amp;rdquo; graphic that you are sure exists so there is better visual feedback that something is wrong. Or, you might want to hide it entirely. This is possible because images that a browser can&amp;rsquo;t find fire off an &amp;ldquo;error&amp;rdquo; JavaScript event we can watch for.</description>
+      <description>Missing images will either just display nothing, or display a [ ? ] style box when their source cannot be found. Instead, you may want to replace that with a &amp;ldquo;missing image&amp;rdquo; graphic that you are sure exists so there is better visual feedback that something is wrong. Or, you might want to hide it entirely. This is possible because images that a browser can&#39;t find fire off an &amp;ldquo;error&amp;rdquo; JavaScript event we can watch for.</description>
     </item>
     
     <item>

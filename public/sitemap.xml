@@ -1,11 +1,10 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
     <loc>https://mosesokemwa.github.io/public/</loc>
     <lastmod>2019-08-16T23:24:14+03:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -29,7 +28,7 @@
   </url>
   
   <url>
-    <loc>https://mosesokemwa.github.io/public/my-dev-wishlist/</loc>
+    <loc>https://mosesokemwa.github.io/public/alembic_migrations/</loc>
     <lastmod>2019-02-18T12:21:14+03:00</lastmod>
   </url>
   
@@ -45,12 +44,10 @@
   
   <url>
     <loc>https://mosesokemwa.github.io/public/categories/</loc>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://mosesokemwa.github.io/public/tags/</loc>
-    <priority>0</priority>
   </url>
   
 </urlset>

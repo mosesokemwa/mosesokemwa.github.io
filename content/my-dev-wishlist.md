@@ -1,7 +1,7 @@
 ---
-title: "My wishlist"
+title: "Fake Wishlist"
 date: 2019-02-18T12:21:14+03:00
-draft: false
+draft: true
 ---
 
 People keep on asking me what I want as gift, or what would I get a dev as a gift. Now I will have place to direct them to
@@ -15,7 +15,7 @@ I love watching Indian Movies, Anime TV shows and architecture design(remodellin
 My current location(at the time of writing) shows me this.
 
 ```
-"Netflix Gift Cards are not currently sold in your country. If you purchased a Netflix Gift Card in a different country, you will be able to use it as 
+"Netflix Gift Cards are not currently sold in your country. If you purchased a Netflix Gift Card in a different country, you will be able to use it as
 long as you pay for Netflix in the same currency as the gift card. Select the country you purchased the gift card from above for more information."
 ```
 
@@ -34,4 +34,4 @@ You can get a license for the pack, mine includes consists of GoLand and Pycharm
 #### Wakatime
 Tracking time spent writing code is important to me, first I get to see time spent on code vs meetings. Second, I get bragging rights within my Wakatime time team when I have the highest coding time.
 
-This list is endless but I will add more with time
+    | Why fake wishlist? hata mimi sijui.
