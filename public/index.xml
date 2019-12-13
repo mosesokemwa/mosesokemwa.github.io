@@ -6,10 +6,20 @@
     <description>Recent content on Moses Okemwa</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 16 Aug 2019 23:24:14 +0300</lastBuildDate>
+    <lastBuildDate>Sat, 12 Oct 2019 12:21:11 +0300</lastBuildDate>
     
 	<atom:link href="https://mosesokemwa.github.io/public/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Flask migration of non-nullable fields</title>
+      <link>https://mosesokemwa.github.io/public/flask_alembic_migrations/</link>
+      <pubDate>Sat, 12 Oct 2019 12:21:11 +0300</pubDate>
+      
+      <guid>https://mosesokemwa.github.io/public/flask_alembic_migrations/</guid>
+      <description>It is quite easy to add a non-nullable field to an empty table. Any migration tool, including Alembic, can automatically generate a migration file for you that is immediately ready for use, with no modifications required.
+The problem arises when you have a table that is populated with data. You specify that you want a new field that doesn’t accept null values, yet, you already have a host of rows on the table created prior to this new addition.</description>
+    </item>
     
     <item>
       <title>To my future boss</title>
@@ -52,16 +62,6 @@ sudo ufw allow out 22/tcp sudo ufw allow out 80/tcp sudo ufw allow out 443/tcp L
       <guid>https://mosesokemwa.github.io/public/disabling-ubuntu-motd-spam/</guid>
       <description>When you log into an Ubuntu machine using SSH or a console, you’ll see a motd (“message of the day”) printed with some useful system information, as well as some useless marketing spam. The useless marketing spam is the same material you see when you visit motd.ubuntu.com. This is an affront to good taste, and should be disabled.
 There are a few ways to disable the MOTD altogether. You can touch the file ~/.</description>
-    </item>
-    
-    <item>
-      <title>Flask migration of non-nullable fields</title>
-      <link>https://mosesokemwa.github.io/public/alembic_migrations/</link>
-      <pubDate>Mon, 18 Feb 2019 12:21:14 +0300</pubDate>
-      
-      <guid>https://mosesokemwa.github.io/public/alembic_migrations/</guid>
-      <description>It is quite easy to add a non-nullable field to an empty table. Any migration tool, including Alembic, can automatically generate a migration file for you that is immediately ready for use, with no modifications required.
-The problem arises when you have a table that is populated with data. You specify that you want a new field that doesn’t accept null values, yet, you already have a host of rows on the table created prior to this new addition.</description>
     </item>
     
     <item>

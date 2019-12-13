@@ -1,0 +1,227 @@
+<!doctype html>
+<html class="no-js" lang="en-us">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="manifest" href="/manifest.json">
+
+    
+    <title>Flask migration of non-nullable fields &middot; Moses Okemwa</title>
+
+    <meta name="description" content="">
+    <link rel="canonical" href="https://mosesokemwa.github.io/public/flask_alembic_migrations/">
+
+    <link rel="manifest" href="/public/manifest.json">
+    <meta name="application-name" content="Flask migration of non-nullable fields &middot; Moses Okemwa">
+    <meta name="theme-color" content="#2271ff">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="fav/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="fav/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="fav/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="fav/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="fav/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="fav/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="fav/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="fav/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="fav/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="fav/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="fav/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="fav/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="fav/favicon-16x16.png">
+
+    
+
+    
+    <link rel="stylesheet" href="https://mosesokemwa.github.io/public/scss/main.min.bd66d0f4766f5e8330c9a410a7e64eb55b7bcc294602d8d48e670157386a59ea.css" integrity="sha256-vWbQ9HZvXoMwyaQQp&#43;ZOtVt7zClGAtjUjmcBVzhqWeo=" media="screen">
+
+</head>
+    <body>
+        <div class="page">
+            
+<header>
+    <nav class="navbar bg-moringa"></nav>
+</header>
+
+
+             
+            <div id="main">
+                
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="manifest" href="/manifest.json">
+
+    
+    <title>Flask migration of non-nullable fields &middot; Moses Okemwa</title>
+
+    <meta name="description" content="">
+    <link rel="canonical" href="https://mosesokemwa.github.io/public/flask_alembic_migrations/">
+
+    <link rel="manifest" href="/public/manifest.json">
+    <meta name="application-name" content="Flask migration of non-nullable fields &middot; Moses Okemwa">
+    <meta name="theme-color" content="#2271ff">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="fav/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="fav/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="fav/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="fav/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="fav/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="fav/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="fav/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="fav/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="fav/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="fav/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="fav/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="fav/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="fav/favicon-16x16.png">
+
+    
+
+    
+    <link rel="stylesheet" href="https://mosesokemwa.github.io/public/scss/main.min.bd66d0f4766f5e8330c9a410a7e64eb55b7bcc294602d8d48e670157386a59ea.css" integrity="sha256-vWbQ9HZvXoMwyaQQp&#43;ZOtVt7zClGAtjUjmcBVzhqWeo=" media="screen">
+
+</head>
+<ol class="breadcrumb">
+
+
+
+
+
+<li class="breadcrumb-item">
+    <a href="https://mosesokemwa.github.io/public/">Moses Okemwa</a>
+</li>
+
+
+
+
+<li class="breadcrumb-item active d-sm-none d-md-block">
+Flask migration of non-nullable fields
+</li>
+
+
+</ol>
+
+<article>
+    <h1>Flask migration of non-nullable fields</h1>
+    
+
+
+
+
+<div>
+    <time class="meta-date" datetime="2019-10-12">
+    October 12, 2019
+    </time>
+</div>
+    
+    
+
+    <div>
+        
+          <a class="previous" href="https://mosesokemwa.github.io/public/to-my-future-boss/"> To my future boss</a>
+        
+        
+    </div>
+
+
+    <section id="content">
+        <p>It is quite easy to add a <code>non-nullable</code> field to an empty table.
+Any migration tool, including <a href="https://alembic.sqlalchemy.org/en/latest/tutorial.html">Alembic</a>, can automatically generate a migration file for you that is immediately ready for use, with no modifications required.</p>
+<p>The problem arises when you have a table that is populated with data. You specify that you want a new field that doesn’t accept null values, yet, you already have a host of rows on the table created prior to this new addition. These rows won’t have values for the new field so they would default to null.</p>
+<p>Alembic still generates a migration script but you will need to add some code of your own to successfully make the schema change. You want to add code to the migration script that sets a default value on the field as Alembic doesn’t handle this automatically.</p>
+<p>Say you wanted to add a new boolean field: <code>is_admin</code>.</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#008000;font-weight:bold">class</span> <span style="color:#00f;font-weight:bold">User</span>(db<span style="color:#666">.</span>Model):
+    <span style="color:#408080;font-style:italic"># other fields</span>
+    is_admin <span style="color:#666">=</span> db<span style="color:#666">.</span>Column(db<span style="color:#666">.</span>Boolean, default<span style="color:#666">=</span>False, nullable<span style="color:#666">=</span>False)
+</code></pre></div><p>Alembic would generate the migration script below</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#008000;font-weight:bold">from</span> <span style="color:#00f;font-weight:bold">alembic</span> <span style="color:#008000;font-weight:bold">import</span> op
+<span style="color:#008000;font-weight:bold">import</span> <span style="color:#00f;font-weight:bold">sqlalchemy</span> <span style="color:#008000;font-weight:bold">as</span> <span style="color:#00f;font-weight:bold">sa</span>
+<span style="color:#408080;font-style:italic"># revision identifiers, used by Alembic.</span>
+revision <span style="color:#666">=</span> <span style="color:#ba2121"></span><span style="color:#ba2121">&#39;</span><span style="color:#ba2121">635d30762810</span><span style="color:#ba2121">&#39;</span>
+down_revision <span style="color:#666">=</span> <span style="color:#ba2121"></span><span style="color:#ba2121">&#39;</span><span style="color:#ba2121">ad4b629ace65</span><span style="color:#ba2121">&#39;</span>
+branch_labels <span style="color:#666">=</span> None
+depends_on <span style="color:#666">=</span> None
+<span style="color:#008000;font-weight:bold">def</span> <span style="color:#00f">upgrade</span>():
+    <span style="color:#408080;font-style:italic"># ### commands auto generated by Alembic - please adjust! ###</span>
+    op<span style="color:#666">.</span>add_column(
+        <span style="color:#ba2121"></span><span style="color:#ba2121">&#39;</span><span style="color:#ba2121">users</span><span style="color:#ba2121">&#39;</span>,
+        sa<span style="color:#666">.</span>Column(<span style="color:#ba2121"></span><span style="color:#ba2121">&#39;</span><span style="color:#ba2121">is_admin</span><span style="color:#ba2121">&#39;</span>, sa<span style="color:#666">.</span>Boolean(), nullable<span style="color:#666">=</span>False)
+    )
+    <span style="color:#408080;font-style:italic"># ### end Alembic commands ###</span>
+<span style="color:#008000;font-weight:bold">def</span> <span style="color:#00f">downgrade</span>():
+    <span style="color:#408080;font-style:italic"># ### commands auto generated by Alembic - please adjust! ###</span>
+    op<span style="color:#666">.</span>drop_column(<span style="color:#ba2121"></span><span style="color:#ba2121">&#39;</span><span style="color:#ba2121">users</span><span style="color:#ba2121">&#39;</span>, <span style="color:#ba2121"></span><span style="color:#ba2121">&#39;</span><span style="color:#ba2121">is_admin</span><span style="color:#ba2121">&#39;</span>)
+    <span style="color:#408080;font-style:italic"># ### end Alembic commands ###</span>
+</code></pre></div><p>If you try to apply this migration as is, you are going to get an error saying</p>
+<pre><code>sqlalchemy.exc.IntegrityError: (psycopg2.IntegrityError) column &quot;is_admin&quot; contains null values
+ [SQL: 'ALTER TABLE users ADD COLUMN is_admin BOOLEAN NOT NULL'] (Background on this error at: http://sqlalche.me/e/gkpj)
+</code></pre><p>This error is reporting that we have <code>null values</code> which the <code>nullable=False</code> constraint doesn’t permit. We can fix this by doing the following:</p>
+<ul>
+<li>Add the new column: is_admin with nullable set to True</li>
+<li>Then update the value of the field on all existing rows to false</li>
+<li>Then update the column is_admin to be non-nullable
+Here is what the updated migration script looks like. The updated portions have been emphasized.</li>
+</ul>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#008000;font-weight:bold">from</span> <span style="color:#00f;font-weight:bold">alembic</span> <span style="color:#008000;font-weight:bold">import</span> op
+<span style="color:#008000;font-weight:bold">import</span> <span style="color:#00f;font-weight:bold">sqlalchemy</span> <span style="color:#008000;font-weight:bold">as</span> <span style="color:#00f;font-weight:bold">sa</span>
+<span style="color:#408080;font-style:italic"># revision identifiers, used by Alembic.</span>
+revision <span style="color:#666">=</span> <span style="color:#ba2121"></span><span style="color:#ba2121">&#39;</span><span style="color:#ba2121">635d30762810</span><span style="color:#ba2121">&#39;</span>
+down_revision <span style="color:#666">=</span> <span style="color:#ba2121"></span><span style="color:#ba2121">&#39;</span><span style="color:#ba2121">ad4b629ace65</span><span style="color:#ba2121">&#39;</span>
+branch_labels <span style="color:#666">=</span> None
+depends_on <span style="color:#666">=</span> None
+<span style="color:#008000;font-weight:bold">def</span> <span style="color:#00f">upgrade</span>():
+    <span style="color:#408080;font-style:italic"># ### commands auto generated by Alembic - please adjust! ###</span>
+    op<span style="color:#666">.</span>add_column(
+        <span style="color:#ba2121"></span><span style="color:#ba2121">&#39;</span><span style="color:#ba2121">users</span><span style="color:#ba2121">&#39;</span>,
+        sa<span style="color:#666">.</span>Column(<span style="color:#ba2121"></span><span style="color:#ba2121">&#39;</span><span style="color:#ba2121">is_admin</span><span style="color:#ba2121">&#39;</span>, sa<span style="color:#666">.</span>Boolean(), nullable<span style="color:#666">=</span>True)
+    )
+    <span style="color:#408080;font-style:italic"># updated part</span>
+    op<span style="color:#666">.</span>execute(<span style="color:#ba2121"></span><span style="color:#ba2121">&#34;</span><span style="color:#ba2121">UPDATE users SET is_admin = false</span><span style="color:#ba2121">&#34;</span>)
+    op<span style="color:#666">.</span>alter_column(<span style="color:#ba2121"></span><span style="color:#ba2121">&#39;</span><span style="color:#ba2121">users</span><span style="color:#ba2121">&#39;</span>, <span style="color:#ba2121"></span><span style="color:#ba2121">&#39;</span><span style="color:#ba2121">is_admin</span><span style="color:#ba2121">&#39;</span>, nullable<span style="color:#666">=</span>False)
+    <span style="color:#408080;font-style:italic"># ### end Alembic commands ###</span>
+<span style="color:#008000;font-weight:bold">def</span> <span style="color:#00f">downgrade</span>():
+    <span style="color:#408080;font-style:italic"># ### commands auto generated by Alembic - please adjust! ###</span>
+    op<span style="color:#666">.</span>drop_column(<span style="color:#ba2121"></span><span style="color:#ba2121">&#39;</span><span style="color:#ba2121">users</span><span style="color:#ba2121">&#39;</span>, <span style="color:#ba2121"></span><span style="color:#ba2121">&#39;</span><span style="color:#ba2121">is_admin</span><span style="color:#ba2121">&#39;</span>)
+    <span style="color:#408080;font-style:italic"># ### end Alembic commands ###</span>
+</code></pre></div><p>We only need to make this change to the migration script, we do not need to make any changes to the User model.</p>
+<p>When you try applying the migrate command, you should see that the operation is executed successfully this time. You can verify that all existing users have the is_admin column set to false. At this point, you can update the column on selected rows to true.</p>
+<p>In this piece, we assumed that the bulk of the users would be non-admin users. And that is all it takes to add a non-nullable field to an already populated table.</p>
+<p>This is a recurring theme when using Alembic, you would find yourself having to manually craft your own migration commands. As you have seen in this tutorial, it can be quite straightforward to make modifications to the auto-generated script.</p>
+<p>A little knowledge of SQL is all you need to write the exact migration script that fit your use case.</p>
+
+    </section>
+</article>
+
+            </div>
+            
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <p>Made with &hearts; in Nairobi &middot; 2019</p>
+                    <p><a href="/" target="_blank">Home</a></p>
+                    <p><a href="mailto:okemwamoses@gmail.com" target="_blank">Email</a></p>
+                    <p><a href="https://github.com/mosesokemwa" target="_blank">Github</a></p>
+                    <p><a href="https://linkedin.com/in/mosesokemwa/" target="_blank">LinkedIn</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+        </div>
+    </body>
+
+</html>

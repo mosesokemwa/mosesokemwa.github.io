@@ -115,7 +115,7 @@ Disabling Ubuntu MOTD spam
 
 <article>
     <h1>Disabling Ubuntu MOTD spam</h1>
-
+    
 
 
 
@@ -125,6 +125,19 @@ Disabling Ubuntu MOTD spam
     February 25, 2019
     </time>
 </div>
+    
+    
+
+    <div>
+        
+          <a class="previous" href="https://mosesokemwa.github.io/public/broken-image-handling/"> Broken image handling with jQuery</a>
+        
+        
+          <a class="next" href="https://mosesokemwa.github.io/public/nginx-setup/"> Seting up NGINX</a>
+        
+    </div>
+
+
     <section id="content">
         <p>When you log into an Ubuntu machine using SSH or a console, you’ll see a motd (“message of the day”) printed with some useful system information, as well as some useless marketing spam. The useless marketing spam is the same material you see when you visit <a href="motd.ubuntu.com">motd.ubuntu.com</a>. This is an affront to good taste, and should be disabled.</p>
 <p>There are a few ways to disable the MOTD altogether. You can touch the file <code>~/.hushlogin</code>. You can also edit <code>/etc/pam.d/sshd</code> and remove the lines referring to <code>pam_motd.so</code>. But these measures are a bit extreme. The default Ubutu motd has some useful information in it like the system load, and you might want to keep that information.</p>

@@ -1,6 +1,6 @@
 ---
 title: "Flask migration of non-nullable fields"
-date: 2019-02-18T12:21:14+03:00
+date: 2019-10-12T12:21:11+03:00
 draft: false
 ---
 

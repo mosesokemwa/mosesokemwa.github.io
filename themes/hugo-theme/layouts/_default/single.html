@@ -2,7 +2,32 @@
 {{ partial "breadcrumbs.html" . }}
 <article>
     <h1>{{ .Title }}</h1>
-{{partial "post_meta.html" .}}
+    {{partial "post_meta.html" .}}
+    {{ with .Params.topics }}
+    <ul id="topics">
+        {{ range . }}
+        <li><a href="{{ "topics" | absURL}}{{ . | urlize }}">{{ . }}</a> </li>
+        {{ end }}
+    </ul>
+    {{ end }}
+    {{ with .Params.tags }}
+    <ul id="tags">
+        {{ range . }}
+        <li> <a href="{{ "tags" | absURL }}{{ . | urlize }}">{{ . }}</a> </li>
+        {{ end }}
+    </ul>
+    {{ end }}
+
+    <div>
+        {{ with .PrevInSection }}
+          <a class="previous" href="{{.Permalink}}"> {{.Title}}</a>
+        {{ end }}
+        {{ with .NextInSection }}
+          <a class="next" href="{{.Permalink}}"> {{.Title}}</a>
+        {{ end }}
+    </div>
+
+
     <section id="content">
         {{ .Content }}
     </section>
