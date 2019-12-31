@@ -1,6 +1,6 @@
 ---
 title: "Time Complexities Of Python Data Structures"
-date: 2019-11-18T12:21:14+03:00
+date: 2019-12-24T17:58:14+03:00
 draft: True
 ---
 
@@ -12,7 +12,6 @@ It is crucial for a data scientist programmer to choose the right data structure
 Choosing the right data type is often ignored and it ends up badly impacting the performance of the application.
 Article Aim
 This article explains the Big-O notation of the key operations of data structures in CPython. The big-O notation is a way to measure the time complexity of an operation.
-Please read the disclaimer.
 
 1. Let’s Understand What Big O Notation Means?
 A number of operations are performed in an algorithm. These operations could include iterating over a collection, copying an item or the entire collection, appending an item into a collection, inserting an item at the start or end of a collection, deleting an item or updating an item in a collection.
