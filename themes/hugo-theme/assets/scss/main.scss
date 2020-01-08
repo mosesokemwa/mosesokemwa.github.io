@@ -114,27 +114,31 @@ header {
 }
 
 .post {
-    max-width: 1000px;
-    padding: 0 2rem;
-    margin: 0 auto;
+    // max-width: 1000px;
+    // padding: 0 2rem;
+    // margin: 0 auto;
 
     .container {
         margin: 2rem auto 1rem auto;
+        font-size: 1rem;
 
-        .meta {
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            font-weight: 600;
-            color: #96A3B6;
-            background: #ffffff;
-            display: inline-block;
-        }
+        table{
+            width: 0;
 
-        .title a {
-            text-decoration: none;
-            color: #000;
-            &:hover {
-                color: $moringa-dark;
+            .meta {
+                text-transform: uppercase;
+                font-weight: 600;
+                color: #96A3B6;
+                // background: #ffffff;
+            }
+
+            .title a {
+                // text-decoration: none;
+                // color: #000;
+                font-size: 1rem;
+                // &:hover {
+                //     color: $moringa-dark;
+                // }
             }
         }
     }
@@ -246,7 +250,7 @@ header {
     .hero-container {
         max-width: 800px;
         margin: 0 auto;
-        padding: 2.5rem 0;
+        padding: 1.5rem 0;
     }
 
     .hero-image {
@@ -360,9 +364,7 @@ footer {
     html {
         font-size: 15px;
     }
-
-    table>td>.read {
+    td.read {
         display: none;
     }
-
 }

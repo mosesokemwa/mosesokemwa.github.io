@@ -18,7 +18,11 @@
     </ul>
     {{ end }}
 
-    <div>
+    <section id="content">
+        {{ .Content }}
+    </section>
+
+      <div>
         {{ with .PrevInSection }}
           <a class="previous" href="{{.Permalink}}"> {{.Title}}</a>
         {{ end }}
@@ -26,10 +30,5 @@
           <a class="next" href="{{.Permalink}}"> {{.Title}}</a>
         {{ end }}
     </div>
-
-
-    <section id="content">
-        {{ .Content }}
-    </section>
 </article>
 {{ end }}
