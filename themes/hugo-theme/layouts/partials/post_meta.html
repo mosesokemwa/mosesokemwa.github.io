@@ -6,6 +6,8 @@
      explicitly, as the user might not have $author set and we'd get an error
      trying to use nil as the index value -->
 {{$authorDetailSet := and (.Site.Author) ($author)}}
+<div>
     <time class="meta-date" datetime="{{.Date.Format "2006-01-02" | safeHTML}}">
     {{.Date.Format "2006-01-02"}}
     </time>
+</div>
