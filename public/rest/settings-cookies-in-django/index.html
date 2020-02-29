@@ -12,13 +12,13 @@
     <link rel="manifest" href="/manifest.json">
 
     
-    <title>Disabling Ubuntu MOTD spam &middot; Moses Okemwa</title>
+    <title> &middot; Moses Okemwa</title>
 
     <meta name="description" content="">
-    <link rel="canonical" href="https://mosesokemwa.github.io/public/disabling-ubuntu-motd-spam/">
+    <link rel="canonical" href="https://mosesokemwa.github.io/public/rest/settings-cookies-in-django/">
 
     <link rel="manifest" href="/public/manifest.json">
-    <meta name="application-name" content="Disabling Ubuntu MOTD spam &middot; Moses Okemwa">
+    <meta name="application-name" content=" &middot; Moses Okemwa">
     <meta name="theme-color" content="#2271ff">
 
     <link rel="apple-touch-icon" sizes="57x57" href="fav/apple-icon-57x57.png">
@@ -64,13 +64,13 @@
     <link rel="manifest" href="/manifest.json">
 
     
-    <title>Disabling Ubuntu MOTD spam &middot; Moses Okemwa</title>
+    <title> &middot; Moses Okemwa</title>
 
     <meta name="description" content="">
-    <link rel="canonical" href="https://mosesokemwa.github.io/public/disabling-ubuntu-motd-spam/">
+    <link rel="canonical" href="https://mosesokemwa.github.io/public/rest/settings-cookies-in-django/">
 
     <link rel="manifest" href="/public/manifest.json">
-    <meta name="application-name" content="Disabling Ubuntu MOTD spam &middot; Moses Okemwa">
+    <meta name="application-name" content=" &middot; Moses Okemwa">
     <meta name="theme-color" content="#2271ff">
 
     <link rel="apple-touch-icon" sizes="57x57" href="fav/apple-icon-57x57.png">
@@ -99,6 +99,8 @@
 
 
 
+
+
 <li class="breadcrumb-item">
     <a href="https://mosesokemwa.github.io/public/">Moses Okemwa</a>
 </li>
@@ -106,42 +108,51 @@
 
 
 
+<li class="breadcrumb-item">
+    <a href="https://mosesokemwa.github.io/public/rest/">Rests</a>
+</li>
+
+
+
+
 <li class="breadcrumb-item active d-sm-none d-md-block">
-Disabling Ubuntu MOTD spam
+
 </li>
 
 
 </ol>
 
 <article>
-    <h1>Disabling Ubuntu MOTD spam</h1>
+    <h1></h1>
     
 
 
 
 
 <div>
-    <time class="meta-date" datetime="2019-02-25">
-    2019-02-25
+    <time class="meta-date" datetime="0001-01-01">
+    0001-01-01
     </time>
 </div>
     
     
 
     <section id="content">
-        <p>When you log into an Ubuntu machine using SSH or a console, you’ll see a motd (“message of the day”) printed with some useful system information, as well as some useless marketing spam. The useless marketing spam is the same material you see when you visit <a href="motd.ubuntu.com">motd.ubuntu.com</a>. This is an affront to good taste, and should be disabled.</p>
-<p>There are a few ways to disable the MOTD altogether. You can touch the file <code>~/.hushlogin</code>. You can also edit <code>/etc/pam.d/sshd</code> and remove the lines referring to <code>pam_motd.so</code>. But these measures are a bit extreme. The default Ubutu motd has some useful information in it like the system load, and you might want to keep that information.</p>
-<p>If you want to keep the motd minus the marketing spam, edit /etc/default/motd-news and set ENABLED=0. Here’s a handy one-liner that does it using sed:</p>
-<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#408080;font-style:italic"># Disable Ubuntu motd spam</span>
-$ sudo sed -i <span style="color:#ba2121">&#39;s/^ENABLED=.*/ENABLED=0/&#39;</span> /etc/default/motd-news
-</code></pre></div><p>If you configure your hosts using Ansible, you can use a task like this to achieve the same effect:</p>
-<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">- name: disable ubuntu motd-news
-  lineinfile:
-    dest: /etc/default/motd-news
-    state: present
-    regexp: <span style="color:#ba2121">&#39;^ENABLED=&#39;</span>
-    line: <span style="color:#ba2121">&#39;ENABLED=0&#39;</span>
-</code></pre></div>
+        <p>Using Django&rsquo;s session framework should cover most scenarios, but Django also now provide direct cookie manipulation methods on the request and response objects (so you don&rsquo;t need a helper function).</p>
+<p>Setting a cookie:</p>
+<p>def view(request):
+response = HttpResponse(&lsquo;blah&rsquo;)
+response.set_cookie(&lsquo;cookie_name&rsquo;, &lsquo;cookie_value&rsquo;)
+Retrieving a cookie:</p>
+<p>def view(request):
+value = request.COOKIES.get(&lsquo;cookie_name&rsquo;)
+if value is None:
+# Cookie is not set</p>
+<h1 id="or">OR</h1>
+<p>try:
+value = request.COOKIES[&lsquo;cookie_name&rsquo;]
+except KeyError:</p>
+
     </section>
 
 </article>

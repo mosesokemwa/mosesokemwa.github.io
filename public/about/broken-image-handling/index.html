@@ -12,13 +12,13 @@
     <link rel="manifest" href="/manifest.json">
 
     
-    <title>Disabling Ubuntu MOTD spam &middot; Moses Okemwa</title>
+    <title>Broken image handling with jQuery &middot; Moses Okemwa</title>
 
     <meta name="description" content="">
-    <link rel="canonical" href="https://mosesokemwa.github.io/public/disabling-ubuntu-motd-spam/">
+    <link rel="canonical" href="https://mosesokemwa.github.io/public/about/broken-image-handling/">
 
     <link rel="manifest" href="/public/manifest.json">
-    <meta name="application-name" content="Disabling Ubuntu MOTD spam &middot; Moses Okemwa">
+    <meta name="application-name" content="Broken image handling with jQuery &middot; Moses Okemwa">
     <meta name="theme-color" content="#2271ff">
 
     <link rel="apple-touch-icon" sizes="57x57" href="fav/apple-icon-57x57.png">
@@ -64,13 +64,13 @@
     <link rel="manifest" href="/manifest.json">
 
     
-    <title>Disabling Ubuntu MOTD spam &middot; Moses Okemwa</title>
+    <title>Broken image handling with jQuery &middot; Moses Okemwa</title>
 
     <meta name="description" content="">
-    <link rel="canonical" href="https://mosesokemwa.github.io/public/disabling-ubuntu-motd-spam/">
+    <link rel="canonical" href="https://mosesokemwa.github.io/public/about/broken-image-handling/">
 
     <link rel="manifest" href="/public/manifest.json">
-    <meta name="application-name" content="Disabling Ubuntu MOTD spam &middot; Moses Okemwa">
+    <meta name="application-name" content="Broken image handling with jQuery &middot; Moses Okemwa">
     <meta name="theme-color" content="#2271ff">
 
     <link rel="apple-touch-icon" sizes="57x57" href="fav/apple-icon-57x57.png">
@@ -99,6 +99,8 @@
 
 
 
+
+
 <li class="breadcrumb-item">
     <a href="https://mosesokemwa.github.io/public/">Moses Okemwa</a>
 </li>
@@ -106,42 +108,64 @@
 
 
 
+<li class="breadcrumb-item">
+    <a href="https://mosesokemwa.github.io/public/about/">Abouts</a>
+</li>
+
+
+
+
 <li class="breadcrumb-item active d-sm-none d-md-block">
-Disabling Ubuntu MOTD spam
+Broken image handling with jQuery
 </li>
 
 
 </ol>
 
 <article>
-    <h1>Disabling Ubuntu MOTD spam</h1>
+    <h1>Broken image handling with jQuery</h1>
     
 
 
 
 
 <div>
-    <time class="meta-date" datetime="2019-02-25">
-    2019-02-25
+    <time class="meta-date" datetime="2019-02-03">
+    2019-02-03
     </time>
 </div>
     
     
 
     <section id="content">
-        <p>When you log into an Ubuntu machine using SSH or a console, you’ll see a motd (“message of the day”) printed with some useful system information, as well as some useless marketing spam. The useless marketing spam is the same material you see when you visit <a href="motd.ubuntu.com">motd.ubuntu.com</a>. This is an affront to good taste, and should be disabled.</p>
-<p>There are a few ways to disable the MOTD altogether. You can touch the file <code>~/.hushlogin</code>. You can also edit <code>/etc/pam.d/sshd</code> and remove the lines referring to <code>pam_motd.so</code>. But these measures are a bit extreme. The default Ubutu motd has some useful information in it like the system load, and you might want to keep that information.</p>
-<p>If you want to keep the motd minus the marketing spam, edit /etc/default/motd-news and set ENABLED=0. Here’s a handy one-liner that does it using sed:</p>
-<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#408080;font-style:italic"># Disable Ubuntu motd spam</span>
-$ sudo sed -i <span style="color:#ba2121">&#39;s/^ENABLED=.*/ENABLED=0/&#39;</span> /etc/default/motd-news
-</code></pre></div><p>If you configure your hosts using Ansible, you can use a task like this to achieve the same effect:</p>
-<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">- name: disable ubuntu motd-news
-  lineinfile:
-    dest: /etc/default/motd-news
-    state: present
-    regexp: <span style="color:#ba2121">&#39;^ENABLED=&#39;</span>
-    line: <span style="color:#ba2121">&#39;ENABLED=0&#39;</span>
-</code></pre></div>
+        <p>Missing images will either just display nothing, or display a [ ? ] style box when their source cannot be found. Instead, you may want to replace that with a &ldquo;missing image&rdquo; graphic that you are sure exists so there is better visual feedback that something is wrong. Or, you might want to hide it entirely. This is possible because images that a browser can&rsquo;t find fire off an &ldquo;error&rdquo; JavaScript event we can watch for.</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#408080;font-style:italic">// Jquery
+</span><span style="color:#408080;font-style:italic">// Replace source
+</span><span style="color:#408080;font-style:italic"></span>$(<span style="color:#ba2121">&#34;img&#34;</span>).on(<span style="color:#ba2121">&#34;error&#34;</span>, <span style="color:#008000;font-weight:bold">function</span>() {
+  $(<span style="color:#008000;font-weight:bold">this</span>).attr(<span style="color:#ba2121">&#34;src&#34;</span>, <span style="color:#ba2121">&#34;/images/missing.png&#34;</span>);
+});
+
+<span style="color:#408080;font-style:italic">// Or, hide them
+</span><span style="color:#408080;font-style:italic"></span>$(<span style="color:#ba2121">&#34;img&#34;</span>).on(<span style="color:#ba2121">&#34;error&#34;</span>, <span style="color:#008000;font-weight:bold">function</span>() {
+  $(<span style="color:#008000;font-weight:bold">this</span>).hide();
+});
+</code></pre></div><p>But what if you have thousands of images, seeing the same image when handling the missing image error can be boring to the user. So to make it fun, why not a bit further and select random images in an array.</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#408080;font-style:italic">// Jquery
+</span><span style="color:#408080;font-style:italic">// Replace source
+</span><span style="color:#408080;font-style:italic"></span>
+<span style="color:#008000;font-weight:bold">var</span> images <span style="color:#666">=</span> [<span style="color:#ba2121">&#34;0.png&#34;</span>, <span style="color:#ba2121">&#34;1.png&#34;</span>, <span style="color:#ba2121">&#34;2.png&#34;</span>, <span style="color:#ba2121">&#34;3.png&#34;</span>, <span style="color:#ba2121">&#34;4.png&#34;</span>, <span style="color:#ba2121">&#34;5.png&#34;</span>];
+<span style="color:#008000;font-weight:bold">var</span> rand <span style="color:#666">=</span> images[<span style="color:#008000">Math</span>.floor(<span style="color:#008000">Math</span>.random() <span style="color:#666">*</span> images.length)];
+
+$(<span style="color:#ba2121">&#34;img&#34;</span>).on(<span style="color:#ba2121">&#34;error&#34;</span>, <span style="color:#008000;font-weight:bold">function</span>() {
+  $(<span style="color:#008000;font-weight:bold">this</span>).attr(<span style="color:#ba2121">&#34;src&#34;</span>, <span style="color:#ba2121">&#34;/images/&#34;</span> <span style="color:#666">+</span> rand);
+});
+
+<span style="color:#408080;font-style:italic">// Or, hide them
+</span><span style="color:#408080;font-style:italic"></span>$(<span style="color:#ba2121">&#34;img&#34;</span>).on(<span style="color:#ba2121">&#34;error&#34;</span>, <span style="color:#008000;font-weight:bold">function</span>() {
+  $(<span style="color:#008000;font-weight:bold">this</span>).hide();
+});
+</code></pre></div><p>the expansion potential for this piece of code is endless, so I&rsquo;m going to have fun finding out what I can do with this</p>
+
     </section>
 
 </article>

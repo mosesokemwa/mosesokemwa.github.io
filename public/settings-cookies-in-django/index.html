@@ -12,13 +12,13 @@
     <link rel="manifest" href="/manifest.json">
 
     
-    <title>Disabling Ubuntu MOTD spam &middot; Moses Okemwa</title>
+    <title>Django&#39;s session and cookie manipulation &middot; Moses Okemwa</title>
 
     <meta name="description" content="">
-    <link rel="canonical" href="https://mosesokemwa.github.io/public/disabling-ubuntu-motd-spam/">
+    <link rel="canonical" href="https://mosesokemwa.github.io/public/settings-cookies-in-django/">
 
     <link rel="manifest" href="/public/manifest.json">
-    <meta name="application-name" content="Disabling Ubuntu MOTD spam &middot; Moses Okemwa">
+    <meta name="application-name" content="Django&#39;s session and cookie manipulation &middot; Moses Okemwa">
     <meta name="theme-color" content="#2271ff">
 
     <link rel="apple-touch-icon" sizes="57x57" href="fav/apple-icon-57x57.png">
@@ -64,13 +64,13 @@
     <link rel="manifest" href="/manifest.json">
 
     
-    <title>Disabling Ubuntu MOTD spam &middot; Moses Okemwa</title>
+    <title>Django&#39;s session and cookie manipulation &middot; Moses Okemwa</title>
 
     <meta name="description" content="">
-    <link rel="canonical" href="https://mosesokemwa.github.io/public/disabling-ubuntu-motd-spam/">
+    <link rel="canonical" href="https://mosesokemwa.github.io/public/settings-cookies-in-django/">
 
     <link rel="manifest" href="/public/manifest.json">
-    <meta name="application-name" content="Disabling Ubuntu MOTD spam &middot; Moses Okemwa">
+    <meta name="application-name" content="Django&#39;s session and cookie manipulation &middot; Moses Okemwa">
     <meta name="theme-color" content="#2271ff">
 
     <link rel="apple-touch-icon" sizes="57x57" href="fav/apple-icon-57x57.png">
@@ -107,40 +107,44 @@
 
 
 <li class="breadcrumb-item active d-sm-none d-md-block">
-Disabling Ubuntu MOTD spam
+Django&#39;s session and cookie manipulation
 </li>
 
 
 </ol>
 
 <article>
-    <h1>Disabling Ubuntu MOTD spam</h1>
+    <h1>Django&#39;s session and cookie manipulation</h1>
     
 
 
 
 
 <div>
-    <time class="meta-date" datetime="2019-02-25">
-    2019-02-25
+    <time class="meta-date" datetime="2020-02-29">
+    2020-02-29
     </time>
 </div>
     
     
 
     <section id="content">
-        <p>When you log into an Ubuntu machine using SSH or a console, you’ll see a motd (“message of the day”) printed with some useful system information, as well as some useless marketing spam. The useless marketing spam is the same material you see when you visit <a href="motd.ubuntu.com">motd.ubuntu.com</a>. This is an affront to good taste, and should be disabled.</p>
-<p>There are a few ways to disable the MOTD altogether. You can touch the file <code>~/.hushlogin</code>. You can also edit <code>/etc/pam.d/sshd</code> and remove the lines referring to <code>pam_motd.so</code>. But these measures are a bit extreme. The default Ubutu motd has some useful information in it like the system load, and you might want to keep that information.</p>
-<p>If you want to keep the motd minus the marketing spam, edit /etc/default/motd-news and set ENABLED=0. Here’s a handy one-liner that does it using sed:</p>
-<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#408080;font-style:italic"># Disable Ubuntu motd spam</span>
-$ sudo sed -i <span style="color:#ba2121">&#39;s/^ENABLED=.*/ENABLED=0/&#39;</span> /etc/default/motd-news
-</code></pre></div><p>If you configure your hosts using Ansible, you can use a task like this to achieve the same effect:</p>
-<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">- name: disable ubuntu motd-news
-  lineinfile:
-    dest: /etc/default/motd-news
-    state: present
-    regexp: <span style="color:#ba2121">&#39;^ENABLED=&#39;</span>
-    line: <span style="color:#ba2121">&#39;ENABLED=0&#39;</span>
+        <p>Django provide direct cookie manipulation methods on the request and response objects (so you don&rsquo;t need a helper function).</p>
+<p>Setting a cookie:</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#008000;font-weight:bold">def</span> <span style="color:#00f">view</span>(request):
+  response <span style="color:#666">=</span> HttpResponse(<span style="color:#ba2121">&#39;blah&#39;</span>)
+  response<span style="color:#666">.</span>set_cookie(<span style="color:#ba2121">&#39;cookie_name&#39;</span>, <span style="color:#ba2121">&#39;cookie_value&#39;</span>)
+</code></pre></div><p>Retrieving a cookie:</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#008000;font-weight:bold">def</span> <span style="color:#00f">view</span>(request):
+  value <span style="color:#666">=</span> request<span style="color:#666">.</span>COOKIES<span style="color:#666">.</span>get(<span style="color:#ba2121">&#39;cookie_name&#39;</span>)
+  <span style="color:#008000;font-weight:bold">if</span> value <span style="color:#a2f;font-weight:bold">is</span> None:
+    <span style="color:#408080;font-style:italic"># Cookie is not set</span>
+
+  <span style="color:#408080;font-style:italic"># OR</span>
+
+  <span style="color:#008000;font-weight:bold">try</span>:
+    value <span style="color:#666">=</span> request<span style="color:#666">.</span>COOKIES[<span style="color:#ba2121">&#39;cookie_name&#39;</span>]
+  <span style="color:#008000;font-weight:bold">except</span> <span style="color:#d2413a;font-weight:bold">KeyError</span>:
 </code></pre></div>
     </section>
 

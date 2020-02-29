@@ -3,12 +3,17 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://mosesokemwa.github.io/public/flask_alembic_migrations/</loc>
-    <lastmod>2019-10-12T12:21:11+03:00</lastmod>
+    <loc>https://mosesokemwa.github.io/public/settings-cookies-in-django/</loc>
+    <lastmod>2020-02-29T12:13:39+03:00</lastmod>
   </url>
   
   <url>
     <loc>https://mosesokemwa.github.io/public/</loc>
+    <lastmod>2020-02-29T12:13:39+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mosesokemwa.github.io/public/flask_alembic_migrations/</loc>
     <lastmod>2019-10-12T12:21:11+03:00</lastmod>
   </url>
   
