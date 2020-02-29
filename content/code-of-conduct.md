@@ -1,5 +1,5 @@
 ---
-title: "Kick off - The brain that Is"
+title: "Code of conduct"
 date: 2019-01-24T18:15:14+03:00
 draft: false
 ---
