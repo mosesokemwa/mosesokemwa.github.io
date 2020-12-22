@@ -5,11 +5,17 @@
     <link>https://mosesokemwa.github.io/public/</link>
     <description>Recent content on Moses Okemwa</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sat, 29 Feb 2020 12:13:39 +0300</lastBuildDate>
-    
-	<atom:link href="https://mosesokemwa.github.io/public/index.xml" rel="self" type="application/rss+xml" />
-    
+    <language>en-us</language><atom:link href="https://mosesokemwa.github.io/public/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Getting Django models into admin</title>
+      <link>https://mosesokemwa.github.io/public/getting-django-models-into-admin/</link>
+      <pubDate>Sun, 13 Dec 2020 22:17:14 +0300</pubDate>
+      
+      <guid>https://mosesokemwa.github.io/public/getting-django-models-into-admin/</guid>
+      <description>I needed a shortcut to register all my models in Django admin, spent a few hours tinkering and finllay found a shortcut.
+The only downside is it registers everything, does not provide the custom options of including/excluding fields by putting fields that you need in the admin. If you feel creative, feel free to extend the functionality.
+from django.apps import apps from django.contrib import admin class ListAdminMixin(object): def __init__(self, model, admin_site): self.</description>
+    </item>
     
     <item>
       <title>Django&#39;s session and cookie manipulation</title>

@@ -12,13 +12,13 @@
     <link rel="manifest" href="/manifest.json">
 
     
-    <title>Disabling Ubuntu MOTD spam &middot; Moses Okemwa</title>
+    <title>Getting Django models into admin &middot; Moses Okemwa</title>
 
     <meta name="description" content="">
-    <link rel="canonical" href="https://mosesokemwa.github.io/public/disabling-ubuntu-motd-spam/">
+    <link rel="canonical" href="https://mosesokemwa.github.io/public/getting-django-models-into-admin/">
 
     <link rel="manifest" href="/public/manifest.json">
-    <meta name="application-name" content="Disabling Ubuntu MOTD spam &middot; Moses Okemwa">
+    <meta name="application-name" content="Getting Django models into admin &middot; Moses Okemwa">
     <meta name="theme-color" content="#2271ff">
 
     <link rel="apple-touch-icon" sizes="57x57" href="fav/apple-icon-57x57.png">
@@ -64,13 +64,13 @@
     <link rel="manifest" href="/manifest.json">
 
     
-    <title>Disabling Ubuntu MOTD spam &middot; Moses Okemwa</title>
+    <title>Getting Django models into admin &middot; Moses Okemwa</title>
 
     <meta name="description" content="">
-    <link rel="canonical" href="https://mosesokemwa.github.io/public/disabling-ubuntu-motd-spam/">
+    <link rel="canonical" href="https://mosesokemwa.github.io/public/getting-django-models-into-admin/">
 
     <link rel="manifest" href="/public/manifest.json">
-    <meta name="application-name" content="Disabling Ubuntu MOTD spam &middot; Moses Okemwa">
+    <meta name="application-name" content="Getting Django models into admin &middot; Moses Okemwa">
     <meta name="theme-color" content="#2271ff">
 
     <link rel="apple-touch-icon" sizes="57x57" href="fav/apple-icon-57x57.png">
@@ -107,40 +107,47 @@
 
 
 <li class="breadcrumb-item active d-sm-none d-md-block">
-Disabling Ubuntu MOTD spam
+Getting Django models into admin
 </li>
 
 
 </ol>
 
 <article>
-    <h1>Disabling Ubuntu MOTD spam</h1>
+    <h1>Getting Django models into admin</h1>
     
 
 
 
 
 <div>
-    <time class="meta-date" datetime="2019-02-25">
-    2019-02-25
+    <time class="meta-date" datetime="2020-12-13">
+    2020-12-13
     </time>
 </div>
     
     
 
     <section id="content">
-        <p>When you log into an Ubuntu machine using SSH or a console, you’ll see a motd (“message of the day”) printed with some useful system information, as well as some useless marketing spam. The useless marketing spam is the same material you see when you visit <a href="motd.ubuntu.com">motd.ubuntu.com</a>. This is an affront to good taste, and should be disabled.</p>
-<p>There are a few ways to disable the MOTD altogether. You can touch the file <code>~/.hushlogin</code>. You can also edit <code>/etc/pam.d/sshd</code> and remove the lines referring to <code>pam_motd.so</code>. But these measures are a bit extreme. The default Ubutu motd has some useful information in it like the system load, and you might want to keep that information.</p>
-<p>If you want to keep the motd minus the marketing spam, edit /etc/default/motd-news and set ENABLED=0. Here’s a handy one-liner that does it using sed:</p>
-<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#408080;font-style:italic"># Disable Ubuntu motd spam</span>
-$ sudo sed -i <span style="color:#ba2121">&#39;s/^ENABLED=.*/ENABLED=0/&#39;</span> /etc/default/motd-news
-</code></pre></div><p>If you configure your hosts using Ansible, you can use a task like this to achieve the same effect:</p>
-<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">- name: disable ubuntu motd-news
-  lineinfile:
-    dest: /etc/default/motd-news
-    state: present
-    regexp: <span style="color:#ba2121">&#39;^ENABLED=&#39;</span>
-    line: <span style="color:#ba2121">&#39;ENABLED=0&#39;</span>
+        <p>I needed a shortcut to register all my models in Django admin, spent a few hours tinkering and finllay found a shortcut.</p>
+<p>The only downside is it registers everything, does not provide the custom options of including/excluding fields by putting fields that you need in the admin. If you feel creative, feel free to extend the functionality.</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#008000;font-weight:bold">from</span> <span style="color:#00f;font-weight:bold">django.apps</span> <span style="color:#008000;font-weight:bold">import</span> apps
+<span style="color:#008000;font-weight:bold">from</span> <span style="color:#00f;font-weight:bold">django.contrib</span> <span style="color:#008000;font-weight:bold">import</span> admin
+
+
+<span style="color:#008000;font-weight:bold">class</span> <span style="color:#00f;font-weight:bold">ListAdminMixin</span>(<span style="color:#008000">object</span>):
+    <span style="color:#008000;font-weight:bold">def</span> __init__(self, model, admin_site):
+        self<span style="color:#666">.</span>list_display <span style="color:#666">=</span> [field<span style="color:#666">.</span>name <span style="color:#008000;font-weight:bold">for</span> field <span style="color:#a2f;font-weight:bold">in</span> model<span style="color:#666">.</span>_meta<span style="color:#666">.</span>fields]
+        <span style="color:#008000">super</span>(ListAdminMixin, self)<span style="color:#666">.</span>__init__(model, admin_site)
+
+
+models <span style="color:#666">=</span> apps<span style="color:#666">.</span>get_models()
+<span style="color:#008000;font-weight:bold">for</span> model <span style="color:#a2f;font-weight:bold">in</span> models:
+    admin_class <span style="color:#666">=</span> <span style="color:#008000">type</span>(<span style="color:#ba2121">&#39;AdminClass&#39;</span>, (ListAdminMixin, admin<span style="color:#666">.</span>ModelAdmin), {})
+    <span style="color:#008000;font-weight:bold">try</span>:
+        admin<span style="color:#666">.</span>site<span style="color:#666">.</span>register(model, admin_class)
+    <span style="color:#008000;font-weight:bold">except</span> admin<span style="color:#666">.</span>sites<span style="color:#666">.</span>AlreadyRegistered:
+        <span style="color:#008000;font-weight:bold">pass</span>
 </code></pre></div>
     </section>
 

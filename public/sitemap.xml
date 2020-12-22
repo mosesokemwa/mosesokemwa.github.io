@@ -3,12 +3,12 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://mosesokemwa.github.io/public/settings-cookies-in-django/</loc>
-    <lastmod>2020-02-29T12:13:39+03:00</lastmod>
+    <loc>https://mosesokemwa.github.io/public/getting-django-models-into-admin/</loc>
+    <lastmod>2020-12-13T22:17:14+03:00</lastmod>
   </url>
   
   <url>
-    <loc>https://mosesokemwa.github.io/public/</loc>
+    <loc>https://mosesokemwa.github.io/public/settings-cookies-in-django/</loc>
     <lastmod>2020-02-29T12:13:39+03:00</lastmod>
   </url>
   
@@ -44,6 +44,10 @@
   
   <url>
     <loc>https://mosesokemwa.github.io/public/categories/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mosesokemwa.github.io/public/</loc>
   </url>
   
   <url>
