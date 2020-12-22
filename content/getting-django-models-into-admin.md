@@ -1,6 +1,6 @@
 ---
 title: "Getting Django models into admin"
-date: 2020-12-10T22:17:14+03:00
+date: 2020-12-13T22:17:14+03:00
 draft: false
 ---
 
