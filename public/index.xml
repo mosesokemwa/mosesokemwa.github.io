@@ -7,6 +7,18 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language><atom:link href="https://mosesokemwa.github.io/public/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Extracting Nested Query Params</title>
+      <link>https://mosesokemwa.github.io/public/extract-nested-query-params/</link>
+      <pubDate>Wed, 10 Feb 2021 14:29:14 +0300</pubDate>
+      
+      <guid>https://mosesokemwa.github.io/public/extract-nested-query-params/</guid>
+      <description>This is a very niche problem I was trying to solve.
+/api/v1/data?url=https://mysite.com/blog/blopost1?callbackUrl=https://webhook.com/api/me In this link I needed to get the url and nested call back query params, when parsed to the api data endpoint All this was a scope-creep and needed to ebe solved in the shorted time possible
+My take: NodeJs is powerful, you just need to know where to look(documentation) and who to consult(documentation)
+const url = require(&amp;#39;url&amp;#39;); //https://nodejs.</description>
+    </item>
+    
+    <item>
       <title>Getting Django models into admin</title>
       <link>https://mosesokemwa.github.io/public/getting-django-models-into-admin/</link>
       <pubDate>Sun, 13 Dec 2020 22:17:14 +0300</pubDate>

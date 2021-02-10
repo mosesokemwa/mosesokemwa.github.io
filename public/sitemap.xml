@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://mosesokemwa.github.io/public/extract-nested-query-params/</loc>
+    <lastmod>2021-02-10T14:29:14+03:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://mosesokemwa.github.io/public/getting-django-models-into-admin/</loc>
     <lastmod>2020-12-13T22:17:14+03:00</lastmod>
   </url>
