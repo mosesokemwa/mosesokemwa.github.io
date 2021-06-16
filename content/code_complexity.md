@@ -1,7 +1,8 @@
 ---
 title: "Time Complexities Of Python Data Structures"
 date: 2019-12-24T17:58:14+03:00
-draft: True
+draft: true
+slug: code complexity
 ---
 
 ### An Important Article For Everyone Using Python Programming Language In Data Science Projects

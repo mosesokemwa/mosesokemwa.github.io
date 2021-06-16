@@ -12,13 +12,13 @@
     <link rel="manifest" href="/manifest.json">
 
     
-    <title>Getting Django models into admin &middot; Moses Okemwa</title>
+    <title>Getting All Django Models into Admin Site &middot; Moses Okemwa</title>
 
     <meta name="description" content="">
     <link rel="canonical" href="https://mosesokemwa.github.io/public/getting-django-models-into-admin/">
 
     <link rel="manifest" href="/public/manifest.json">
-    <meta name="application-name" content="Getting Django models into admin &middot; Moses Okemwa">
+    <meta name="application-name" content="Getting All Django Models into Admin Site &middot; Moses Okemwa">
     <meta name="theme-color" content="#2271ff">
 
     <link rel="apple-touch-icon" sizes="57x57" href="fav/apple-icon-57x57.png">
@@ -38,7 +38,7 @@
     
 
     
-    <link rel="stylesheet" href="https://mosesokemwa.github.io/public/scss/main.min.10365ec68662a80c9afa2f624f1024cb1554eddc90fd2d6783ad167db095d736.css" integrity="sha256-EDZexoZiqAya&#43;i9iTxAkyxVU7dyQ/S1ng60WfbCV1zY=" media="screen">
+    <link rel="stylesheet" href="https://mosesokemwa.github.io/public/scss/main.min.ff2413d5c9d7084e16109f0f46dfe2f069ef13c084e61bbc7ee884e3a6924751.css" integrity="sha256-/yQT1cnXCE4WEJ8PRt/i8GnvE8CE5hu8fuiE46aSR1E=" media="screen">
 
 </head>
     <body>
@@ -64,13 +64,13 @@
     <link rel="manifest" href="/manifest.json">
 
     
-    <title>Getting Django models into admin &middot; Moses Okemwa</title>
+    <title>Getting All Django Models into Admin Site &middot; Moses Okemwa</title>
 
     <meta name="description" content="">
     <link rel="canonical" href="https://mosesokemwa.github.io/public/getting-django-models-into-admin/">
 
     <link rel="manifest" href="/public/manifest.json">
-    <meta name="application-name" content="Getting Django models into admin &middot; Moses Okemwa">
+    <meta name="application-name" content="Getting All Django Models into Admin Site &middot; Moses Okemwa">
     <meta name="theme-color" content="#2271ff">
 
     <link rel="apple-touch-icon" sizes="57x57" href="fav/apple-icon-57x57.png">
@@ -90,7 +90,7 @@
     
 
     
-    <link rel="stylesheet" href="https://mosesokemwa.github.io/public/scss/main.min.10365ec68662a80c9afa2f624f1024cb1554eddc90fd2d6783ad167db095d736.css" integrity="sha256-EDZexoZiqAya&#43;i9iTxAkyxVU7dyQ/S1ng60WfbCV1zY=" media="screen">
+    <link rel="stylesheet" href="https://mosesokemwa.github.io/public/scss/main.min.ff2413d5c9d7084e16109f0f46dfe2f069ef13c084e61bbc7ee884e3a6924751.css" integrity="sha256-/yQT1cnXCE4WEJ8PRt/i8GnvE8CE5hu8fuiE46aSR1E=" media="screen">
 
 </head>
 <ol class="breadcrumb">
@@ -107,14 +107,14 @@
 
 
 <li class="breadcrumb-item active d-sm-none d-md-block">
-Getting Django models into admin
+Getting All Django Models into Admin Site
 </li>
 
 
 </ol>
 
 <article>
-    <h1>Getting Django models into admin</h1>
+    <h1>Getting All Django Models into Admin Site</h1>
     
 
 
@@ -129,8 +129,7 @@ Getting Django models into admin
     
 
     <section id="content">
-        <p>I needed a shortcut to register all my models in Django admin, spent a few hours tinkering and finllay found a shortcut.</p>
-<p>The only downside is it registers everything, does not provide the custom options of including/excluding fields by putting fields that you need in the admin. If you feel creative, feel free to extend the functionality.</p>
+        <p>I needed a shortcut to register all my models in Django admin, spent a few hours tinkering with this idea.</p>
 <div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#008000;font-weight:bold">from</span> <span style="color:#00f;font-weight:bold">django.apps</span> <span style="color:#008000;font-weight:bold">import</span> apps
 <span style="color:#008000;font-weight:bold">from</span> <span style="color:#00f;font-weight:bold">django.contrib</span> <span style="color:#008000;font-weight:bold">import</span> admin
 
@@ -148,7 +147,8 @@ models <span style="color:#666">=</span> apps<span style="color:#666">.</span>ge
         admin<span style="color:#666">.</span>site<span style="color:#666">.</span>register(model, admin_class)
     <span style="color:#008000;font-weight:bold">except</span> admin<span style="color:#666">.</span>sites<span style="color:#666">.</span>AlreadyRegistered:
         <span style="color:#008000;font-weight:bold">pass</span>
-</code></pre></div>
+</code></pre></div><p>The only downside is it registers everything, does not provide the custom options of including/excluding fields by putting fields that you need in the admin. If you feel creative, feel free to extend the functionality.</p>
+
     </section>
 
 </article>

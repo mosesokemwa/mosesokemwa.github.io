@@ -6,3 +6,7 @@ theme: hugo-theme
 pygmentsCodefences: true
 pygmentsStyle: pygments
 publishDir: public
+sitemap:
+  changefreq: monthly
+  filename: sitemap.xml
+  priority: 0.5

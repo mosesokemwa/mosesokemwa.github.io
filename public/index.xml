@@ -19,14 +19,13 @@ const url = require(&amp;#39;url&amp;#39;); //https://nodejs.</description>
     </item>
     
     <item>
-      <title>Getting Django models into admin</title>
+      <title>Getting All Django Models into Admin Site</title>
       <link>https://mosesokemwa.github.io/public/getting-django-models-into-admin/</link>
       <pubDate>Sun, 13 Dec 2020 22:17:14 +0300</pubDate>
       
       <guid>https://mosesokemwa.github.io/public/getting-django-models-into-admin/</guid>
-      <description>I needed a shortcut to register all my models in Django admin, spent a few hours tinkering and finllay found a shortcut.
-The only downside is it registers everything, does not provide the custom options of including/excluding fields by putting fields that you need in the admin. If you feel creative, feel free to extend the functionality.
-from django.apps import apps from django.contrib import admin class ListAdminMixin(object): def __init__(self, model, admin_site): self.</description>
+      <description>I needed a shortcut to register all my models in Django admin, spent a few hours tinkering with this idea.
+from django.apps import apps from django.contrib import admin class ListAdminMixin(object): def __init__(self, model, admin_site): self.list_display = [field.name for field in model._meta.fields] super(ListAdminMixin, self).__init__(model, admin_site) models = apps.get_models() for model in models: admin_class = type(&amp;#39;AdminClass&amp;#39;, (ListAdminMixin, admin.ModelAdmin), {}) try: admin.site.register(model, admin_class) except admin.sites.AlreadyRegistered: pass The only downside is it registers everything, does not provide the custom options of including/excluding fields by putting fields that you need in the admin.</description>
     </item>
     
     <item>
@@ -100,6 +99,35 @@ There are a few ways to disable the MOTD altogether. You can touch the file ~/.<
       <description>So I decided to start sharing my brain with the world, and by doing that I needed a place where I can put all my thoughts together. Most of them are unstructured others sound really composed.
 To be effective and not worry about the PR/Marketing side of things I decided to do things different.
  I don’t use cookies to track visitors to my site; you are completely anonymous when vising this site except for whatever is revealed by your User-Agent and source IP information.</description>
+    </item>
+    
+    <item>
+      <title>Droplets, Dockers, Containers, Kitematic…. SLEEPLESS NIGHT.</title>
+      <link>https://mosesokemwa.github.io/public/devops-tooling/</link>
+      <pubDate>Sat, 18 Nov 2017 21:35:00 +0300</pubDate>
+      
+      <guid>https://mosesokemwa.github.io/public/devops-tooling/</guid>
+      <description>I spent 5 hours of my night installing, reading docs, configuring, uninstalling and watching videos. All to understand how digital ocean and dockers cross paths. I must say, it was worth it. I came across things I knew and worked with before - Nginx, vagrant, and virtual machine. The only thing I heard to learn how to use with dockers was Nginx, the rest are things you use on the side.</description>
+    </item>
+    
+    <item>
+      <title>What lurks behind the curtain = { isn’t that scary}</title>
+      <link>https://mosesokemwa.github.io/public/the-onion-router/</link>
+      <pubDate>Sat, 18 Nov 2017 21:35:00 +0300</pubDate>
+      
+      <guid>https://mosesokemwa.github.io/public/the-onion-router/</guid>
+      <description>The internet you use and the websites your browse — these are just a fraction of the entire web. Some of you would be not knowing this widely popular fact about the hidden world of Darknet. But, your knowledge shouldn’t be limited to this fact. So, here is more about this underground world for the “underground”.
+The Darknet can’t be accessed using the regular web browser. You can access this by using encryption mechanisms like TOR or some other password protected forums.</description>
+    </item>
+    
+    <item>
+      <title>Beautiful Tools for Awesome Front-end Developers.</title>
+      <link>https://mosesokemwa.github.io/public/tools-for-frontend-developers/</link>
+      <pubDate>Tue, 18 Apr 2017 21:35:00 +0300</pubDate>
+      
+      <guid>https://mosesokemwa.github.io/public/tools-for-frontend-developers/</guid>
+      <description>In my many hours of writing code and hanging around fellow developers, I realized that there are a bunch of tools that we use in our craft that make life easier. Some are just a matter of taste, familiarity and what area one is focusing on.
+I focus on Backend Development but in the rare times I work on the front end bit I have these tools that come in handy(Chrome Browser tools).</description>
     </item>
     
   </channel>

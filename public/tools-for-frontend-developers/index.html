@@ -12,13 +12,13 @@
     <link rel="manifest" href="/manifest.json">
 
     
-    <title>Extracting Nested Query Params &middot; Moses Okemwa</title>
+    <title>Beautiful Tools for Awesome Front-end Developers. &middot; Moses Okemwa</title>
 
     <meta name="description" content="">
-    <link rel="canonical" href="https://mosesokemwa.github.io/public/extract-nested-query-params/">
+    <link rel="canonical" href="https://mosesokemwa.github.io/public/tools-for-frontend-developers/">
 
     <link rel="manifest" href="/public/manifest.json">
-    <meta name="application-name" content="Extracting Nested Query Params &middot; Moses Okemwa">
+    <meta name="application-name" content="Beautiful Tools for Awesome Front-end Developers. &middot; Moses Okemwa">
     <meta name="theme-color" content="#2271ff">
 
     <link rel="apple-touch-icon" sizes="57x57" href="fav/apple-icon-57x57.png">
@@ -64,13 +64,13 @@
     <link rel="manifest" href="/manifest.json">
 
     
-    <title>Extracting Nested Query Params &middot; Moses Okemwa</title>
+    <title>Beautiful Tools for Awesome Front-end Developers. &middot; Moses Okemwa</title>
 
     <meta name="description" content="">
-    <link rel="canonical" href="https://mosesokemwa.github.io/public/extract-nested-query-params/">
+    <link rel="canonical" href="https://mosesokemwa.github.io/public/tools-for-frontend-developers/">
 
     <link rel="manifest" href="/public/manifest.json">
-    <meta name="application-name" content="Extracting Nested Query Params &middot; Moses Okemwa">
+    <meta name="application-name" content="Beautiful Tools for Awesome Front-end Developers. &middot; Moses Okemwa">
     <meta name="theme-color" content="#2271ff">
 
     <link rel="apple-touch-icon" sizes="57x57" href="fav/apple-icon-57x57.png">
@@ -107,58 +107,56 @@
 
 
 <li class="breadcrumb-item active d-sm-none d-md-block">
-Extracting Nested Query Params
+Beautiful Tools for Awesome Front-end Developers.
 </li>
 
 
 </ol>
 
 <article>
-    <h1>Extracting Nested Query Params</h1>
+    <h1>Beautiful Tools for Awesome Front-end Developers.</h1>
     
 
 
 
 
 <div>
-    <time class="meta-date" datetime="2021-02-10">
-    2021-02-10
+    <time class="meta-date" datetime="2017-04-18">
+    2017-04-18
     </time>
 </div>
     
     
 
     <section id="content">
-        <p>This is a very niche problem I was trying to solve.</p>
-<pre><code>/api/v1/data?url=https://mysite.com/blog/blopost1?callbackUrl=https://webhook.com/api/me
-</code></pre><p>In this link I needed to get the url and nested call back query params, when parsed to the api data endpoint
-All this was a scope-creep and needed to ebe solved in the shorted time possible</p>
-<p>My take: NodeJs is powerful, you just need to know where to look(documentation) and who to consult(documentation)</p>
-<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#008000;font-weight:bold">const</span> url <span style="color:#666">=</span> require(<span style="color:#ba2121">&#39;url&#39;</span>); <span style="color:#408080;font-style:italic">//https://nodejs.org/api/url.html
-</span><span style="color:#408080;font-style:italic"></span><span style="color:#008000;font-weight:bold">const</span> querystring <span style="color:#666">=</span> require(<span style="color:#ba2121">&#39;querystring&#39;</span>); <span style="color:#408080;font-style:italic">// https://nodejs.org/api/querystring.html
-</span><span style="color:#408080;font-style:italic"></span>
-<span style="color:#008000;font-weight:bold">let</span> rawUrl <span style="color:#666">=</span> ctx.query.url;
-<span style="color:#008000;font-weight:bold">let</span> parsedUrl <span style="color:#666">=</span> url.parse(rawUrl);
-<span style="color:#008000;font-weight:bold">let</span> parsedQs <span style="color:#666">=</span> querystring.parse(parsedUrl.query);
-
-
-<span style="color:#408080;font-style:italic">// parsedQs = { callbackUrl: &#39;https://webhook.com/api/me&#39; }
-</span></code></pre></div><p>After calling <code>url.parse(rawUrl)</code> on our URL, this is what is returned to us:</p>
-<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">{
-    protocol<span style="color:#666">:</span> <span style="color:#ba2121">&#39;https:&#39;</span>,
-    slashes<span style="color:#666">:</span> <span style="color:#008000;font-weight:bold">true</span>,
-    auth<span style="color:#666">:</span> <span style="color:#008000;font-weight:bold">null</span>,
-    host<span style="color:#666">:</span> <span style="color:#ba2121">&#39;mysite.com&#39;</span>,
-    port<span style="color:#666">:</span> <span style="color:#008000;font-weight:bold">null</span>,
-    hostname<span style="color:#666">:</span> <span style="color:#ba2121">&#39;mysite.com&#39;</span>,
-    hash<span style="color:#666">:</span> <span style="color:#008000;font-weight:bold">null</span>,
-    search<span style="color:#666">:</span> <span style="color:#ba2121">&#39;?callbackUrl=https://webhook.com/api/me&#39;</span>,
-    query<span style="color:#666">:</span> <span style="color:#ba2121">&#39;callbackUrl=https://webhook.com/api/me&#39;</span>,
-    pathname<span style="color:#666">:</span> <span style="color:#ba2121">&#39;/&#39;</span>,
-    path<span style="color:#666">:</span> <span style="color:#ba2121">&#39;/?page=2&amp;limit=3&#39;</span>,
-    href<span style="color:#666">:</span> <span style="color:#ba2121">&#39;https://mysite.com/blog/blopost1?callbackUrl=https://webhook.com/api/me&#39;</span>
-}
-</code></pre></div><p>While the actual act of retrieving this data is very simple, understanding where this info comes from and what it is can be confusing for some beginners. Hopefully this article cleared some things up for you.</p>
+        <p>In my many hours of writing code and hanging around fellow developers,
+I realized that there are a bunch of tools that we use in our craft that make life easier. Some are just a matter of taste, familiarity and what area one is focusing on.</p>
+<p>I focus on Backend Development but in the rare times I work on the front end bit I have these tools that come in handy(Chrome Browser tools). I bumped into most of them when peeking around a friends laptop.</p>
+<pre><code>    There are other tools but the rest are just a matter of preference
+    and what you are using them for.
+</code></pre>
+<h5 id="the-tools-are-in-no-specific-order">The tools are in no specific order</h5>
+<ol>
+<li>
+<p><a href="http://bit.ly/window-resizer">Resize the browser window</a> to emulate various screen resolutions. This is used to see how your site will look on different screen sizes. Check it out here -</p>
+</li>
+<li>
+<p><a href="https://wappalyzer.com/">Wappalyzer</a> is a cross-platform utility that uncovers the technologies used on websites. It detects content management systems, eCommerce platforms, web frameworks, server software, analytics tools and many more. I use these to keep track of the combinations of technologies that go into a site. Usually sites I find inspiring.</p>
+</li>
+<li>
+<p><a href="https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl=en">Lighthouse</a> is an open-source, automated tool for improving the quality of web pages. You can run it against any page on the web. It has audits for performance, accessibility, progressive web apps, and more. I use to see the performance of my projects, so far it has never failed me.</p>
+</li>
+<li>
+<p><a href="https://chrome.google.com/webstore/detail/cssviewer/ggfgijbpiheegefliciemofobhmofgce?hl=en">CSSViewer</a>is a simple CSS properties viewer for all websites. I need not explain this.</p>
+</li>
+<li>
+<p>The <a href="https://chrome.google.com/webstore/detail/web-developer/bfbameneiokkgbdmiekhjnmfkcnldhhm?hl=en">Web Developer</a> extension adds a toolbar button to the browser with various web developer tools. This just adds an extra layer of functionality, let&rsquo;s call it chrome-dev-tools-on-steroids. You just need to use to understand</p>
+</li>
+<li>
+<p>This extension inserts the <a href="https://chrome.google.com/webstore/detail/pesticide-for-chrome/bblbgcheenepgnnajgfpiicnbbdmmooh?hl=en">Pesticide CSS</a> into the current page, outlining each element to better see the placement on the page. Really awesome extension(did you notice my lack of words to describe it)</p>
+</li>
+</ol>
+<p>There are other tools but the rest are just a matter of preference and what you are using them for.</p>
 
     </section>
 

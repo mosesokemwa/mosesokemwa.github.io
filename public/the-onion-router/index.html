@@ -12,13 +12,13 @@
     <link rel="manifest" href="/manifest.json">
 
     
-    <title>Extracting Nested Query Params &middot; Moses Okemwa</title>
+    <title>What lurks behind the curtain = { isn’t that scary} &middot; Moses Okemwa</title>
 
     <meta name="description" content="">
-    <link rel="canonical" href="https://mosesokemwa.github.io/public/extract-nested-query-params/">
+    <link rel="canonical" href="https://mosesokemwa.github.io/public/the-onion-router/">
 
     <link rel="manifest" href="/public/manifest.json">
-    <meta name="application-name" content="Extracting Nested Query Params &middot; Moses Okemwa">
+    <meta name="application-name" content="What lurks behind the curtain = { isn’t that scary} &middot; Moses Okemwa">
     <meta name="theme-color" content="#2271ff">
 
     <link rel="apple-touch-icon" sizes="57x57" href="fav/apple-icon-57x57.png">
@@ -64,13 +64,13 @@
     <link rel="manifest" href="/manifest.json">
 
     
-    <title>Extracting Nested Query Params &middot; Moses Okemwa</title>
+    <title>What lurks behind the curtain = { isn’t that scary} &middot; Moses Okemwa</title>
 
     <meta name="description" content="">
-    <link rel="canonical" href="https://mosesokemwa.github.io/public/extract-nested-query-params/">
+    <link rel="canonical" href="https://mosesokemwa.github.io/public/the-onion-router/">
 
     <link rel="manifest" href="/public/manifest.json">
-    <meta name="application-name" content="Extracting Nested Query Params &middot; Moses Okemwa">
+    <meta name="application-name" content="What lurks behind the curtain = { isn’t that scary} &middot; Moses Okemwa">
     <meta name="theme-color" content="#2271ff">
 
     <link rel="apple-touch-icon" sizes="57x57" href="fav/apple-icon-57x57.png">
@@ -107,58 +107,40 @@
 
 
 <li class="breadcrumb-item active d-sm-none d-md-block">
-Extracting Nested Query Params
+What lurks behind the curtain = { isn’t that scary}
 </li>
 
 
 </ol>
 
 <article>
-    <h1>Extracting Nested Query Params</h1>
+    <h1>What lurks behind the curtain = { isn’t that scary}</h1>
     
 
 
 
 
 <div>
-    <time class="meta-date" datetime="2021-02-10">
-    2021-02-10
+    <time class="meta-date" datetime="2017-11-18">
+    2017-11-18
     </time>
 </div>
     
     
 
     <section id="content">
-        <p>This is a very niche problem I was trying to solve.</p>
-<pre><code>/api/v1/data?url=https://mysite.com/blog/blopost1?callbackUrl=https://webhook.com/api/me
-</code></pre><p>In this link I needed to get the url and nested call back query params, when parsed to the api data endpoint
-All this was a scope-creep and needed to ebe solved in the shorted time possible</p>
-<p>My take: NodeJs is powerful, you just need to know where to look(documentation) and who to consult(documentation)</p>
-<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#008000;font-weight:bold">const</span> url <span style="color:#666">=</span> require(<span style="color:#ba2121">&#39;url&#39;</span>); <span style="color:#408080;font-style:italic">//https://nodejs.org/api/url.html
-</span><span style="color:#408080;font-style:italic"></span><span style="color:#008000;font-weight:bold">const</span> querystring <span style="color:#666">=</span> require(<span style="color:#ba2121">&#39;querystring&#39;</span>); <span style="color:#408080;font-style:italic">// https://nodejs.org/api/querystring.html
-</span><span style="color:#408080;font-style:italic"></span>
-<span style="color:#008000;font-weight:bold">let</span> rawUrl <span style="color:#666">=</span> ctx.query.url;
-<span style="color:#008000;font-weight:bold">let</span> parsedUrl <span style="color:#666">=</span> url.parse(rawUrl);
-<span style="color:#008000;font-weight:bold">let</span> parsedQs <span style="color:#666">=</span> querystring.parse(parsedUrl.query);
-
-
-<span style="color:#408080;font-style:italic">// parsedQs = { callbackUrl: &#39;https://webhook.com/api/me&#39; }
-</span></code></pre></div><p>After calling <code>url.parse(rawUrl)</code> on our URL, this is what is returned to us:</p>
-<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">{
-    protocol<span style="color:#666">:</span> <span style="color:#ba2121">&#39;https:&#39;</span>,
-    slashes<span style="color:#666">:</span> <span style="color:#008000;font-weight:bold">true</span>,
-    auth<span style="color:#666">:</span> <span style="color:#008000;font-weight:bold">null</span>,
-    host<span style="color:#666">:</span> <span style="color:#ba2121">&#39;mysite.com&#39;</span>,
-    port<span style="color:#666">:</span> <span style="color:#008000;font-weight:bold">null</span>,
-    hostname<span style="color:#666">:</span> <span style="color:#ba2121">&#39;mysite.com&#39;</span>,
-    hash<span style="color:#666">:</span> <span style="color:#008000;font-weight:bold">null</span>,
-    search<span style="color:#666">:</span> <span style="color:#ba2121">&#39;?callbackUrl=https://webhook.com/api/me&#39;</span>,
-    query<span style="color:#666">:</span> <span style="color:#ba2121">&#39;callbackUrl=https://webhook.com/api/me&#39;</span>,
-    pathname<span style="color:#666">:</span> <span style="color:#ba2121">&#39;/&#39;</span>,
-    path<span style="color:#666">:</span> <span style="color:#ba2121">&#39;/?page=2&amp;limit=3&#39;</span>,
-    href<span style="color:#666">:</span> <span style="color:#ba2121">&#39;https://mysite.com/blog/blopost1?callbackUrl=https://webhook.com/api/me&#39;</span>
-}
-</code></pre></div><p>While the actual act of retrieving this data is very simple, understanding where this info comes from and what it is can be confusing for some beginners. Hopefully this article cleared some things up for you.</p>
+        <p><img src="../images/1_0UZLMxbeiL3viwHkkxDj_g.jpeg" alt="Tor Image"></p>
+<p>The internet you use and the websites your browse — these are just a fraction of the entire web. Some of you would be not knowing this widely popular fact about the hidden world of Darknet. But, your knowledge shouldn’t be limited to this fact. So, here is more about this underground world for the “underground”.</p>
+<p>The Darknet can’t be accessed using the regular web browser. You can access this by using encryption mechanisms like TOR or some other password protected forums.
+Many of you would be aware that the <a href="https://www.torproject.org/projects/torbrowser.html.en">TOR network</a> (The Onion Router) was developed by the United States Navy Research Laboratory in 1990’s to communicate securely and its code was later released to the world under a free license.</p>
+<p>By configuring your TOR browser, you can access the Darknet websites. Apart from being a means to express your views freely, whistle blowing and secure communications, the Darknet is home to illegal products(a lot of them). It’s widely used to share peoples information, drugs, and other illegal information.</p>
+<pre><code>    &quot;The Darknet has existed for a long time and it’s impossible for the
+    governments to control what’s going on there with the available tools.
+    — I say this cautiously. For it has been long rumoured that all activities
+    can actually be monitored.&quot;
+</code></pre>
+<p>For the curious minded, have a blast finding out what is behind the curtain. If it was developed by the government, why did they release the code, after all its the government we are talking about.</p>
+<p>Either way a tool is a tool. A hammer in the wrong hands&hellip;&hellip;</p>
 
     </section>
 
