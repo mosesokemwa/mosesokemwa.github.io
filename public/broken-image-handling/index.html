@@ -15,7 +15,7 @@
     <title>Broken image handling with jQuery &middot; Moses Okemwa</title>
 
     <meta name="description" content="">
-    <link rel="canonical" href="https://mosesokemwa.github.io/public/broken-image-handling/">
+    <link rel="canonical" href="https://mosesokemwa.com/public/broken-image-handling/">
 
     <link rel="manifest" href="/public/manifest.json">
     <meta name="application-name" content="Broken image handling with jQuery &middot; Moses Okemwa">
@@ -38,7 +38,7 @@
     
 
     
-    <link rel="stylesheet" href="https://mosesokemwa.github.io/public/scss/main.min.ff2413d5c9d7084e16109f0f46dfe2f069ef13c084e61bbc7ee884e3a6924751.css" integrity="sha256-/yQT1cnXCE4WEJ8PRt/i8GnvE8CE5hu8fuiE46aSR1E=" media="screen">
+    <link rel="stylesheet" href="https://mosesokemwa.com/public/scss/main.min.496fb46f16645b4539ac8bcac6b2679f014930326a5b1e80fd239c10ac54bce5.css" integrity="sha256-SW&#43;0bxZkW0U5rIvKxrJnnwFJMDJqWx6A/SOcEKxUvOU=" media="screen">
 
 </head>
     <body>
@@ -67,7 +67,7 @@
     <title>Broken image handling with jQuery &middot; Moses Okemwa</title>
 
     <meta name="description" content="">
-    <link rel="canonical" href="https://mosesokemwa.github.io/public/broken-image-handling/">
+    <link rel="canonical" href="https://mosesokemwa.com/public/broken-image-handling/">
 
     <link rel="manifest" href="/public/manifest.json">
     <meta name="application-name" content="Broken image handling with jQuery &middot; Moses Okemwa">
@@ -90,7 +90,7 @@
     
 
     
-    <link rel="stylesheet" href="https://mosesokemwa.github.io/public/scss/main.min.ff2413d5c9d7084e16109f0f46dfe2f069ef13c084e61bbc7ee884e3a6924751.css" integrity="sha256-/yQT1cnXCE4WEJ8PRt/i8GnvE8CE5hu8fuiE46aSR1E=" media="screen">
+    <link rel="stylesheet" href="https://mosesokemwa.com/public/scss/main.min.496fb46f16645b4539ac8bcac6b2679f014930326a5b1e80fd239c10ac54bce5.css" integrity="sha256-SW&#43;0bxZkW0U5rIvKxrJnnwFJMDJqWx6A/SOcEKxUvOU=" media="screen">
 
 </head>
 <ol class="breadcrumb">
@@ -100,7 +100,7 @@
 
 
 <li class="breadcrumb-item">
-    <a href="https://mosesokemwa.github.io/public/">Moses Okemwa</a>
+    <a href="https://mosesokemwa.com/public/">Moses Okemwa</a>
 </li>
 
 
@@ -130,7 +130,7 @@ Broken image handling with jQuery
 
     <section id="content">
         <p>Missing images will either just display nothing, or display a [ ? ] style box when their source cannot be found. Instead, you may want to replace that with a &ldquo;missing image&rdquo; graphic that you are sure exists so there is better visual feedback that something is wrong. Or, you might want to hide it entirely. This is possible because images that a browser can&rsquo;t find fire off an &ldquo;error&rdquo; JavaScript event we can watch for.</p>
-<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#408080;font-style:italic">// Jquery
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#408080;font-style:italic">// Jquery
 </span><span style="color:#408080;font-style:italic">// Replace source
 </span><span style="color:#408080;font-style:italic"></span>$(<span style="color:#ba2121">&#34;img&#34;</span>).on(<span style="color:#ba2121">&#34;error&#34;</span>, <span style="color:#008000;font-weight:bold">function</span>() {
   $(<span style="color:#008000;font-weight:bold">this</span>).attr(<span style="color:#ba2121">&#34;src&#34;</span>, <span style="color:#ba2121">&#34;/images/missing.png&#34;</span>);
@@ -141,7 +141,7 @@ Broken image handling with jQuery
   $(<span style="color:#008000;font-weight:bold">this</span>).hide();
 });
 </code></pre></div><p>But what if you have thousands of images, seeing the same image when handling the missing image error can be boring to the user. So to make it fun, why not a bit further and select random images in an array.</p>
-<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#408080;font-style:italic">// Jquery
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#408080;font-style:italic">// Jquery
 </span><span style="color:#408080;font-style:italic">// Replace source
 </span><span style="color:#408080;font-style:italic"></span>
 <span style="color:#008000;font-weight:bold">var</span> images <span style="color:#666">=</span> [<span style="color:#ba2121">&#34;0.png&#34;</span>, <span style="color:#ba2121">&#34;1.png&#34;</span>, <span style="color:#ba2121">&#34;2.png&#34;</span>, <span style="color:#ba2121">&#34;3.png&#34;</span>, <span style="color:#ba2121">&#34;4.png&#34;</span>, <span style="color:#ba2121">&#34;5.png&#34;</span>];

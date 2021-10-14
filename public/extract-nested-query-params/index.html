@@ -15,7 +15,7 @@
     <title>Extracting Nested Query Params &middot; Moses Okemwa</title>
 
     <meta name="description" content="">
-    <link rel="canonical" href="https://mosesokemwa.github.io/public/extract-nested-query-params/">
+    <link rel="canonical" href="https://mosesokemwa.com/public/extract-nested-query-params/">
 
     <link rel="manifest" href="/public/manifest.json">
     <meta name="application-name" content="Extracting Nested Query Params &middot; Moses Okemwa">
@@ -38,7 +38,7 @@
     
 
     
-    <link rel="stylesheet" href="https://mosesokemwa.github.io/public/scss/main.min.ff2413d5c9d7084e16109f0f46dfe2f069ef13c084e61bbc7ee884e3a6924751.css" integrity="sha256-/yQT1cnXCE4WEJ8PRt/i8GnvE8CE5hu8fuiE46aSR1E=" media="screen">
+    <link rel="stylesheet" href="https://mosesokemwa.com/public/scss/main.min.496fb46f16645b4539ac8bcac6b2679f014930326a5b1e80fd239c10ac54bce5.css" integrity="sha256-SW&#43;0bxZkW0U5rIvKxrJnnwFJMDJqWx6A/SOcEKxUvOU=" media="screen">
 
 </head>
     <body>
@@ -67,7 +67,7 @@
     <title>Extracting Nested Query Params &middot; Moses Okemwa</title>
 
     <meta name="description" content="">
-    <link rel="canonical" href="https://mosesokemwa.github.io/public/extract-nested-query-params/">
+    <link rel="canonical" href="https://mosesokemwa.com/public/extract-nested-query-params/">
 
     <link rel="manifest" href="/public/manifest.json">
     <meta name="application-name" content="Extracting Nested Query Params &middot; Moses Okemwa">
@@ -90,7 +90,7 @@
     
 
     
-    <link rel="stylesheet" href="https://mosesokemwa.github.io/public/scss/main.min.ff2413d5c9d7084e16109f0f46dfe2f069ef13c084e61bbc7ee884e3a6924751.css" integrity="sha256-/yQT1cnXCE4WEJ8PRt/i8GnvE8CE5hu8fuiE46aSR1E=" media="screen">
+    <link rel="stylesheet" href="https://mosesokemwa.com/public/scss/main.min.496fb46f16645b4539ac8bcac6b2679f014930326a5b1e80fd239c10ac54bce5.css" integrity="sha256-SW&#43;0bxZkW0U5rIvKxrJnnwFJMDJqWx6A/SOcEKxUvOU=" media="screen">
 
 </head>
 <ol class="breadcrumb">
@@ -100,7 +100,7 @@
 
 
 <li class="breadcrumb-item">
-    <a href="https://mosesokemwa.github.io/public/">Moses Okemwa</a>
+    <a href="https://mosesokemwa.com/public/">Moses Okemwa</a>
 </li>
 
 
@@ -130,11 +130,11 @@ Extracting Nested Query Params
 
     <section id="content">
         <p>This is a very niche problem I was trying to solve.</p>
-<pre><code>/api/v1/data?url=https://mysite.com/blog/blopost1?callbackUrl=https://webhook.com/api/me
+<pre tabindex="0"><code>/api/v1/data?url=https://mysite.com/blog/blopost1?callbackUrl=https://webhook.com/api/me
 </code></pre><p>In this link I needed to get the url and nested call back query params, when parsed to the api data endpoint
 All this was a scope-creep and needed to ebe solved in the shorted time possible</p>
 <p>My take: NodeJs is powerful, you just need to know where to look(documentation) and who to consult(documentation)</p>
-<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#008000;font-weight:bold">const</span> url <span style="color:#666">=</span> require(<span style="color:#ba2121">&#39;url&#39;</span>); <span style="color:#408080;font-style:italic">//https://nodejs.org/api/url.html
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#008000;font-weight:bold">const</span> url <span style="color:#666">=</span> require(<span style="color:#ba2121">&#39;url&#39;</span>); <span style="color:#408080;font-style:italic">//https://nodejs.org/api/url.html
 </span><span style="color:#408080;font-style:italic"></span><span style="color:#008000;font-weight:bold">const</span> querystring <span style="color:#666">=</span> require(<span style="color:#ba2121">&#39;querystring&#39;</span>); <span style="color:#408080;font-style:italic">// https://nodejs.org/api/querystring.html
 </span><span style="color:#408080;font-style:italic"></span>
 <span style="color:#008000;font-weight:bold">let</span> rawUrl <span style="color:#666">=</span> ctx.query.url;
@@ -144,7 +144,7 @@ All this was a scope-creep and needed to ebe solved in the shorted time possible
 
 <span style="color:#408080;font-style:italic">// parsedQs = { callbackUrl: &#39;https://webhook.com/api/me&#39; }
 </span></code></pre></div><p>After calling <code>url.parse(rawUrl)</code> on our URL, this is what is returned to us:</p>
-<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">{
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">{
     protocol<span style="color:#666">:</span> <span style="color:#ba2121">&#39;https:&#39;</span>,
     slashes<span style="color:#666">:</span> <span style="color:#008000;font-weight:bold">true</span>,
     auth<span style="color:#666">:</span> <span style="color:#008000;font-weight:bold">null</span>,

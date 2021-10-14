@@ -15,7 +15,7 @@
     <title>Seting up NGINX &middot; Moses Okemwa</title>
 
     <meta name="description" content="">
-    <link rel="canonical" href="https://mosesokemwa.github.io/public/nginx-setup/">
+    <link rel="canonical" href="https://mosesokemwa.com/public/nginx-setup/">
 
     <link rel="manifest" href="/public/manifest.json">
     <meta name="application-name" content="Seting up NGINX &middot; Moses Okemwa">
@@ -38,7 +38,7 @@
     
 
     
-    <link rel="stylesheet" href="https://mosesokemwa.github.io/public/scss/main.min.ff2413d5c9d7084e16109f0f46dfe2f069ef13c084e61bbc7ee884e3a6924751.css" integrity="sha256-/yQT1cnXCE4WEJ8PRt/i8GnvE8CE5hu8fuiE46aSR1E=" media="screen">
+    <link rel="stylesheet" href="https://mosesokemwa.com/public/scss/main.min.496fb46f16645b4539ac8bcac6b2679f014930326a5b1e80fd239c10ac54bce5.css" integrity="sha256-SW&#43;0bxZkW0U5rIvKxrJnnwFJMDJqWx6A/SOcEKxUvOU=" media="screen">
 
 </head>
     <body>
@@ -67,7 +67,7 @@
     <title>Seting up NGINX &middot; Moses Okemwa</title>
 
     <meta name="description" content="">
-    <link rel="canonical" href="https://mosesokemwa.github.io/public/nginx-setup/">
+    <link rel="canonical" href="https://mosesokemwa.com/public/nginx-setup/">
 
     <link rel="manifest" href="/public/manifest.json">
     <meta name="application-name" content="Seting up NGINX &middot; Moses Okemwa">
@@ -90,7 +90,7 @@
     
 
     
-    <link rel="stylesheet" href="https://mosesokemwa.github.io/public/scss/main.min.ff2413d5c9d7084e16109f0f46dfe2f069ef13c084e61bbc7ee884e3a6924751.css" integrity="sha256-/yQT1cnXCE4WEJ8PRt/i8GnvE8CE5hu8fuiE46aSR1E=" media="screen">
+    <link rel="stylesheet" href="https://mosesokemwa.com/public/scss/main.min.496fb46f16645b4539ac8bcac6b2679f014930326a5b1e80fd239c10ac54bce5.css" integrity="sha256-SW&#43;0bxZkW0U5rIvKxrJnnwFJMDJqWx6A/SOcEKxUvOU=" media="screen">
 
 </head>
 <ol class="breadcrumb">
@@ -100,7 +100,7 @@
 
 
 <li class="breadcrumb-item">
-    <a href="https://mosesokemwa.github.io/public/">Moses Okemwa</a>
+    <a href="https://mosesokemwa.com/public/">Moses Okemwa</a>
 </li>
 
 
@@ -133,15 +133,15 @@ Seting up NGINX
 Hopefully having it here will make my work easier the next time I need to set up NGINX.</p>
 <h5 id="setup-nginx">Setup NGINX</h5>
 <p>Setup UFW (Uncomplicated Firewall) rules</p>
-<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo ufw allow out 22/tcp
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo ufw allow out 22/tcp
 sudo ufw allow out 80/tcp
 sudo ufw allow out 443/tcp
 </code></pre></div><p>Lets start by updating our software</p>
-<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt-get update <span style="color:#666">&amp;&amp;</span> sudo apt-get dist-upgrade -y <span style="color:#666">&amp;&amp;</span> sudo reboot
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt-get update <span style="color:#666">&amp;&amp;</span> sudo apt-get dist-upgrade -y <span style="color:#666">&amp;&amp;</span> sudo reboot
 </code></pre></div><p>Then enable automatic security updates</p>
-<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo dpkg-reconfigure --priority<span style="color:#666">=</span>low unattended-upgrades
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo dpkg-reconfigure --priority<span style="color:#666">=</span>low unattended-upgrades
 </code></pre></div><p>Securely installing NGINX</p>
-<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#408080;font-style:italic"># check NGINX sha256 hash to ensure that it hasn&#39;t been somehow compromised</span>
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#408080;font-style:italic"># check NGINX sha256 hash to ensure that it hasn&#39;t been somehow compromised</span>
 wget --quiet http://nginx.org/keys/nginx_signing.key -O nginx_signing.key <span style="color:#666">&amp;&amp;</span> sha256sum nginx_signing.key
 <span style="color:#408080;font-style:italic"># At the time of writing the sha256sum is &#34;dd4da5dc599ef9e7a7ac20a87275024b4923a917a306ab5d53fa77871220ecda&#34;</span>
 <span style="color:#408080;font-style:italic"># Please ensure that you get the same result before proceeding further</span>
@@ -149,36 +149,36 @@ sudo apt-key add nginx_signing.key
 <span style="color:#008000">echo</span> <span style="color:#ba2121">&#34;deb http://nginx.org/packages/mainline/ubuntu/ trusty nginx&#34;</span> | sudo tee --append /etc/apt/sources.list.d/nginx_org_packages_mainline_ubuntu.list
 sudo apt-get update <span style="color:#666">&amp;&amp;</span> sudo apt-get install -y nginx
 </code></pre></div><p>Install fail2ban to prevent brute force SSH attacks</p>
-<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt-get install -y fail2ban
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt-get install -y fail2ban
 </code></pre></div><h4 id="create-the-website-root-folder">Create the website root folder</h4>
-<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo mkdir /var/www/website
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo mkdir /var/www/website
 </code></pre></div><p>Remove the default Nginx configuration and start with a fresh blank file</p>
-<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo mv /etc/nginx/conf.d/default.conf /etc/nginx/conf.d/default.conf.orig
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo mv /etc/nginx/conf.d/default.conf /etc/nginx/conf.d/default.conf.orig
 sudo nano /etc/nginx/conf.d/default.conf
 </code></pre></div><p>Copy and Paste this and <code>cmd+o</code> and enter to save then <code>cmd+x</code> to exit</p>
-<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">server <span style="color:#666">{</span>
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">server <span style="color:#666">{</span>
     listen 80;
     server_name default_server;
     root /var/www/website;
 <span style="color:#666">}</span>
 </code></pre></div><p>Reload Nginx to apply our configuration</p>
-<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo systemctl restart nginx
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo systemctl restart nginx
 </code></pre></div><h4 id="setup-lets-encrypt">Setup Let’s Encrypt</h4>
-<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt-get install -y git
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt-get install -y git
 sudo git clone https://github.com/letsencrypt/letsencrypt /opt/letsencrypt
 /opt/letsencrypt/letsencrypt-auto
 </code></pre></div><p>SSL certificates
 Replace <code>mosesokemwa.com</code> with your domain</p>
-<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#008000">export</span> <span style="color:#19177c">DOMAINS</span><span style="color:#666">=</span><span style="color:#ba2121">&#34;mosesokemwa.com&#34;</span>
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#008000">export</span> <span style="color:#19177c">DOMAINS</span><span style="color:#666">=</span><span style="color:#ba2121">&#34;mosesokemwa.com&#34;</span>
 <span style="color:#008000">export</span> <span style="color:#19177c">DIR</span><span style="color:#666">=</span>/var/www/demo
 /opt/letsencrypt/letsencrypt-auto certonly --server https://acme-v01.api.letsencrypt.org/directory -a webroot --webroot-path<span style="color:#666">=</span><span style="color:#19177c">$DIR</span> -d <span style="color:#19177c">$DOMAINS</span>
 </code></pre></div><p>Enter email and agree term then you should see</p>
 <h4 id="nginx-https-config">Nginx HTTPS config</h4>
 <p>Open default.conf for add our SSL Certificate.</p>
-<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo nano /etc/nginx/conf.d/default.conf
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo nano /etc/nginx/conf.d/default.conf
 </code></pre></div><p>Modify</p>
 <p>Replace <code>mosesokemwa.com</code> with your domain</p>
-<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">server <span style="color:#666">{</span>
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">server <span style="color:#666">{</span>
     listen <span style="color:#666">443</span> ssl;
     server_name mosesokemwa.com;
     root /var/www/demo;
@@ -186,12 +186,12 @@ Replace <code>mosesokemwa.com</code> with your domain</p>
     ssl_certificate_key /etc/letsencrypt/live/rabbot.io/privkey.pem;
 <span style="color:#666">}</span>
 </code></pre></div><p>Save, Exit and then restart Nginx</p>
-<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo systemctl restart nginx
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo systemctl restart nginx
 </code></pre></div><p>Now we got <a href="https://mosesokemwa.com/">https://mosesokemwa.com/</a> up and running! But we not done yet!</p>
 <h4 id="automatic-renew">Automatic Renew</h4>
 <p>sudo nano /home/recers.sh
 Then add below content then Save, Exit.</p>
-<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#bc7a00">#!/bin/sh
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#bc7a00">#!/bin/sh
 </span><span style="color:#bc7a00"></span><span style="color:#408080;font-style:italic"># This script renews all the Let&#39;s Encrypt certificates with a validity &lt; 30 days</span>
 <span style="color:#008000;font-weight:bold">if</span> ! /opt/letsencrypt/letsencrypt-auto renew &gt; /var/log/letsencrypt/renew.log 2&gt;&amp;<span style="color:#666">1</span> ; <span style="color:#008000;font-weight:bold">then</span>
  <span style="color:#008000">echo</span> Automated renewal failed:
@@ -201,11 +201,11 @@ Then add below content then Save, Exit.</p>
 
 nginx -t <span style="color:#666">&amp;&amp;</span> nginx -s reload
 </code></pre></div><p>Add daily cron job.</p>
-<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo crontab -e
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo crontab -e
 </code></pre></div><p>Then add below content then Save, Exit.</p>
-<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">@daily /home/recers.sh
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">@daily /home/recers.sh
 </code></pre></div><p>Make it executable.</p>
-<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">chmod +x /home/recers.sh
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">chmod +x /home/recers.sh
 </code></pre></div><p>Now it become zombies yeah! But if you test with SSL analyser, You’ll grade only B grade which is a bummer! Gimme A!</p>
 
     </section>
