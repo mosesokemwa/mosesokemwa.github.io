@@ -12,13 +12,13 @@
     <link rel="manifest" href="/manifest.json">
 
     
-    <title>Flask migration of non-nullable fields &middot; Moses Okemwa</title>
+    <title>Flask migration of non-nullable fields &amp;middot; Moses Okemwa</title>
 
     <meta name="description" content="">
     <link rel="canonical" href="https://mosesokemwa.com/public/flask_alembic_migrations/">
 
-    <link rel="manifest" href="/public/manifest.json">
-    <meta name="application-name" content="Flask migration of non-nullable fields &middot; Moses Okemwa">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="application-name" content="Flask migration of non-nullable fields &amp;middot; Moses Okemwa">
     <meta name="theme-color" content="#2271ff">
 
     <link rel="apple-touch-icon" sizes="57x57" href="fav/apple-icon-57x57.png">
@@ -38,7 +38,7 @@
     
 
     
-    <link rel="stylesheet" href="https://mosesokemwa.com/public/scss/main.min.496fb46f16645b4539ac8bcac6b2679f014930326a5b1e80fd239c10ac54bce5.css" integrity="sha256-SW&#43;0bxZkW0U5rIvKxrJnnwFJMDJqWx6A/SOcEKxUvOU=" media="screen">
+    <link rel="stylesheet" href="https://mosesokemwa.com/public/scss/main.min.0d30ca89c02830e5cfc1147058038d527d1789ac41d135e22653c08c05cfa4ac.css" integrity="sha256-DTDKicAoMOXPwRRwWAONUn0XiaxB0TXiJlPAjAXPpKw=" media="screen">
 
 </head>
     <body>
@@ -64,13 +64,13 @@
     <link rel="manifest" href="/manifest.json">
 
     
-    <title>Flask migration of non-nullable fields &middot; Moses Okemwa</title>
+    <title>Flask migration of non-nullable fields &amp;middot; Moses Okemwa</title>
 
     <meta name="description" content="">
     <link rel="canonical" href="https://mosesokemwa.com/public/flask_alembic_migrations/">
 
-    <link rel="manifest" href="/public/manifest.json">
-    <meta name="application-name" content="Flask migration of non-nullable fields &middot; Moses Okemwa">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="application-name" content="Flask migration of non-nullable fields &amp;middot; Moses Okemwa">
     <meta name="theme-color" content="#2271ff">
 
     <link rel="apple-touch-icon" sizes="57x57" href="fav/apple-icon-57x57.png">
@@ -90,7 +90,7 @@
     
 
     
-    <link rel="stylesheet" href="https://mosesokemwa.com/public/scss/main.min.496fb46f16645b4539ac8bcac6b2679f014930326a5b1e80fd239c10ac54bce5.css" integrity="sha256-SW&#43;0bxZkW0U5rIvKxrJnnwFJMDJqWx6A/SOcEKxUvOU=" media="screen">
+    <link rel="stylesheet" href="https://mosesokemwa.com/public/scss/main.min.0d30ca89c02830e5cfc1147058038d527d1789ac41d135e22653c08c05cfa4ac.css" integrity="sha256-DTDKicAoMOXPwRRwWAONUn0XiaxB0TXiJlPAjAXPpKw=" media="screen">
 
 </head>
 <ol class="breadcrumb">
@@ -134,31 +134,31 @@ Any migration tool, including <a href="https://alembic.sqlalchemy.org/en/latest/
 <p>The problem arises when you have a table that is populated with data. You specify that you want a new field that doesn’t accept null values, yet, you already have a host of rows on the table created prior to this new addition. These rows won’t have values for the new field so they would default to null.</p>
 <p>Alembic still generates a migration script but you will need to add some code of your own to successfully make the schema change. You want to add code to the migration script that sets a default value on the field as Alembic doesn’t handle this automatically.</p>
 <p>Say you wanted to add a new boolean field: <code>is_admin</code>.</p>
-<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#008000;font-weight:bold">class</span> <span style="color:#00f;font-weight:bold">User</span>(db<span style="color:#666">.</span>Model):
-    <span style="color:#408080;font-style:italic"># other fields</span>
-    is_admin <span style="color:#666">=</span> db<span style="color:#666">.</span>Column(db<span style="color:#666">.</span>Boolean, default<span style="color:#666">=</span><span style="color:#008000;font-weight:bold">False</span>, nullable<span style="color:#666">=</span><span style="color:#008000;font-weight:bold">False</span>)
-</code></pre></div><p>Alembic would generate the migration script below</p>
-<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#008000;font-weight:bold">from</span> <span style="color:#00f;font-weight:bold">alembic</span> <span style="color:#008000;font-weight:bold">import</span> op
-<span style="color:#008000;font-weight:bold">import</span> <span style="color:#00f;font-weight:bold">sqlalchemy</span> <span style="color:#008000;font-weight:bold">as</span> <span style="color:#00f;font-weight:bold">sa</span>
-<span style="color:#408080;font-style:italic"># revision identifiers, used by Alembic.</span>
-revision <span style="color:#666">=</span> <span style="color:#ba2121">&#39;635d30762810&#39;</span>
-down_revision <span style="color:#666">=</span> <span style="color:#ba2121">&#39;ad4b629ace65&#39;</span>
-branch_labels <span style="color:#666">=</span> <span style="color:#008000;font-weight:bold">None</span>
-depends_on <span style="color:#666">=</span> <span style="color:#008000;font-weight:bold">None</span>
-<span style="color:#008000;font-weight:bold">def</span> <span style="color:#00f">upgrade</span>():
-    <span style="color:#408080;font-style:italic"># ### commands auto generated by Alembic - please adjust! ###</span>
-    op<span style="color:#666">.</span>add_column(
-        <span style="color:#ba2121">&#39;users&#39;</span>,
-        sa<span style="color:#666">.</span>Column(<span style="color:#ba2121">&#39;is_admin&#39;</span>, sa<span style="color:#666">.</span>Boolean(), nullable<span style="color:#666">=</span><span style="color:#008000;font-weight:bold">False</span>)
-    )
-    <span style="color:#408080;font-style:italic"># ### end Alembic commands ###</span>
-<span style="color:#008000;font-weight:bold">def</span> <span style="color:#00f">downgrade</span>():
-    <span style="color:#408080;font-style:italic"># ### commands auto generated by Alembic - please adjust! ###</span>
-    op<span style="color:#666">.</span>drop_column(<span style="color:#ba2121">&#39;users&#39;</span>, <span style="color:#ba2121">&#39;is_admin&#39;</span>)
-    <span style="color:#408080;font-style:italic"># ### end Alembic commands ###</span>
-</code></pre></div><p>If you try to apply this migration as is, you are going to get an error saying</p>
-<pre tabindex="0"><code>sqlalchemy.exc.IntegrityError: (psycopg2.IntegrityError) column &quot;is_admin&quot; contains null values
- [SQL: 'ALTER TABLE users ADD COLUMN is_admin BOOLEAN NOT NULL'] (Background on this error at: http://sqlalche.me/e/gkpj)
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#008000;font-weight:bold">class</span> <span style="color:#00f;font-weight:bold">User</span>(db<span style="color:#666">.</span>Model):
+</span></span><span style="display:flex;"><span>    <span style="color:#408080;font-style:italic"># other fields</span>
+</span></span><span style="display:flex;"><span>    is_admin <span style="color:#666">=</span> db<span style="color:#666">.</span>Column(db<span style="color:#666">.</span>Boolean, default<span style="color:#666">=</span><span style="color:#008000;font-weight:bold">False</span>, nullable<span style="color:#666">=</span><span style="color:#008000;font-weight:bold">False</span>)
+</span></span></code></pre></div><p>Alembic would generate the migration script below</p>
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#008000;font-weight:bold">from</span> <span style="color:#00f;font-weight:bold">alembic</span> <span style="color:#008000;font-weight:bold">import</span> op
+</span></span><span style="display:flex;"><span><span style="color:#008000;font-weight:bold">import</span> <span style="color:#00f;font-weight:bold">sqlalchemy</span> <span style="color:#008000;font-weight:bold">as</span> <span style="color:#00f;font-weight:bold">sa</span>
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic"># revision identifiers, used by Alembic.</span>
+</span></span><span style="display:flex;"><span>revision <span style="color:#666">=</span> <span style="color:#ba2121">&#39;635d30762810&#39;</span>
+</span></span><span style="display:flex;"><span>down_revision <span style="color:#666">=</span> <span style="color:#ba2121">&#39;ad4b629ace65&#39;</span>
+</span></span><span style="display:flex;"><span>branch_labels <span style="color:#666">=</span> <span style="color:#008000;font-weight:bold">None</span>
+</span></span><span style="display:flex;"><span>depends_on <span style="color:#666">=</span> <span style="color:#008000;font-weight:bold">None</span>
+</span></span><span style="display:flex;"><span><span style="color:#008000;font-weight:bold">def</span> <span style="color:#00f">upgrade</span>():
+</span></span><span style="display:flex;"><span>    <span style="color:#408080;font-style:italic"># ### commands auto generated by Alembic - please adjust! ###</span>
+</span></span><span style="display:flex;"><span>    op<span style="color:#666">.</span>add_column(
+</span></span><span style="display:flex;"><span>        <span style="color:#ba2121">&#39;users&#39;</span>,
+</span></span><span style="display:flex;"><span>        sa<span style="color:#666">.</span>Column(<span style="color:#ba2121">&#39;is_admin&#39;</span>, sa<span style="color:#666">.</span>Boolean(), nullable<span style="color:#666">=</span><span style="color:#008000;font-weight:bold">False</span>)
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>    <span style="color:#408080;font-style:italic"># ### end Alembic commands ###</span>
+</span></span><span style="display:flex;"><span><span style="color:#008000;font-weight:bold">def</span> <span style="color:#00f">downgrade</span>():
+</span></span><span style="display:flex;"><span>    <span style="color:#408080;font-style:italic"># ### commands auto generated by Alembic - please adjust! ###</span>
+</span></span><span style="display:flex;"><span>    op<span style="color:#666">.</span>drop_column(<span style="color:#ba2121">&#39;users&#39;</span>, <span style="color:#ba2121">&#39;is_admin&#39;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#408080;font-style:italic"># ### end Alembic commands ###</span>
+</span></span></code></pre></div><p>If you try to apply this migration as is, you are going to get an error saying</p>
+<pre tabindex="0"><code>sqlalchemy.exc.IntegrityError: (psycopg2.IntegrityError) column &#34;is_admin&#34; contains null values
+ [SQL: &#39;ALTER TABLE users ADD COLUMN is_admin BOOLEAN NOT NULL&#39;] (Background on this error at: http://sqlalche.me/e/gkpj)
 </code></pre><p>This error is reporting that we have <code>null values</code> which the <code>nullable=False</code> constraint doesn’t permit. We can fix this by doing the following:</p>
 <ul>
 <li>Add the new column: is_admin with nullable set to True</li>
@@ -166,28 +166,28 @@ depends_on <span style="color:#666">=</span> <span style="color:#008000;font-wei
 <li>Then update the column is_admin to be non-nullable
 Here is what the updated migration script looks like. The updated portions have been emphasized.</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#008000;font-weight:bold">from</span> <span style="color:#00f;font-weight:bold">alembic</span> <span style="color:#008000;font-weight:bold">import</span> op
-<span style="color:#008000;font-weight:bold">import</span> <span style="color:#00f;font-weight:bold">sqlalchemy</span> <span style="color:#008000;font-weight:bold">as</span> <span style="color:#00f;font-weight:bold">sa</span>
-<span style="color:#408080;font-style:italic"># revision identifiers, used by Alembic.</span>
-revision <span style="color:#666">=</span> <span style="color:#ba2121">&#39;635d30762810&#39;</span>
-down_revision <span style="color:#666">=</span> <span style="color:#ba2121">&#39;ad4b629ace65&#39;</span>
-branch_labels <span style="color:#666">=</span> <span style="color:#008000;font-weight:bold">None</span>
-depends_on <span style="color:#666">=</span> <span style="color:#008000;font-weight:bold">None</span>
-<span style="color:#008000;font-weight:bold">def</span> <span style="color:#00f">upgrade</span>():
-    <span style="color:#408080;font-style:italic"># ### commands auto generated by Alembic - please adjust! ###</span>
-    op<span style="color:#666">.</span>add_column(
-        <span style="color:#ba2121">&#39;users&#39;</span>,
-        sa<span style="color:#666">.</span>Column(<span style="color:#ba2121">&#39;is_admin&#39;</span>, sa<span style="color:#666">.</span>Boolean(), nullable<span style="color:#666">=</span><span style="color:#008000;font-weight:bold">True</span>)
-    )
-    <span style="color:#408080;font-style:italic"># updated part</span>
-    op<span style="color:#666">.</span>execute(<span style="color:#ba2121">&#34;UPDATE users SET is_admin = false&#34;</span>)
-    op<span style="color:#666">.</span>alter_column(<span style="color:#ba2121">&#39;users&#39;</span>, <span style="color:#ba2121">&#39;is_admin&#39;</span>, nullable<span style="color:#666">=</span><span style="color:#008000;font-weight:bold">False</span>)
-    <span style="color:#408080;font-style:italic"># ### end Alembic commands ###</span>
-<span style="color:#008000;font-weight:bold">def</span> <span style="color:#00f">downgrade</span>():
-    <span style="color:#408080;font-style:italic"># ### commands auto generated by Alembic - please adjust! ###</span>
-    op<span style="color:#666">.</span>drop_column(<span style="color:#ba2121">&#39;users&#39;</span>, <span style="color:#ba2121">&#39;is_admin&#39;</span>)
-    <span style="color:#408080;font-style:italic"># ### end Alembic commands ###</span>
-</code></pre></div><p>We only need to make this change to the migration script, we do not need to make any changes to the User model.</p>
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#008000;font-weight:bold">from</span> <span style="color:#00f;font-weight:bold">alembic</span> <span style="color:#008000;font-weight:bold">import</span> op
+</span></span><span style="display:flex;"><span><span style="color:#008000;font-weight:bold">import</span> <span style="color:#00f;font-weight:bold">sqlalchemy</span> <span style="color:#008000;font-weight:bold">as</span> <span style="color:#00f;font-weight:bold">sa</span>
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic"># revision identifiers, used by Alembic.</span>
+</span></span><span style="display:flex;"><span>revision <span style="color:#666">=</span> <span style="color:#ba2121">&#39;635d30762810&#39;</span>
+</span></span><span style="display:flex;"><span>down_revision <span style="color:#666">=</span> <span style="color:#ba2121">&#39;ad4b629ace65&#39;</span>
+</span></span><span style="display:flex;"><span>branch_labels <span style="color:#666">=</span> <span style="color:#008000;font-weight:bold">None</span>
+</span></span><span style="display:flex;"><span>depends_on <span style="color:#666">=</span> <span style="color:#008000;font-weight:bold">None</span>
+</span></span><span style="display:flex;"><span><span style="color:#008000;font-weight:bold">def</span> <span style="color:#00f">upgrade</span>():
+</span></span><span style="display:flex;"><span>    <span style="color:#408080;font-style:italic"># ### commands auto generated by Alembic - please adjust! ###</span>
+</span></span><span style="display:flex;"><span>    op<span style="color:#666">.</span>add_column(
+</span></span><span style="display:flex;"><span>        <span style="color:#ba2121">&#39;users&#39;</span>,
+</span></span><span style="display:flex;"><span>        sa<span style="color:#666">.</span>Column(<span style="color:#ba2121">&#39;is_admin&#39;</span>, sa<span style="color:#666">.</span>Boolean(), nullable<span style="color:#666">=</span><span style="color:#008000;font-weight:bold">True</span>)
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>    <span style="color:#408080;font-style:italic"># updated part</span>
+</span></span><span style="display:flex;"><span>    op<span style="color:#666">.</span>execute(<span style="color:#ba2121">&#34;UPDATE users SET is_admin = false&#34;</span>)
+</span></span><span style="display:flex;"><span>    op<span style="color:#666">.</span>alter_column(<span style="color:#ba2121">&#39;users&#39;</span>, <span style="color:#ba2121">&#39;is_admin&#39;</span>, nullable<span style="color:#666">=</span><span style="color:#008000;font-weight:bold">False</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#408080;font-style:italic"># ### end Alembic commands ###</span>
+</span></span><span style="display:flex;"><span><span style="color:#008000;font-weight:bold">def</span> <span style="color:#00f">downgrade</span>():
+</span></span><span style="display:flex;"><span>    <span style="color:#408080;font-style:italic"># ### commands auto generated by Alembic - please adjust! ###</span>
+</span></span><span style="display:flex;"><span>    op<span style="color:#666">.</span>drop_column(<span style="color:#ba2121">&#39;users&#39;</span>, <span style="color:#ba2121">&#39;is_admin&#39;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#408080;font-style:italic"># ### end Alembic commands ###</span>
+</span></span></code></pre></div><p>We only need to make this change to the migration script, we do not need to make any changes to the User model.</p>
 <p>When you try applying the migrate command, you should see that the operation is executed successfully this time. You can verify that all existing users have the is_admin column set to false. At this point, you can update the column on selected rows to true.</p>
 <p>In this piece, we assumed that the bulk of the users would be non-admin users. And that is all it takes to add a non-nullable field to an already populated table.</p>
 <p>This is a recurring theme when using Alembic, you would find yourself having to manually craft your own migration commands. As you have seen in this tutorial, it can be quite straightforward to make modifications to the auto-generated script.</p>
@@ -203,7 +203,7 @@ depends_on <span style="color:#666">=</span> <span style="color:#008000;font-wei
         <div class="container">
             <div class="row">
                 <div class="col-sm-12 text-center">
-                    <p>Made with &hearts; in Nairobi &middot; 2021</p>
+                    <p>Made with &hearts; in Nairobi &middot; 2023</p>
                     <p><a href="/public" target="_target">Home</a></p>
                     <p><a href="mailto:okemwamoses@gmail.com" target="_blank">Email</a></p>
                     <p><a href="https://github.com/mosesokemwa" target="_blank">Github</a></p>

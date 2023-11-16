@@ -12,13 +12,13 @@
     <link rel="manifest" href="/manifest.json">
 
     
-    <title>Disabling Ubuntu MOTD spam &middot; Moses Okemwa</title>
+    <title>Disabling Ubuntu MOTD spam &amp;middot; Moses Okemwa</title>
 
     <meta name="description" content="">
     <link rel="canonical" href="https://mosesokemwa.com/public/disabling-ubuntu-motd-spam/">
 
-    <link rel="manifest" href="/public/manifest.json">
-    <meta name="application-name" content="Disabling Ubuntu MOTD spam &middot; Moses Okemwa">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="application-name" content="Disabling Ubuntu MOTD spam &amp;middot; Moses Okemwa">
     <meta name="theme-color" content="#2271ff">
 
     <link rel="apple-touch-icon" sizes="57x57" href="fav/apple-icon-57x57.png">
@@ -38,7 +38,7 @@
     
 
     
-    <link rel="stylesheet" href="https://mosesokemwa.com/public/scss/main.min.496fb46f16645b4539ac8bcac6b2679f014930326a5b1e80fd239c10ac54bce5.css" integrity="sha256-SW&#43;0bxZkW0U5rIvKxrJnnwFJMDJqWx6A/SOcEKxUvOU=" media="screen">
+    <link rel="stylesheet" href="https://mosesokemwa.com/public/scss/main.min.0d30ca89c02830e5cfc1147058038d527d1789ac41d135e22653c08c05cfa4ac.css" integrity="sha256-DTDKicAoMOXPwRRwWAONUn0XiaxB0TXiJlPAjAXPpKw=" media="screen">
 
 </head>
     <body>
@@ -64,13 +64,13 @@
     <link rel="manifest" href="/manifest.json">
 
     
-    <title>Disabling Ubuntu MOTD spam &middot; Moses Okemwa</title>
+    <title>Disabling Ubuntu MOTD spam &amp;middot; Moses Okemwa</title>
 
     <meta name="description" content="">
     <link rel="canonical" href="https://mosesokemwa.com/public/disabling-ubuntu-motd-spam/">
 
-    <link rel="manifest" href="/public/manifest.json">
-    <meta name="application-name" content="Disabling Ubuntu MOTD spam &middot; Moses Okemwa">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="application-name" content="Disabling Ubuntu MOTD spam &amp;middot; Moses Okemwa">
     <meta name="theme-color" content="#2271ff">
 
     <link rel="apple-touch-icon" sizes="57x57" href="fav/apple-icon-57x57.png">
@@ -90,7 +90,7 @@
     
 
     
-    <link rel="stylesheet" href="https://mosesokemwa.com/public/scss/main.min.496fb46f16645b4539ac8bcac6b2679f014930326a5b1e80fd239c10ac54bce5.css" integrity="sha256-SW&#43;0bxZkW0U5rIvKxrJnnwFJMDJqWx6A/SOcEKxUvOU=" media="screen">
+    <link rel="stylesheet" href="https://mosesokemwa.com/public/scss/main.min.0d30ca89c02830e5cfc1147058038d527d1789ac41d135e22653c08c05cfa4ac.css" integrity="sha256-DTDKicAoMOXPwRRwWAONUn0XiaxB0TXiJlPAjAXPpKw=" media="screen">
 
 </head>
 <ol class="breadcrumb">
@@ -132,16 +132,16 @@ Disabling Ubuntu MOTD spam
         <p>When you log into an Ubuntu machine using SSH or a console, you’ll see a motd (“message of the day”) printed with some useful system information, as well as some useless marketing spam. The useless marketing spam is the same material you see when you visit <a href="motd.ubuntu.com">motd.ubuntu.com</a>. This is an affront to good taste, and should be disabled.</p>
 <p>There are a few ways to disable the MOTD altogether. You can touch the file <code>~/.hushlogin</code>. You can also edit <code>/etc/pam.d/sshd</code> and remove the lines referring to <code>pam_motd.so</code>. But these measures are a bit extreme. The default Ubutu motd has some useful information in it like the system load, and you might want to keep that information.</p>
 <p>If you want to keep the motd minus the marketing spam, edit /etc/default/motd-news and set ENABLED=0. Here’s a handy one-liner that does it using sed:</p>
-<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#408080;font-style:italic"># Disable Ubuntu motd spam</span>
-$ sudo sed -i <span style="color:#ba2121">&#39;s/^ENABLED=.*/ENABLED=0/&#39;</span> /etc/default/motd-news
-</code></pre></div><p>If you configure your hosts using Ansible, you can use a task like this to achieve the same effect:</p>
-<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">- name: disable ubuntu motd-news
-  lineinfile:
-    dest: /etc/default/motd-news
-    state: present
-    regexp: <span style="color:#ba2121">&#39;^ENABLED=&#39;</span>
-    line: <span style="color:#ba2121">&#39;ENABLED=0&#39;</span>
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#408080;font-style:italic"># Disable Ubuntu motd spam</span>
+</span></span><span style="display:flex;"><span>$ sudo sed -i <span style="color:#ba2121">&#39;s/^ENABLED=.*/ENABLED=0/&#39;</span> /etc/default/motd-news
+</span></span></code></pre></div><p>If you configure your hosts using Ansible, you can use a task like this to achieve the same effect:</p>
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>- name: disable ubuntu motd-news
+</span></span><span style="display:flex;"><span>  lineinfile:
+</span></span><span style="display:flex;"><span>    dest: /etc/default/motd-news
+</span></span><span style="display:flex;"><span>    state: present
+</span></span><span style="display:flex;"><span>    regexp: <span style="color:#ba2121">&#39;^ENABLED=&#39;</span>
+</span></span><span style="display:flex;"><span>    line: <span style="color:#ba2121">&#39;ENABLED=0&#39;</span>
+</span></span></code></pre></div>
     </section>
 
 </article>
@@ -152,7 +152,7 @@ $ sudo sed -i <span style="color:#ba2121">&#39;s/^ENABLED=.*/ENABLED=0/&#39;</sp
         <div class="container">
             <div class="row">
                 <div class="col-sm-12 text-center">
-                    <p>Made with &hearts; in Nairobi &middot; 2021</p>
+                    <p>Made with &hearts; in Nairobi &middot; 2023</p>
                     <p><a href="/public" target="_target">Home</a></p>
                     <p><a href="mailto:okemwamoses@gmail.com" target="_blank">Email</a></p>
                     <p><a href="https://github.com/mosesokemwa" target="_blank">Github</a></p>

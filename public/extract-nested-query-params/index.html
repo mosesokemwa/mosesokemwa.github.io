@@ -12,13 +12,13 @@
     <link rel="manifest" href="/manifest.json">
 
     
-    <title>Extracting Nested Query Params &middot; Moses Okemwa</title>
+    <title>Extracting Nested Query Params &amp;middot; Moses Okemwa</title>
 
     <meta name="description" content="">
     <link rel="canonical" href="https://mosesokemwa.com/public/extract-nested-query-params/">
 
-    <link rel="manifest" href="/public/manifest.json">
-    <meta name="application-name" content="Extracting Nested Query Params &middot; Moses Okemwa">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="application-name" content="Extracting Nested Query Params &amp;middot; Moses Okemwa">
     <meta name="theme-color" content="#2271ff">
 
     <link rel="apple-touch-icon" sizes="57x57" href="fav/apple-icon-57x57.png">
@@ -38,7 +38,7 @@
     
 
     
-    <link rel="stylesheet" href="https://mosesokemwa.com/public/scss/main.min.496fb46f16645b4539ac8bcac6b2679f014930326a5b1e80fd239c10ac54bce5.css" integrity="sha256-SW&#43;0bxZkW0U5rIvKxrJnnwFJMDJqWx6A/SOcEKxUvOU=" media="screen">
+    <link rel="stylesheet" href="https://mosesokemwa.com/public/scss/main.min.0d30ca89c02830e5cfc1147058038d527d1789ac41d135e22653c08c05cfa4ac.css" integrity="sha256-DTDKicAoMOXPwRRwWAONUn0XiaxB0TXiJlPAjAXPpKw=" media="screen">
 
 </head>
     <body>
@@ -64,13 +64,13 @@
     <link rel="manifest" href="/manifest.json">
 
     
-    <title>Extracting Nested Query Params &middot; Moses Okemwa</title>
+    <title>Extracting Nested Query Params &amp;middot; Moses Okemwa</title>
 
     <meta name="description" content="">
     <link rel="canonical" href="https://mosesokemwa.com/public/extract-nested-query-params/">
 
-    <link rel="manifest" href="/public/manifest.json">
-    <meta name="application-name" content="Extracting Nested Query Params &middot; Moses Okemwa">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="application-name" content="Extracting Nested Query Params &amp;middot; Moses Okemwa">
     <meta name="theme-color" content="#2271ff">
 
     <link rel="apple-touch-icon" sizes="57x57" href="fav/apple-icon-57x57.png">
@@ -90,7 +90,7 @@
     
 
     
-    <link rel="stylesheet" href="https://mosesokemwa.com/public/scss/main.min.496fb46f16645b4539ac8bcac6b2679f014930326a5b1e80fd239c10ac54bce5.css" integrity="sha256-SW&#43;0bxZkW0U5rIvKxrJnnwFJMDJqWx6A/SOcEKxUvOU=" media="screen">
+    <link rel="stylesheet" href="https://mosesokemwa.com/public/scss/main.min.0d30ca89c02830e5cfc1147058038d527d1789ac41d135e22653c08c05cfa4ac.css" integrity="sha256-DTDKicAoMOXPwRRwWAONUn0XiaxB0TXiJlPAjAXPpKw=" media="screen">
 
 </head>
 <ol class="breadcrumb">
@@ -134,31 +134,31 @@ Extracting Nested Query Params
 </code></pre><p>In this link I needed to get the url and nested call back query params, when parsed to the api data endpoint
 All this was a scope-creep and needed to ebe solved in the shorted time possible</p>
 <p>My take: NodeJs is powerful, you just need to know where to look(documentation) and who to consult(documentation)</p>
-<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#008000;font-weight:bold">const</span> url <span style="color:#666">=</span> require(<span style="color:#ba2121">&#39;url&#39;</span>); <span style="color:#408080;font-style:italic">//https://nodejs.org/api/url.html
-</span><span style="color:#408080;font-style:italic"></span><span style="color:#008000;font-weight:bold">const</span> querystring <span style="color:#666">=</span> require(<span style="color:#ba2121">&#39;querystring&#39;</span>); <span style="color:#408080;font-style:italic">// https://nodejs.org/api/querystring.html
-</span><span style="color:#408080;font-style:italic"></span>
-<span style="color:#008000;font-weight:bold">let</span> rawUrl <span style="color:#666">=</span> ctx.query.url;
-<span style="color:#008000;font-weight:bold">let</span> parsedUrl <span style="color:#666">=</span> url.parse(rawUrl);
-<span style="color:#008000;font-weight:bold">let</span> parsedQs <span style="color:#666">=</span> querystring.parse(parsedUrl.query);
-
-
-<span style="color:#408080;font-style:italic">// parsedQs = { callbackUrl: &#39;https://webhook.com/api/me&#39; }
-</span></code></pre></div><p>After calling <code>url.parse(rawUrl)</code> on our URL, this is what is returned to us:</p>
-<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">{
-    protocol<span style="color:#666">:</span> <span style="color:#ba2121">&#39;https:&#39;</span>,
-    slashes<span style="color:#666">:</span> <span style="color:#008000;font-weight:bold">true</span>,
-    auth<span style="color:#666">:</span> <span style="color:#008000;font-weight:bold">null</span>,
-    host<span style="color:#666">:</span> <span style="color:#ba2121">&#39;mysite.com&#39;</span>,
-    port<span style="color:#666">:</span> <span style="color:#008000;font-weight:bold">null</span>,
-    hostname<span style="color:#666">:</span> <span style="color:#ba2121">&#39;mysite.com&#39;</span>,
-    hash<span style="color:#666">:</span> <span style="color:#008000;font-weight:bold">null</span>,
-    search<span style="color:#666">:</span> <span style="color:#ba2121">&#39;?callbackUrl=https://webhook.com/api/me&#39;</span>,
-    query<span style="color:#666">:</span> <span style="color:#ba2121">&#39;callbackUrl=https://webhook.com/api/me&#39;</span>,
-    pathname<span style="color:#666">:</span> <span style="color:#ba2121">&#39;/&#39;</span>,
-    path<span style="color:#666">:</span> <span style="color:#ba2121">&#39;/?page=2&amp;limit=3&#39;</span>,
-    href<span style="color:#666">:</span> <span style="color:#ba2121">&#39;https://mysite.com/blog/blopost1?callbackUrl=https://webhook.com/api/me&#39;</span>
-}
-</code></pre></div><p>While the actual act of retrieving this data is very simple, understanding where this info comes from and what it is can be confusing for some beginners. Hopefully this article cleared some things up for you.</p>
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#008000;font-weight:bold">const</span> url <span style="color:#666">=</span> require(<span style="color:#ba2121">&#39;url&#39;</span>); <span style="color:#408080;font-style:italic">//https://nodejs.org/api/url.html
+</span></span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic"></span><span style="color:#008000;font-weight:bold">const</span> querystring <span style="color:#666">=</span> require(<span style="color:#ba2121">&#39;querystring&#39;</span>); <span style="color:#408080;font-style:italic">// https://nodejs.org/api/querystring.html
+</span></span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic"></span>
+</span></span><span style="display:flex;"><span><span style="color:#008000;font-weight:bold">let</span> rawUrl <span style="color:#666">=</span> ctx.query.url;
+</span></span><span style="display:flex;"><span><span style="color:#008000;font-weight:bold">let</span> parsedUrl <span style="color:#666">=</span> url.parse(rawUrl);
+</span></span><span style="display:flex;"><span><span style="color:#008000;font-weight:bold">let</span> parsedQs <span style="color:#666">=</span> querystring.parse(parsedUrl.query);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">// parsedQs = { callbackUrl: &#39;https://webhook.com/api/me&#39; }
+</span></span></span></code></pre></div><p>After calling <code>url.parse(rawUrl)</code> on our URL, this is what is returned to us:</p>
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    protocol<span style="color:#666">:</span> <span style="color:#ba2121">&#39;https:&#39;</span>,
+</span></span><span style="display:flex;"><span>    slashes<span style="color:#666">:</span> <span style="color:#008000;font-weight:bold">true</span>,
+</span></span><span style="display:flex;"><span>    auth<span style="color:#666">:</span> <span style="color:#008000;font-weight:bold">null</span>,
+</span></span><span style="display:flex;"><span>    host<span style="color:#666">:</span> <span style="color:#ba2121">&#39;mysite.com&#39;</span>,
+</span></span><span style="display:flex;"><span>    port<span style="color:#666">:</span> <span style="color:#008000;font-weight:bold">null</span>,
+</span></span><span style="display:flex;"><span>    hostname<span style="color:#666">:</span> <span style="color:#ba2121">&#39;mysite.com&#39;</span>,
+</span></span><span style="display:flex;"><span>    hash<span style="color:#666">:</span> <span style="color:#008000;font-weight:bold">null</span>,
+</span></span><span style="display:flex;"><span>    search<span style="color:#666">:</span> <span style="color:#ba2121">&#39;?callbackUrl=https://webhook.com/api/me&#39;</span>,
+</span></span><span style="display:flex;"><span>    query<span style="color:#666">:</span> <span style="color:#ba2121">&#39;callbackUrl=https://webhook.com/api/me&#39;</span>,
+</span></span><span style="display:flex;"><span>    pathname<span style="color:#666">:</span> <span style="color:#ba2121">&#39;/&#39;</span>,
+</span></span><span style="display:flex;"><span>    path<span style="color:#666">:</span> <span style="color:#ba2121">&#39;/?page=2&amp;limit=3&#39;</span>,
+</span></span><span style="display:flex;"><span>    href<span style="color:#666">:</span> <span style="color:#ba2121">&#39;https://mysite.com/blog/blopost1?callbackUrl=https://webhook.com/api/me&#39;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>While the actual act of retrieving this data is very simple, understanding where this info comes from and what it is can be confusing for some beginners. Hopefully this article cleared some things up for you.</p>
 
     </section>
 
@@ -170,7 +170,7 @@ All this was a scope-creep and needed to ebe solved in the shorted time possible
         <div class="container">
             <div class="row">
                 <div class="col-sm-12 text-center">
-                    <p>Made with &hearts; in Nairobi &middot; 2021</p>
+                    <p>Made with &hearts; in Nairobi &middot; 2023</p>
                     <p><a href="/public" target="_target">Home</a></p>
                     <p><a href="mailto:okemwamoses@gmail.com" target="_blank">Email</a></p>
                     <p><a href="https://github.com/mosesokemwa" target="_blank">Github</a></p>
