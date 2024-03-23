@@ -7,6 +7,11 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
+    <loc>https://mosesokemwa.com/public/</loc>
+    <lastmod>2021-02-10T14:29:14+03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>https://mosesokemwa.com/public/getting-django-models-into-admin/</loc>
     <lastmod>2020-12-13T22:17:14+03:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -63,10 +68,6 @@
     <priority>0.5</priority>
   </url><url>
     <loc>https://mosesokemwa.com/public/categories/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://mosesokemwa.com/public/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
