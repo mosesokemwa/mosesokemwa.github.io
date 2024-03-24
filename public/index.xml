@@ -2,94 +2,94 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Moses Okemwa</title>
-    <link>https://mosesokemwa.com/public/</link>
+    <link>https://mosesokemwa.github.io/public/</link>
     <description>Recent content on Moses Okemwa</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 10 Feb 2021 14:29:14 +0300</lastBuildDate>
-    <atom:link href="https://mosesokemwa.com/public/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://mosesokemwa.github.io/public/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Extracting Nested Query Params</title>
-      <link>https://mosesokemwa.com/public/extract-nested-query-params/</link>
+      <link>https://mosesokemwa.github.io/public/extract-nested-query-params/</link>
       <pubDate>Wed, 10 Feb 2021 14:29:14 +0300</pubDate>
-      <guid>https://mosesokemwa.com/public/extract-nested-query-params/</guid>
+      <guid>https://mosesokemwa.github.io/public/extract-nested-query-params/</guid>
       <description>This is a very niche problem I was trying to solve.&#xA;/api/v1/data?url=https://mysite.com/blog/blopost1?callbackUrl=https://webhook.com/api/me In this link I needed to get the url and nested call back query params, when parsed to the api data endpoint All this was a scope-creep and needed to ebe solved in the shorted time possible&#xA;My take: NodeJs is powerful, you just need to know where to look(documentation) and who to consult(documentation)&#xA;const url = require(&amp;#39;url&amp;#39;); //https://nodejs.</description>
     </item>
     <item>
       <title>Getting All Django Models into Admin Site</title>
-      <link>https://mosesokemwa.com/public/getting-django-models-into-admin/</link>
+      <link>https://mosesokemwa.github.io/public/getting-django-models-into-admin/</link>
       <pubDate>Sun, 13 Dec 2020 22:17:14 +0300</pubDate>
-      <guid>https://mosesokemwa.com/public/getting-django-models-into-admin/</guid>
+      <guid>https://mosesokemwa.github.io/public/getting-django-models-into-admin/</guid>
       <description>I needed a shortcut to register all my models in Django admin, spent a few hours tinkering with this idea.&#xA;from django.apps import apps from django.contrib import admin class ListAdminMixin(object): def __init__(self, model, admin_site): self.list_display = [field.name for field in model._meta.fields] super(ListAdminMixin, self).__init__(model, admin_site) models = apps.get_models() for model in models: admin_class = type(&amp;#39;AdminClass&amp;#39;, (ListAdminMixin, admin.ModelAdmin), {}) try: admin.site.register(model, admin_class) except admin.sites.AlreadyRegistered: pass The only downside is it registers everything, does not provide the custom options of including/excluding fields by putting fields that you need in the admin.</description>
     </item>
     <item>
       <title>Django&#39;s session and cookie manipulation</title>
-      <link>https://mosesokemwa.com/public/settings-cookies-in-django/</link>
+      <link>https://mosesokemwa.github.io/public/settings-cookies-in-django/</link>
       <pubDate>Sat, 29 Feb 2020 12:13:39 +0300</pubDate>
-      <guid>https://mosesokemwa.com/public/settings-cookies-in-django/</guid>
+      <guid>https://mosesokemwa.github.io/public/settings-cookies-in-django/</guid>
       <description>Django provide direct cookie manipulation methods on the request and response objects (so you don&amp;rsquo;t need a helper function).&#xA;Setting a cookie:&#xA;def view(request): response = HttpResponse(&amp;#39;blah&amp;#39;) response.set_cookie(&amp;#39;cookie_name&amp;#39;, &amp;#39;cookie_value&amp;#39;) Retrieving a cookie:&#xA;def view(request): value = request.COOKIES.get(&amp;#39;cookie_name&amp;#39;) if value is None: # Cookie is not set # OR try: value = request.COOKIES[&amp;#39;cookie_name&amp;#39;] except KeyError: </description>
     </item>
     <item>
       <title>Flask migration of non-nullable fields</title>
-      <link>https://mosesokemwa.com/public/flask_alembic_migrations/</link>
+      <link>https://mosesokemwa.github.io/public/flask_alembic_migrations/</link>
       <pubDate>Sat, 12 Oct 2019 12:21:11 +0300</pubDate>
-      <guid>https://mosesokemwa.com/public/flask_alembic_migrations/</guid>
+      <guid>https://mosesokemwa.github.io/public/flask_alembic_migrations/</guid>
       <description>It is quite easy to add a non-nullable field to an empty table. Any migration tool, including Alembic, can automatically generate a migration file for you that is immediately ready for use, with no modifications required.&#xA;The problem arises when you have a table that is populated with data. You specify that you want a new field that doesn’t accept null values, yet, you already have a host of rows on the table created prior to this new addition.</description>
     </item>
     <item>
       <title>The expert beginner { good || bad }</title>
-      <link>https://mosesokemwa.com/public/dark-net-diaries/</link>
+      <link>https://mosesokemwa.github.io/public/dark-net-diaries/</link>
       <pubDate>Fri, 09 Aug 2019 21:40:14 +0300</pubDate>
-      <guid>https://mosesokemwa.com/public/dark-net-diaries/</guid>
+      <guid>https://mosesokemwa.github.io/public/dark-net-diaries/</guid>
       <description>This has been you at a specific point in your life. The Expert Beginner is one who has new skills to learn in their craft and improvements to make in their professional life, and is intentional about how they grow.&#xA;A high number of Expert Beginners are found in the Tech industry because it is receptive to career transitions and tech employees are asked to be dynamic. Some people in tech have a tech related certification from university, others can rightfully brag to be self-taught while others were in a completely different industry - like I was before I became a Software Engineer.</description>
     </item>
     <item>
       <title>Seting up NGINX</title>
-      <link>https://mosesokemwa.com/public/nginx-setup/</link>
+      <link>https://mosesokemwa.github.io/public/nginx-setup/</link>
       <pubDate>Sat, 25 May 2019 18:15:14 +0300</pubDate>
-      <guid>https://mosesokemwa.com/public/nginx-setup/</guid>
+      <guid>https://mosesokemwa.github.io/public/nginx-setup/</guid>
       <description>This is a process that I find myself doing over and over again, and for the most part I keep skipping a couple of steps or repeating them. Hopefully having it here will make my work easier the next time I need to set up NGINX.&#xA;Setup NGINX Setup UFW (Uncomplicated Firewall) rules&#xA;sudo ufw allow out 22/tcp sudo ufw allow out 80/tcp sudo ufw allow out 443/tcp Lets start by updating our software</description>
     </item>
     <item>
       <title>Disabling Ubuntu MOTD spam</title>
-      <link>https://mosesokemwa.com/public/disabling-ubuntu-motd-spam/</link>
+      <link>https://mosesokemwa.github.io/public/disabling-ubuntu-motd-spam/</link>
       <pubDate>Mon, 25 Feb 2019 01:47:00 +0300</pubDate>
-      <guid>https://mosesokemwa.com/public/disabling-ubuntu-motd-spam/</guid>
+      <guid>https://mosesokemwa.github.io/public/disabling-ubuntu-motd-spam/</guid>
       <description>When you log into an Ubuntu machine using SSH or a console, you’ll see a motd (“message of the day”) printed with some useful system information, as well as some useless marketing spam. The useless marketing spam is the same material you see when you visit motd.ubuntu.com. This is an affront to good taste, and should be disabled.&#xA;There are a few ways to disable the MOTD altogether. You can touch the file ~/.</description>
     </item>
     <item>
       <title>Broken image handling with jQuery</title>
-      <link>https://mosesokemwa.com/public/broken-image-handling/</link>
+      <link>https://mosesokemwa.github.io/public/broken-image-handling/</link>
       <pubDate>Sun, 03 Feb 2019 14:28:14 +0300</pubDate>
-      <guid>https://mosesokemwa.com/public/broken-image-handling/</guid>
+      <guid>https://mosesokemwa.github.io/public/broken-image-handling/</guid>
       <description>Missing images will either just display nothing, or display a [ ? ] style box when their source cannot be found. Instead, you may want to replace that with a &amp;ldquo;missing image&amp;rdquo; graphic that you are sure exists so there is better visual feedback that something is wrong. Or, you might want to hide it entirely. This is possible because images that a browser can&amp;rsquo;t find fire off an &amp;ldquo;error&amp;rdquo; JavaScript event we can watch for.</description>
     </item>
     <item>
       <title>Code of conduct</title>
-      <link>https://mosesokemwa.com/public/code-of-conduct/</link>
+      <link>https://mosesokemwa.github.io/public/code-of-conduct/</link>
       <pubDate>Thu, 24 Jan 2019 18:15:14 +0300</pubDate>
-      <guid>https://mosesokemwa.com/public/code-of-conduct/</guid>
+      <guid>https://mosesokemwa.github.io/public/code-of-conduct/</guid>
       <description>So I decided to start sharing my brain with the world, and by doing that I needed a place where I can put all my thoughts together. Most of them are unstructured others sound really composed.&#xA;To be effective and not worry about the PR/Marketing side of things I decided to do things different.&#xA;I don’t use cookies to track visitors to my site; you are completely anonymous when vising this site except for whatever is revealed by your User-Agent and source IP information.</description>
     </item>
     <item>
       <title>Droplets, Dockers, Containers, Kitematic…. SLEEPLESS NIGHT.</title>
-      <link>https://mosesokemwa.com/public/devops-tooling/</link>
+      <link>https://mosesokemwa.github.io/public/devops-tooling/</link>
       <pubDate>Sat, 18 Nov 2017 21:35:00 +0300</pubDate>
-      <guid>https://mosesokemwa.com/public/devops-tooling/</guid>
+      <guid>https://mosesokemwa.github.io/public/devops-tooling/</guid>
       <description>I spent 5 hours of my night installing, reading docs, configuring, uninstalling and watching videos. All to understand how digital ocean and dockers cross paths. I must say, it was worth it. I came across things I knew and worked with before - Nginx, vagrant, and virtual machine. The only thing I heard to learn how to use with dockers was Nginx, the rest are things you use on the side.</description>
     </item>
     <item>
       <title>What lurks behind the curtain = { isn’t that scary}</title>
-      <link>https://mosesokemwa.com/public/the-onion-router/</link>
+      <link>https://mosesokemwa.github.io/public/the-onion-router/</link>
       <pubDate>Sat, 18 Nov 2017 21:35:00 +0300</pubDate>
-      <guid>https://mosesokemwa.com/public/the-onion-router/</guid>
+      <guid>https://mosesokemwa.github.io/public/the-onion-router/</guid>
       <description>The internet you use and the websites your browse — these are just a fraction of the entire web. Some of you would be not knowing this widely popular fact about the hidden world of Darknet. But, your knowledge shouldn’t be limited to this fact. So, here is more about this underground world for the “underground”.&#xA;The Darknet can’t be accessed using the regular web browser. You can access this by using encryption mechanisms like TOR or some other password protected forums.</description>
     </item>
     <item>
       <title>Beautiful Tools for Awesome Front-end Developers.</title>
-      <link>https://mosesokemwa.com/public/tools-for-frontend-developers/</link>
+      <link>https://mosesokemwa.github.io/public/tools-for-frontend-developers/</link>
       <pubDate>Tue, 18 Apr 2017 21:35:00 +0300</pubDate>
-      <guid>https://mosesokemwa.com/public/tools-for-frontend-developers/</guid>
+      <guid>https://mosesokemwa.github.io/public/tools-for-frontend-developers/</guid>
       <description>In my many hours of writing code and hanging around fellow developers, I realized that there are a bunch of tools that we use in our craft that make life easier. Some are just a matter of taste, familiarity and what area one is focusing on.&#xA;I focus on Backend Development but in the rare times I work on the front end bit I have these tools that come in handy(Chrome Browser tools).</description>
     </item>
   </channel>
