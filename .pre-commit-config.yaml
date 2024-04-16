@@ -1,0 +1,42 @@
+default_stages: [commit]
+default_language_version:
+  python: python3.10
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.5.0
+    hooks:
+      -   id: check-yaml
+      -   id: check-added-large-files
+  - repo: https://github.com/pycqa/isort
+    rev: 5.13.2
+    hooks:
+      - id: isort
+        exclude: ^($), migrations
+        description: 'Sort imports'
+  - repo: https://github.com/PyCQA/bandit
+    rev: '1.7.7'
+    hooks:
+      - id: bandit
+        args: [
+          --recursive,
+          --confidence-level=high,
+          --severity=high,
+        ]
+        exclude: ^($), migrations, tests
+        description: 'Check for common security issues'
+  - repo: https://github.com/PyCQA/autoflake
+    rev: v2.3.0
+    hooks:
+      - id: autoflake
+        args: [ --remove-all-unused-imports, --in-place ]
+        description: 'Remove unused imports'
+  - repo: https://github.com/PyCQA/flake8
+    rev: 7.0.0
+    hooks:
+      - id: flake8
+        args: [
+          --max-line-length=113,
+        ]
+        exclude: ^($), migrations
+        types: [ 'python' ]
+        description: 'Check for style errors'
