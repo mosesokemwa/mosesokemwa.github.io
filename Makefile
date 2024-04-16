@@ -1,4 +1,5 @@
-.PHONY: run build clean help
+.PHONY: run build clean help commit
+
 run:
 	@echo "Running the program..."
 	@hugo server -D
@@ -18,3 +19,6 @@ help:
 	@echo "clean: Clean the program"
 	@echo "help: Show this help message"
 
+commit:
+	@echo "Committing the changes..."
+	sh deploy.sh

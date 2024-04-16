@@ -1,0 +1,184 @@
+<!doctype html>
+<html class="no-js" lang="en-us">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="manifest" href="/manifest.json">
+
+
+    <title>Broken image handling with jQuery &amp;middot; Moses Okemwa</title>
+
+    <meta name="description" content="">
+    <link rel="canonical" href="https://mosesokemwa.github.io/public/broken-image-handling/">
+
+    <link rel="manifest" href="/manifest.json">
+    <meta name="application-name" content="Broken image handling with jQuery &amp;middot; Moses Okemwa">
+    <meta name="theme-color" content="#2271ff">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="fav/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="fav/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="fav/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="fav/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="fav/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="fav/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="fav/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="fav/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="fav/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="fav/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="fav/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="fav/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="fav/favicon-16x16.png">
+
+
+
+
+    <link rel="stylesheet" href="https://mosesokemwa.github.io/public/scss/main.min.0d30ca89c02830e5cfc1147058038d527d1789ac41d135e22653c08c05cfa4ac.css" integrity="sha256-DTDKicAoMOXPwRRwWAONUn0XiaxB0TXiJlPAjAXPpKw=" media="screen">
+
+</head>
+    <body>
+        <div class="page">
+
+<header>
+    <nav class="navbar bg-moringa"></nav>
+</header>
+
+
+
+            <div id="main">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="manifest" href="/manifest.json">
+
+
+    <title>Broken image handling with jQuery &amp;middot; Moses Okemwa</title>
+
+    <meta name="description" content="">
+    <link rel="canonical" href="https://mosesokemwa.github.io/public/broken-image-handling/">
+
+    <link rel="manifest" href="/manifest.json">
+    <meta name="application-name" content="Broken image handling with jQuery &amp;middot; Moses Okemwa">
+    <meta name="theme-color" content="#2271ff">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="fav/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="fav/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="fav/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="fav/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="fav/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="fav/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="fav/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="fav/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="fav/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="fav/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="fav/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="fav/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="fav/favicon-16x16.png">
+
+
+
+
+    <link rel="stylesheet" href="https://mosesokemwa.github.io/public/scss/main.min.0d30ca89c02830e5cfc1147058038d527d1789ac41d135e22653c08c05cfa4ac.css" integrity="sha256-DTDKicAoMOXPwRRwWAONUn0XiaxB0TXiJlPAjAXPpKw=" media="screen">
+
+</head>
+<ol class="breadcrumb">
+
+
+
+
+
+<li class="breadcrumb-item">
+    <a href="https://mosesokemwa.github.io/public/">Moses Okemwa</a>
+</li>
+
+
+
+
+<li class="breadcrumb-item active d-sm-none d-md-block">
+Broken image handling with jQuery
+</li>
+
+
+</ol>
+
+<article>
+    <h1>Broken image handling with jQuery</h1>
+
+
+
+
+
+<div>
+    <time class="meta-date" datetime="2019-02-03">
+    2019-02-03
+    </time>
+</div>
+
+
+
+    <section id="content">
+        <p>Missing images will either just display nothing, or display a [ ? ] style box when their source cannot be found. Instead, you may want to replace that with a &ldquo;missing image&rdquo; graphic that you are sure exists so there is better visual feedback that something is wrong. Or, you might want to hide it entirely. This is possible because images that a browser can&rsquo;t find fire off an &ldquo;error&rdquo; JavaScript event we can watch for.</p>
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#408080;font-style:italic">// Jquery
+</span></span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">// Replace source
+</span></span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic"></span>$(<span style="color:#ba2121">&#34;img&#34;</span>).on(<span style="color:#ba2121">&#34;error&#34;</span>, <span style="color:#008000;font-weight:bold">function</span>() {
+</span></span><span style="display:flex;"><span>  $(<span style="color:#008000;font-weight:bold">this</span>).attr(<span style="color:#ba2121">&#34;src&#34;</span>, <span style="color:#ba2121">&#34;/images/missing.png&#34;</span>);
+</span></span><span style="display:flex;"><span>});
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">// Or, hide them
+</span></span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic"></span>$(<span style="color:#ba2121">&#34;img&#34;</span>).on(<span style="color:#ba2121">&#34;error&#34;</span>, <span style="color:#008000;font-weight:bold">function</span>() {
+</span></span><span style="display:flex;"><span>  $(<span style="color:#008000;font-weight:bold">this</span>).hide();
+</span></span><span style="display:flex;"><span>});
+</span></span></code></pre></div><p>But what if you have thousands of images, seeing the same image when handling the missing image error can be boring to the user. So to make it fun, why not a bit further and select random images in an array.</p>
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#408080;font-style:italic">// Jquery
+</span></span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">// Replace source
+</span></span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic"></span>
+</span></span><span style="display:flex;"><span><span style="color:#008000;font-weight:bold">var</span> images <span style="color:#666">=</span> [<span style="color:#ba2121">&#34;0.png&#34;</span>, <span style="color:#ba2121">&#34;1.png&#34;</span>, <span style="color:#ba2121">&#34;2.png&#34;</span>, <span style="color:#ba2121">&#34;3.png&#34;</span>, <span style="color:#ba2121">&#34;4.png&#34;</span>, <span style="color:#ba2121">&#34;5.png&#34;</span>];
+</span></span><span style="display:flex;"><span><span style="color:#008000;font-weight:bold">var</span> rand <span style="color:#666">=</span> images[<span style="color:#008000">Math</span>.floor(<span style="color:#008000">Math</span>.random() <span style="color:#666">*</span> images.length)];
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$(<span style="color:#ba2121">&#34;img&#34;</span>).on(<span style="color:#ba2121">&#34;error&#34;</span>, <span style="color:#008000;font-weight:bold">function</span>() {
+</span></span><span style="display:flex;"><span>  $(<span style="color:#008000;font-weight:bold">this</span>).attr(<span style="color:#ba2121">&#34;src&#34;</span>, <span style="color:#ba2121">&#34;/images/&#34;</span> <span style="color:#666">+</span> rand);
+</span></span><span style="display:flex;"><span>});
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">// Or, hide them
+</span></span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic"></span>$(<span style="color:#ba2121">&#34;img&#34;</span>).on(<span style="color:#ba2121">&#34;error&#34;</span>, <span style="color:#008000;font-weight:bold">function</span>() {
+</span></span><span style="display:flex;"><span>  $(<span style="color:#008000;font-weight:bold">this</span>).hide();
+</span></span><span style="display:flex;"><span>});
+</span></span></code></pre></div><p>the expansion potential for this piece of code is endless, so I&rsquo;m going to have fun finding out what I can do with this</p>
+
+    </section>
+
+</article>
+
+            </div>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <p>Made with &hearts; in Nairobi &middot; 2024</p>
+                    <p><a href="/public" target="_target">Home</a></p>
+                    <p><a href="mailto:okemwamoses@gmail.com" target="_blank">Email</a></p>
+                    <p><a href="https://github.com/mosesokemwa" target="_blank">Github</a></p>
+                    <p><a href="https://linkedin.com/in/mosesokemwa/" target="_blank">LinkedIn</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+        </div>
+    </body>
+
+</html>
