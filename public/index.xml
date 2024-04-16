@@ -10,9 +10,9 @@
     <atom:link href="https://mosesokemwa.github.io/public/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>A couple (100) Projects to Improve your Skills as a Programmer</title>
-      <link>https://mosesokemwa.github.io/public/learning-projects/</link>
+      <link>https://mosesokemwa.github.io/public/100-projects/</link>
       <pubDate>Mon, 15 Apr 2024 14:28:14 +0300</pubDate>
-      <guid>https://mosesokemwa.github.io/public/learning-projects/</guid>
+      <guid>https://mosesokemwa.github.io/public/100-projects/</guid>
       <description>A couple (100) Projects to Improve your Skills as a Programmer A list of practical projects that anyone can solve in any programming language . These projects are divided in multiple categories, and each category has it&amp;rsquo;s own folder. To get started, simply fork this github repo.&#xA;Numbers&#xA;Find PI to the Nth Digit - Enter a number and have the program generate PI up to that many decimal places. Keep a limit to how far the program will go.</description>
     </item>
     <item>
