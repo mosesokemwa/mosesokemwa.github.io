@@ -22,5 +22,4 @@ After helping the company grow by structuring the classroom experience and proce
 
 Here I am, 27+yrs old, with amazing people skills, good management practices and great technical skills(imposter syndromes kicks in once in a while, clearly not when writing this), and always on the look for amazing experiences.
 
-In my career as a Software Developer I would like 
-
+In my career as a Software Developer I would like

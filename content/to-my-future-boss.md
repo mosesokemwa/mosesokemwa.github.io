@@ -93,4 +93,3 @@ If that sounds like you, then you might be a tech leader.
 It takes a lot of work to grow in your career. But it's worth it.
 
 Above all else, just keep pushing forward, stay humble, and keep learning!
-

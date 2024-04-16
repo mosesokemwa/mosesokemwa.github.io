@@ -5,10 +5,10 @@ draft: true
 ---
 
 Moses Okemwa, this is your Personal Relative Strengths Report.
-The Shortlist Relative Strengths report has been uniquely designed to uncover the ordering of 10 factors within you. 
+The Shortlist Relative Strengths report has been uniquely designed to uncover the ordering of 10 factors within you.
 These 10 factors were chosen due to their strong association with the way you are effective at both work and in life.
 What does "relative strength" actually mean?
-Unlike "absolute" scores, "relative" scores cannot be compared to other individuals. They are used to identify factors that contribute the most to your personality and behaviour. 
+Unlike "absolute" scores, "relative" scores cannot be compared to other individuals. They are used to identify factors that contribute the most to your personality and behaviour.
 
 A high score on any factor means that it forms a dominant part of who you are.A low score simply means that, within you, other factors tend to be expressed in a more dominant fashion.
 ...
@@ -42,11 +42,11 @@ Team focused individuals can sometimes be too focused on consensus and keeping e
 2. Learning Orientated
 Overview:
 
-You love to learn; it is one of the most powerful aspects of your personality. High learning oriented individuals are curious, inquisitive and investigative. Learning orientation is seen as a key trait across top employees, and you are always seeking to acquire new information and skills to meet your goals. If only more people could have your attitude to learning! 
+You love to learn; it is one of the most powerful aspects of your personality. High learning oriented individuals are curious, inquisitive and investigative. Learning orientation is seen as a key trait across top employees, and you are always seeking to acquire new information and skills to meet your goals. If only more people could have your attitude to learning!
 
 Where you work best:
 
-People who with a high learning orientation naturally seek-out and enjoy the process of learning. You are likely to thrive in environments where change is the norm and where survival depends on adaptation and use of new knowledge and skills. 
+People who with a high learning orientation naturally seek-out and enjoy the process of learning. You are likely to thrive in environments where change is the norm and where survival depends on adaptation and use of new knowledge and skills.
 
 Potential watch-outs:
 

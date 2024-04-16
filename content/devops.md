@@ -26,5 +26,4 @@ Then came the best part of the night, watching the part 3 video from the above y
 
 Currently, I'm almost done with the getting started section on the docs. Doing this to familiarise myself with the docs, terminologies used and get the flow of how to work with Docker.
 
-
 <!-- [![DigitalOcean Referral Badge](https://web-platforms.sfo2.cdn.digitaloceanspaces.com/WWW/Badge%201.svg)](https://www.digitalocean.com/?refcode=e6d5d61dec16&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge) -->

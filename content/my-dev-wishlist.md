@@ -1,7 +1,7 @@
 ---
 title: "Fake Wishlist"
 date: 2019-02-18T12:21:14+03:00
-draft: True
+draft: true
 ---
 
 People keep on asking me what I want as gift, or what would I get a dev as a gift. Now I will have place to direct them to

@@ -37,4 +37,3 @@ draft: true
 - Invest in a culture of accountability by holding yourself and your peers to high standards.
 - Expand your knowledge and influence by rotating across teams and working in new codebases and product areas.
 - Meet your peers face-to-face at 'Weekful', our annual all-company retreat.
-

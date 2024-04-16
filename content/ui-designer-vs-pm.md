@@ -22,4 +22,3 @@ A frontend developer takes care of every user experience and interaction of the 
 
 It is the product design first. He or she brings or have the idea of the product and how it should work; that's is process.
 He then submit this product Idea to A UI designer who then create the user interface. Then the front end designer brings the graphics to live and may probably need a backend designer too.
-

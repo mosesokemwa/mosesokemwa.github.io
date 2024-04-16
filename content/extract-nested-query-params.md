@@ -48,4 +48,4 @@ After calling ```url.parse(rawUrl)``` on our URL, this is what is returned to us
 ```
 
 
-While the actual act of retrieving this data is very simple, understanding where this info comes from and what it is can be confusing for some beginners. Hopefully this article cleared some things up for you. 
+While the actual act of retrieving this data is very simple, understanding where this info comes from and what it is can be confusing for some beginners. Hopefully this article cleared some things up for you.
