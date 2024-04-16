@@ -1,5 +1,5 @@
 ---
-title: "100 Projects to Improve your Skills as a Programmer"
+title: "A couple (100) Projects to Improve your Skills as a Programmer"
 date: 2024-04-15T14:28:14+03:00
 draft: false
 slug: learning-projects
