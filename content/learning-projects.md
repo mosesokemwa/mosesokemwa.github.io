@@ -2,10 +2,10 @@
 title: "100 Projects to Improve your Skills as a Programmer"
 date: 2024-04-15T14:28:14+03:00
 draft: false
-slug: 100 projects
+slug: learning-projects
 ---
 
-### 100 Projects to Improve your Skills as a Programmer
+### A couple (100) Projects to Improve your Skills as a Programmer
 
 **A list of practical projects that anyone can solve in any programming language . These projects are divided in multiple categories, and each category has it's own folder.
 To get started, simply fork this github repo.**
