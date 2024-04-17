@@ -1,7 +1,7 @@
 ---
 title: "Android Automotive OS"
 date: 2024-04-16T16:22:14+03:00
-draft: false
+draft: true
 slug: android-automotive-os
 ---
 
