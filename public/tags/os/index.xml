@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Os on Moses Okemwa</title>
+    <link>http://localhost:1313/public/tags/os/</link>
+    <description>Recent content in Os on Moses Okemwa</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 16 Apr 2024 16:22:14 +0300</lastBuildDate>
+    <atom:link href="http://localhost:1313/public/tags/os/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Android Automotive OS</title>
+      <link>http://localhost:1313/public/hobbies/android-automotive-os/</link>
+      <pubDate>Tue, 16 Apr 2024 16:22:14 +0300</pubDate>
+      <guid>http://localhost:1313/public/hobbies/android-automotive-os/</guid>
+      <description>Android Automotive OS Android Automotive OS is a version of Android that is specifically designed for vehicles. It is an embedded version of the Android operating system that is optimized for use in vehicles. Android Automotive OS is designed to provide a safe, intuitive, and seamless user experience in the car.&#xA;Genesis of Android Automotive OS Android Automotive OS is the result of a collaboration between Google and the automotive industry.</description>
+    </item>
+  </channel>
+</rss>

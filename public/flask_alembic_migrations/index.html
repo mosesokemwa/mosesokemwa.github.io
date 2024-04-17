@@ -1,57 +1,6 @@
 <!doctype html>
 <html class="no-js" lang="en-us">
-    <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
-
-    <link rel="manifest" href="/manifest.json">
-
     
-    <title>Flask migration of non-nullable fields &amp;middot; Moses Okemwa</title>
-
-    <meta name="description" content="">
-    <link rel="canonical" href="https://mosesokemwa.github.io/public/flask_alembic_migrations/">
-
-    <link rel="manifest" href="/manifest.json">
-    <meta name="application-name" content="Flask migration of non-nullable fields &amp;middot; Moses Okemwa">
-    <meta name="theme-color" content="#2271ff">
-
-    <link rel="apple-touch-icon" sizes="57x57" href="fav/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="fav/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="fav/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="fav/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="fav/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="fav/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="fav/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="fav/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="fav/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="fav/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="fav/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="fav/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="fav/favicon-16x16.png">
-
-    
-
-    
-    <link rel="stylesheet" href="https://mosesokemwa.github.io/public/scss/main.min.0d30ca89c02830e5cfc1147058038d527d1789ac41d135e22653c08c05cfa4ac.css" integrity="sha256-DTDKicAoMOXPwRRwWAONUn0XiaxB0TXiJlPAjAXPpKw=" media="screen">
-
-</head>
-    <body>
-        <div class="page">
-            
-<header>
-    <nav class="navbar bg-moringa"></nav>
-</header>
-
-
-             
-            <div id="main">
-                
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -90,9 +39,79 @@
     
 
     
-    <link rel="stylesheet" href="https://mosesokemwa.github.io/public/scss/main.min.0d30ca89c02830e5cfc1147058038d527d1789ac41d135e22653c08c05cfa4ac.css" integrity="sha256-DTDKicAoMOXPwRRwWAONUn0XiaxB0TXiJlPAjAXPpKw=" media="screen">
+    <link rel="stylesheet" href="https://mosesokemwa.github.io/public/scss/main.min.ccb48d0472231db7a01d5dc09fb5a624ccfe6b850ad8ddd59d493619ae9f57e2.css" integrity="sha256-zLSNBHIjHbegHV3An7WmJMz&#43;a4UK2N3VnUk2Ga6fV&#43;I=" media="screen">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 </head>
+
+    <body>
+        <div class="page">
+            
+<header>
+    <nav class="navbar bg-mosesokemwa">
+        
+        <div class="container">
+            <a class="navbar-brand" href="https://mosesokemwa.github.io/public/">
+                <img src="https://mosesokemwa.github.io/public/images/profile.png" alt="Moses Okemwa" class="logo">
+            </a>
+        </div>
+    </nav>
+</header>
+
+
+             
+            <div id="main">
+                
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="manifest" href="/manifest.json">
+
+    
+    <title>Flask migration of non-nullable fields &amp;middot; Moses Okemwa</title>
+
+    <meta name="description" content="">
+    <link rel="canonical" href="https://mosesokemwa.github.io/public/flask_alembic_migrations/">
+
+    <link rel="manifest" href="/manifest.json">
+    <meta name="application-name" content="Flask migration of non-nullable fields &amp;middot; Moses Okemwa">
+    <meta name="theme-color" content="#2271ff">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="fav/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="fav/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="fav/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="fav/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="fav/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="fav/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="fav/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="fav/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="fav/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="fav/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="fav/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="fav/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="fav/favicon-16x16.png">
+
+    
+
+    
+    <link rel="stylesheet" href="https://mosesokemwa.github.io/public/scss/main.min.ccb48d0472231db7a01d5dc09fb5a624ccfe6b850ad8ddd59d493619ae9f57e2.css" integrity="sha256-zLSNBHIjHbegHV3An7WmJMz&#43;a4UK2N3VnUk2Ga6fV&#43;I=" media="screen">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</head>
+
 <ol class="breadcrumb">
 
 
@@ -125,9 +144,6 @@ Flask migration of non-nullable fields
     2019-10-12
     </time>
 </div>
-    
-    
-
     <section id="content">
         <p>It is quite easy to add a <code>non-nullable</code> field to an empty table.
 Any migration tool, including <a href="https://alembic.sqlalchemy.org/en/latest/tutorial.html">Alembic</a>, can automatically generate a migration file for you that is immediately ready for use, with no modifications required.</p>
@@ -194,6 +210,8 @@ Here is what the updated migration script looks like. The updated portions have 
 <p>A little knowledge of SQL is all you need to write the exact migration script that fit your use case.</p>
 
     </section>
+    
+    
 
 </article>
 

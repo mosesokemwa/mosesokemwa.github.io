@@ -3,6 +3,9 @@
 <article>
     <h1>{{ .Title }}</h1>
     {{partial "post_meta.html" .}}
+    <section id="content">
+        {{ .Content }}
+    </section>
     {{ with .Params.topics }}
     <ul id="topics">
         {{ range . }}
@@ -17,10 +20,6 @@
         {{ end }}
     </ul>
     {{ end }}
-
-    <section id="content">
-        {{ .Content }}
-    </section>
 
 </article>
 {{ end }}

@@ -2,9 +2,9 @@
 @import "bootstrap/bootstrap.scss";
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700');
 
-$moringa-dark: #2f8742;
-$moringa-light: #80bf6e;
-$moringa-white: #ffffff;
+$mosesokemwa-dark: #2f8742;
+$mosesokemwa-light: #80bf6e;
+$mosesokemwa-white: #ffffff;
 
 /*
 // Needs latest Compass, add '@import "compass"' to your scss
@@ -71,15 +71,20 @@ html {
 }
 
 header {
+
     nav {
         font-size: 0.85rem;
         font-weight: 600;
 
         .navbar-brand {
-            width: 7.5rem;
+            width: 2.5rem;
+            img {
+                max-width: 2rem;
+                border-radius: 12px;
+            }
         }
 
-        &.bg-moringa {
+        &.bg-mosesokemwa {
             /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#2f8742+0,2f8742+48,80bf6e+100 */
             background: #2f8742;
             /* Old browsers */
@@ -95,11 +100,11 @@ header {
             box-shadow: 0 1px 0 rgba(89, 105, 129, 0.2), 0 1px 4px rgba(89, 105, 129, 0.05);
         }
 
-        .btn-moringa {
-            background: $moringa-dark;
+        .btn-mosesokemwa {
+            background: $mosesokemwa-dark;
             font-weight: 600;
             color: #ffffff;
-            border-color: $moringa-dark;
+            border-color: $mosesokemwa-dark;
             transition: 0.3s;
             font-size: 0.85rem;
 
@@ -135,13 +140,13 @@ header {
 }
 
 
-.btn-outline-moringa {
-    border-color: $moringa-dark;
-    color: $moringa-dark;
+.btn-outline-mosesokemwa {
+    border-color: $mosesokemwa-dark;
+    color: $mosesokemwa-dark;
 
     &:hover {
-        background-color: $moringa-dark;
-        color: $moringa-white;
+        background-color: $mosesokemwa-dark;
+        color: $mosesokemwa-white;
     }
 }
 
@@ -153,7 +158,7 @@ header {
         h1 {
             text-transform: uppercase;
             font-size: 1.75rem;
-            color: $moringa-dark;
+            color: $mosesokemwa-dark;
         }
     }
 

@@ -6,8 +6,15 @@
     <description>Recent content on Moses Okemwa</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 15 Apr 2024 14:28:14 +0300</lastBuildDate>
+    <lastBuildDate>Tue, 16 Apr 2024 16:22:14 +0300</lastBuildDate>
     <atom:link href="https://mosesokemwa.github.io/public/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Android Automotive OS</title>
+      <link>https://mosesokemwa.github.io/public/android-automotive-os/</link>
+      <pubDate>Tue, 16 Apr 2024 16:22:14 +0300</pubDate>
+      <guid>https://mosesokemwa.github.io/public/android-automotive-os/</guid>
+      <description>Android Automotive OS is a version of Android that is specifically designed for vehicles. It is an embedded version of the Android operating system that is optimized for use in vehicles. Android Automotive OS is designed to provide a safe, intuitive, and seamless user experience in the car.&#xA;Genesis of Android Automotive OS Android Automotive OS is the result of a collaboration between Google and the automotive industry. Google has been working with automakers to develop a version of Android that is tailored to the needs of the automotive industry.</description>
+    </item>
     <item>
       <title>A couple (100) Projects to Improve your Skills as a Programmer</title>
       <link>https://mosesokemwa.github.io/public/100-projects/</link>

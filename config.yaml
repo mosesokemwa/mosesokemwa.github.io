@@ -1,7 +1,9 @@
-baseURL: https://mosesokemwa.github.io/public/
+baseURL: https://mosesokemwa.github.io/public
 languageCode: en-us
 description: Dog's and biscuit
 title: Moses Okemwa
+params:
+  logo: https://mosesokemwa.github.io/public/images/profile.png
 theme: hugo-theme
 pygmentsCodefences: true
 pygmentsStyle: pygments

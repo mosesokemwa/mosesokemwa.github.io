@@ -1,5 +1,12 @@
 {{ block "header" . }}
 <header>
-    <nav class="navbar bg-moringa"></nav>
+    <nav class="navbar bg-mosesokemwa">
+        <!-- site.Menus.main -->
+        <div class="container">
+            <a class="navbar-brand" href="{{ .Site.BaseURL }}">
+                <img src="{{ .Site.Params.logo }}" alt="{{ .Site.Title }}" class="logo">
+            </a>
+        </div>
+    </nav>
 </header>
 {{ end }}
