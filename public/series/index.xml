@@ -2,15 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Series on Moses Okemwa</title>
-    <link>https://mosesokemwa.github.io/blog/series/</link>
+    <link>https://mosesokemwa.github.io/series/</link>
     <description>Recent content in Series on Moses Okemwa</description>
     <image>
       <title>Moses Okemwa</title>
-      <url>https://mosesokemwa.github.io/blog/images/profile.png</url>
-      <link>https://mosesokemwa.github.io/blog/images/profile.png</link>
+      <url>https://mosesokemwa.github.io/images/profile.png</url>
+      <link>https://mosesokemwa.github.io/images/profile.png</link>
     </image>
     <generator>Hugo -- 0.127.0</generator>
     <language>en</language>
-    <atom:link href="https://mosesokemwa.github.io/blog/series/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://mosesokemwa.github.io/series/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
