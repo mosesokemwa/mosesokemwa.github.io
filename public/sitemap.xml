@@ -2,82 +2,64 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://mosesokemwa.github.io/public/</loc>
-    <lastmod>2024-04-16T16:22:14+03:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <loc>http://localhost:1313/projects/cross-platform-mobile-app-development/</loc>
+    <lastmod>2024-07-18T16:22:14+03:00</lastmod>
   </url><url>
-    <loc>https://mosesokemwa.github.io/public/100-projects/</loc>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2024-07-18T16:22:14+03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/projects/</loc>
+    <lastmod>2024-07-18T16:22:14+03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/</loc>
+    <lastmod>2024-07-18T14:20:13+03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/best-fit-role/</loc>
+    <lastmod>2024-07-18T14:20:13+03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/100-projects/</loc>
     <lastmod>2024-04-15T14:28:14+03:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
   </url><url>
-    <loc>https://mosesokemwa.github.io/public/extract-nested-query-params/</loc>
+    <loc>http://localhost:1313/posts/extract-nested-query-params/</loc>
     <lastmod>2021-02-10T14:29:14+03:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
   </url><url>
-    <loc>https://mosesokemwa.github.io/public/getting-django-models-into-admin/</loc>
+    <loc>http://localhost:1313/posts/getting-django-models-into-admin/</loc>
     <lastmod>2020-12-13T22:17:14+03:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
   </url><url>
-    <loc>https://mosesokemwa.github.io/public/settings-cookies-in-django/</loc>
+    <loc>http://localhost:1313/posts/settings-cookies-in-django/</loc>
     <lastmod>2020-02-29T12:13:39+03:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
   </url><url>
-    <loc>https://mosesokemwa.github.io/public/flask_alembic_migrations/</loc>
+    <loc>http://localhost:1313/posts/flask_alembic_migrations/</loc>
     <lastmod>2019-10-12T12:21:11+03:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
   </url><url>
-    <loc>https://mosesokemwa.github.io/public/dark-net-diaries/</loc>
+    <loc>http://localhost:1313/posts/dark-net-diaries/</loc>
     <lastmod>2019-08-09T21:40:14+03:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
   </url><url>
-    <loc>https://mosesokemwa.github.io/public/nginx-setup/</loc>
+    <loc>http://localhost:1313/posts/nginx-setup/</loc>
     <lastmod>2019-05-25T18:15:14+03:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
   </url><url>
-    <loc>https://mosesokemwa.github.io/public/disabling-ubuntu-motd-spam/</loc>
+    <loc>http://localhost:1313/posts/disabling-ubuntu-motd-spam/</loc>
     <lastmod>2019-02-25T01:47:00+03:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
   </url><url>
-    <loc>https://mosesokemwa.github.io/public/broken-image-handling/</loc>
+    <loc>http://localhost:1313/posts/broken-image-handling/</loc>
     <lastmod>2019-02-03T14:28:14+03:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
   </url><url>
-    <loc>https://mosesokemwa.github.io/public/code-of-conduct/</loc>
+    <loc>http://localhost:1313/posts/code-of-conduct/</loc>
     <lastmod>2019-01-24T18:15:14+03:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
   </url><url>
-    <loc>https://mosesokemwa.github.io/public/devops-tooling/</loc>
+    <loc>http://localhost:1313/posts/devops-tooling/</loc>
     <lastmod>2017-11-18T21:35:00+03:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
   </url><url>
-    <loc>https://mosesokemwa.github.io/public/the-onion-router/</loc>
+    <loc>http://localhost:1313/posts/the-onion-router/</loc>
     <lastmod>2017-11-18T21:35:00+03:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
   </url><url>
-    <loc>https://mosesokemwa.github.io/public/tools-for-frontend-developers/</loc>
+    <loc>http://localhost:1313/posts/tools-for-frontend-developers/</loc>
     <lastmod>2017-04-18T21:35:00+03:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
   </url><url>
-    <loc>https://mosesokemwa.github.io/public/categories/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <loc>http://localhost:1313/categories/</loc>
   </url><url>
-    <loc>https://mosesokemwa.github.io/public/tags/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <loc>http://localhost:1313/series/</loc>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
   </url>
 </urlset>

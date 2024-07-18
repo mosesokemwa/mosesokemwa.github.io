@@ -163,7 +163,7 @@ header {
     }
 
     article {
-        max-width: 800px;
+        max-width: 1000px;
         padding: 0 2rem;
         margin: 0 auto;
         font-size: 1rem;
@@ -213,8 +213,13 @@ header {
                 border-radius: 0.25em;
                 background-color: #f2f2f2;
 
+
                 code {
                     margin: 0;
+
+                    span {
+                        overflow-wrap: break-word;
+                    }
                 }
             }
         }

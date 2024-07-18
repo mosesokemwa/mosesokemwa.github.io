@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Moses Okemwa</title>
-    <link>http://localhost:1313/</link>
-    <description>Recent content on Moses Okemwa</description>
+    <title>Posts on Moses Okemwa</title>
+    <link>http://localhost:1313/posts/</link>
+    <description>Recent content in Posts on Moses Okemwa</description>
     <image>
       <title>Moses Okemwa</title>
       <url>http://localhost:1313/images/profile.png</url>
@@ -12,7 +12,7 @@
     <generator>Hugo -- 0.127.0</generator>
     <language>en</language>
     <lastBuildDate>Thu, 18 Jul 2024 14:20:13 +0300</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>When skills meet required experience</title>
       <link>http://localhost:1313/posts/best-fit-role/</link>
