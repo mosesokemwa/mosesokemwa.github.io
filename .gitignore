@@ -20,3 +20,5 @@ GoBuilds
 dist
 
 vendor
+public/
+public/*
